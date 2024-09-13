@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <Appbar/>
+      <Ruben/>
       <router-view />
     </v-main>
   </v-app>
