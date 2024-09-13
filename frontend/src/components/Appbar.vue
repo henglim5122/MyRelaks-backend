@@ -4,7 +4,7 @@
                         <v-col cols="3">
                             <v-card>
                                 <v-img
-                                src="./../assets/images/images.jpeg">
+                                src="./../assets/images/goku.png">
                             </v-img>
                             </v-card>
                         </v-col>
