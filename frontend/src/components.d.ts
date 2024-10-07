@@ -7,9 +7,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ContactInfoForm: typeof import('./components/ContactInfoForm.vue')['default']
+    GenderSelect: typeof import('./components/GenderSelect.vue')['default']
+    PersonalInfoForm: typeof import('./components/PersonalInfoForm.vue')['default']
+    ProfileCard: typeof import('./components/ProfileCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Ruben: typeof import('./components/Ruben.vue')['default']
-    Test: typeof import('./components/test.vue')['default']
   }
 }
