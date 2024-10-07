@@ -1,8 +1,8 @@
 <template>
-  <v-container class="fill-height border-white-rounded">
-    <v-row class="border-thin">
+  <v-container class="fill-height border-lg-rounded">
+    <v-row class="border-thin border-white">
       <v-col cols="4">
-        <v-img src="../assets/img.jpg" class="mx-auto" width="400"></v-img>
+        <v-img src="../assets/img.jpg" class="mx-auto" width="600"></v-img>
       </v-col>
       <v-col cols="8">
         <v-card class="mx-auto fill-height">
