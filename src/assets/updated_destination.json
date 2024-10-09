@@ -9,7 +9,7 @@
     },
     "description": "Fragrant rice served with a variety of side dishes, famous in Perlis.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Kari Kambing",
@@ -21,7 +21,7 @@
     },
     "description": "Spicy goat curry, a popular dish among locals.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti Daging",
@@ -33,7 +33,7 @@
     },
     "description": "Delicious flatbread stuffed with spiced meat.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Cendol",
@@ -45,7 +45,7 @@
     },
     "description": "A sweet dessert made from shaved ice, coconut milk, and green jelly.",
     "reviewRating": 4.5,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Kangar Mall",
@@ -57,7 +57,7 @@
     },
     "description": "The main shopping mall in Perlis, featuring various retail stores.",
     "reviewRating": 4.4,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Perlis Supermarket",
@@ -69,7 +69,7 @@
     },
     "description": "A local supermarket offering a wide range of products.",
     "reviewRating": 4.2,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Taman Mall",
@@ -81,7 +81,7 @@
     },
     "description": "A small shopping complex with various shops and eateries.",
     "reviewRating": 4.3,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Perlis Night Market",
@@ -93,7 +93,7 @@
     },
     "description": "A vibrant night market selling local goods and food.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Kedah Eco Park",
@@ -103,9 +103,9 @@
       "latitude": 6.4475,
       "longitude": 100.19
     },
-    "description": "An eco-friendly amusement park with various attractions.",
+    "description": "An eco-friendly Amusement Park with various attractions.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Perlis Zoo",
@@ -117,7 +117,7 @@
     },
     "description": "A local zoo featuring a variety of animals.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Water Theme Park",
@@ -129,7 +129,7 @@
     },
     "description": "A fun water park for families and kids.",
     "reviewRating": 4.4,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Family Fun Park",
@@ -139,9 +139,9 @@
       "latitude": 6.4491,
       "longitude": 100.1875
     },
-    "description": "An amusement park with rides and games for all ages.",
+    "description": "An Amusement Park with rides and games for all ages.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Mount Perlis",
@@ -153,7 +153,7 @@
     },
     "description": "A popular hiking spot with beautiful views.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kuala Perlis Trail",
@@ -165,7 +165,7 @@
     },
     "description": "A scenic trail for hiking enthusiasts.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Sungai Perlis",
@@ -177,7 +177,7 @@
     },
     "description": "A beautiful river perfect for a nature walk.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Perlis State Park",
@@ -189,7 +189,7 @@
     },
     "description": "A park offering various trails and nature activities.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kafe Roti Bakar",
@@ -201,7 +201,7 @@
     },
     "description": "A cozy cafe known for its toast and coffee.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Café 88",
@@ -213,7 +213,7 @@
     },
     "description": "A popular spot for coffee and desserts.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Bubur Lambuk Cafe",
@@ -225,7 +225,7 @@
     },
     "description": "A cafe famous for its traditional rice porridge.",
     "reviewRating": 4.4,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Perlis Coffee House",
@@ -237,7 +237,7 @@
     },
     "description": "A trendy cafe with a variety of beverages.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Perlis State Museum",
@@ -297,7 +297,7 @@
     },
     "description": "A fragrant rice dish served with sambal, fried chicken, and egg.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti John",
@@ -309,7 +309,7 @@
     },
     "description": "A popular street food sandwich filled with minced meat and eggs.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Satay",
@@ -321,7 +321,7 @@
     },
     "description": "Grilled skewers of meat served with peanut sauce.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Mee Goreng Mamak",
@@ -333,7 +333,7 @@
     },
     "description": "Spicy fried noodles with vegetables and proteins.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Sunway Pyramid",
@@ -345,7 +345,7 @@
     },
     "description": "A shopping mall with a variety of shops and restaurants.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "IOI Mall",
@@ -357,7 +357,7 @@
     },
     "description": "A mall featuring numerous retail outlets and dining options.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Setia City Mall",
@@ -369,7 +369,7 @@
     },
     "description": "A family-friendly shopping center with diverse offerings.",
     "reviewRating": 4.4,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Empire Shopping Gallery",
@@ -381,7 +381,7 @@
     },
     "description": "A lifestyle mall with a blend of shopping and dining experiences.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Sunway Lagoon",
@@ -393,7 +393,7 @@
     },
     "description": "A popular water theme park with thrilling rides and attractions.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "i-City",
@@ -405,7 +405,7 @@
     },
     "description": "A theme park with various rides, attractions, and light shows.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Wet World",
@@ -417,7 +417,7 @@
     },
     "description": "A water park featuring slides and fun activities for families.",
     "reviewRating": 4.4,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "KidZania",
@@ -429,7 +429,7 @@
     },
     "description": "An interactive edutainment center for children.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Bukit Tabur",
@@ -441,7 +441,7 @@
     },
     "description": "A popular hiking spot with scenic views of the Klang Gates.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Gombak Forest Reserve",
@@ -453,7 +453,7 @@
     },
     "description": "A lush forest reserve with trails for hiking and nature walks.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "FRIM Forest Reserve",
@@ -465,7 +465,7 @@
     },
     "description": "A forest reserve with trails, canopy walk, and nature activities.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kanching Rainforest Waterfall",
@@ -477,7 +477,7 @@
     },
     "description": "A beautiful waterfall with hiking trails and nature spots.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Huckleberry Food & Fare",
@@ -489,7 +489,7 @@
     },
     "description": "A cozy cafe with a variety of pastries and coffee.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Pulp by Papa Palheta",
@@ -501,7 +501,7 @@
     },
     "description": "A trendy spot known for its specialty coffee and unique ambiance.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "The Red Beanbag",
@@ -513,7 +513,7 @@
     },
     "description": "A cafe known for its brunch menu and vibrant atmosphere.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Myeong Dong Topokki",
@@ -525,7 +525,7 @@
     },
     "description": "A Korean cafe offering topokki and other delicacies.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Batu Caves",
@@ -585,7 +585,7 @@
     },
     "description": "A popular dish of steamed rice served with various curries.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Hokkien Mee",
@@ -597,7 +597,7 @@
     },
     "description": "A savory noodle dish stir-fried with a variety of ingredients.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Char Kway Teow",
@@ -609,7 +609,7 @@
     },
     "description": "A popular stir-fried flat noodle dish with seafood.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti Canai",
@@ -621,7 +621,7 @@
     },
     "description": "A flaky flatbread often served with curry.",
     "reviewRating": 4.5,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Suria KLCC",
@@ -633,7 +633,7 @@
     },
     "description": "A premier shopping destination located at the foot of the Petronas Towers.",
     "reviewRating": 4.8,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Pavilion Kuala Lumpur",
@@ -645,7 +645,7 @@
     },
     "description": "A high-end shopping mall with luxury brands and dining options.",
     "reviewRating": 4.9,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Berjaya Times Square",
@@ -657,7 +657,7 @@
     },
     "description": "One of the largest shopping complexes in Malaysia.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Lot 10",
@@ -669,7 +669,7 @@
     },
     "description": "A shopping mall featuring popular local and international brands.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Sunway Lagoon",
@@ -681,7 +681,7 @@
     },
     "description": "A major theme park with water rides, amusement rides, and attractions.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Escape Theme Park",
@@ -693,7 +693,7 @@
     },
     "description": "An outdoor park with various thrilling rides and attractions.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "KidZania",
@@ -705,7 +705,7 @@
     },
     "description": "A kid-friendly interactive city where children can experience different professions.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Genting Highlands Theme Park",
@@ -715,9 +715,9 @@
       "latitude": 3.0672,
       "longitude": 101.7503
     },
-    "description": "A hilltop amusement park with rides and entertainment.",
+    "description": "A hilltop Amusement Park with rides and entertainment.",
     "reviewRating": 4.9,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Bukit Tunku",
@@ -729,7 +729,7 @@
     },
     "description": "A popular hiking spot with scenic views of the city.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Titiwangsa Lake Gardens",
@@ -741,7 +741,7 @@
     },
     "description": "A beautiful park with walking trails and recreational areas.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Genting Highlands",
@@ -753,7 +753,7 @@
     },
     "description": "A cool hill resort perfect for hiking and outdoor activities.",
     "reviewRating": 4.9,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "FRIM",
@@ -765,7 +765,7 @@
     },
     "description": "The Forest Research Institute Malaysia offers various trails and activities.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "The coffeeholic",
@@ -777,7 +777,7 @@
     },
     "description": "A cafe known for its specialty coffee and cozy atmosphere.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Pulp Coffee",
@@ -789,7 +789,7 @@
     },
     "description": "A cafe famous for its artisan coffee and pastries.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Café de Flore",
@@ -801,7 +801,7 @@
     },
     "description": "A charming cafe offering a range of beverages and light meals.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "The pancake house",
@@ -813,7 +813,7 @@
     },
     "description": "A cozy cafe specializing in pancakes and brunch.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Petronas Twin Towers",
@@ -873,7 +873,7 @@
     },
     "description": "Steamed rice served with a variety of curries and side dishes.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Char Kway Teow",
@@ -885,7 +885,7 @@
     },
     "description": "Stir-fried flat noodles with prawns and Chinese sausage.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Asam Laksa",
@@ -897,7 +897,7 @@
     },
     "description": "A spicy and sour fish noodle soup.",
     "reviewRating": 4.9,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti Canai",
@@ -909,7 +909,7 @@
     },
     "description": "Flaky Indian flatbread typically served with curry.",
     "reviewRating": 4.5,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Gurney Plaza",
@@ -921,7 +921,7 @@
     },
     "description": "A popular shopping mall with various retail outlets and eateries.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Queensbay Mall",
@@ -933,7 +933,7 @@
     },
     "description": "The largest shopping mall in Penang featuring numerous shops.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "1st Avenue Mall",
@@ -945,7 +945,7 @@
     },
     "description": "A trendy shopping destination in the heart of Georgetown.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Sunway Carnival Mall",
@@ -957,7 +957,7 @@
     },
     "description": "A modern mall with a variety of retail and dining options.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Escape Theme Park",
@@ -969,7 +969,7 @@
     },
     "description": "An outdoor adventure park with various rides and activities.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Penang Butterfly Farm",
@@ -981,7 +981,7 @@
     },
     "description": "A conservation center for butterflies with various species.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Wonderfood Museum",
@@ -993,7 +993,7 @@
     },
     "description": "A quirky museum showcasing the food culture of Penang.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Penang Hill",
@@ -1005,7 +1005,7 @@
     },
     "description": "A scenic hill with a cool climate and outdoor activities.",
     "reviewRating": 4.9,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Penang National Park",
@@ -1017,7 +1017,7 @@
     },
     "description": "A national park with trails for hiking and beautiful views.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kek Lok Si Temple",
@@ -1029,7 +1029,7 @@
     },
     "description": "A beautiful temple located on a hill with stunning views.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Penang Hill",
@@ -1041,7 +1041,7 @@
     },
     "description": "A popular hiking spot with panoramic views of the island.",
     "reviewRating": 4.9,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Mount Erskine",
@@ -1053,7 +1053,7 @@
     },
     "description": "A moderate hike with stunning views of the coastline.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "The Alley",
@@ -1065,7 +1065,7 @@
     },
     "description": "A popular cafe known for its bubble tea and desserts.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "The Mugshot Cafe",
@@ -1077,7 +1077,7 @@
     },
     "description": "A cafe famous for its bagels and specialty coffee.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Café 55",
@@ -1089,7 +1089,7 @@
     },
     "description": "A cozy spot for brunch and artisanal coffee.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Wheeler's Coffee",
@@ -1101,7 +1101,7 @@
     },
     "description": "A charming cafe with a vintage vibe and delicious coffee.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Cheong Fatt Tze Mansion",
@@ -1161,7 +1161,7 @@
     },
     "description": "A traditional dish of rice served with local side dishes.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Sotong Sumbat",
@@ -1173,7 +1173,7 @@
     },
     "description": "Stuffed squid grilled to perfection, a local delicacy.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Tinotuan",
@@ -1185,7 +1185,7 @@
     },
     "description": "A traditional rice porridge served with fish.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Sang Nyuk Mian",
@@ -1197,7 +1197,7 @@
     },
     "description": "A flavorful noodle soup with pork and herbs.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Suria Sabah",
@@ -1209,7 +1209,7 @@
     },
     "description": "A shopping mall with local and international brands.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "1Borneo Hypermall",
@@ -1221,7 +1221,7 @@
     },
     "description": "The largest shopping mall in Sabah with a variety of stores.",
     "reviewRating": 4.4,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Kota Kinabalu Handicraft Market",
@@ -1233,7 +1233,7 @@
     },
     "description": "A market showcasing local handicrafts and souvenirs.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "KK Plaza",
@@ -1245,7 +1245,7 @@
     },
     "description": "A shopping complex with a variety of retail outlets.",
     "reviewRating": 4.3,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Wild West Cowboy Town",
@@ -1255,9 +1255,9 @@
       "latitude": 5.9667,
       "longitude": 116.0722
     },
-    "description": "A themed amusement park with various rides and attractions.",
+    "description": "A themed Amusement Park with various rides and attractions.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Kota Kinabalu City Park",
@@ -1269,7 +1269,7 @@
     },
     "description": "A public park with recreational facilities and beautiful views.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Tunku Abdul Rahman Marine Park",
@@ -1281,7 +1281,7 @@
     },
     "description": "A group of islands offering snorkeling and diving activities.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Borneo Marine Research Institute",
@@ -1293,7 +1293,7 @@
     },
     "description": "A research institute with educational exhibits and activities.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Mount Kinabalu",
@@ -1305,7 +1305,7 @@
     },
     "description": "Malaysia's highest peak, offering challenging trails and breathtaking views.",
     "reviewRating": 4.9,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Tun Mustapha Park",
@@ -1317,7 +1317,7 @@
     },
     "description": "A beautiful park with walking trails and scenic landscapes.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Klias River Cruise",
@@ -1329,7 +1329,7 @@
     },
     "description": "An eco-tourism cruise along the Klias River with stunning wildlife.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Mamutik Island",
@@ -1341,7 +1341,7 @@
     },
     "description": "An island offering hiking and beautiful beach experiences.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "D'Place Kinabalu",
@@ -1353,7 +1353,7 @@
     },
     "description": "A cozy cafe known for its local dishes and desserts.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Chilling Cafe",
@@ -1365,7 +1365,7 @@
     },
     "description": "A popular spot for coffee and light bites.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Nook Cafe",
@@ -1377,7 +1377,7 @@
     },
     "description": "A vibrant cafe offering specialty coffee and a variety of meals.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Brew42",
@@ -1389,7 +1389,7 @@
     },
     "description": "A trendy cafe known for its coffee and desserts.",
     "reviewRating": 4.9,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Mari Mari Cultural Village",
@@ -1449,7 +1449,7 @@
     },
     "description": "A spicy noodle soup with coconut milk and shrimp.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Kolo Mee",
@@ -1461,7 +1461,7 @@
     },
     "description": "Egg noodles served with minced pork and shallots.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Nasi Aruk",
@@ -1473,7 +1473,7 @@
     },
     "description": "A traditional rice dish served with local specialties.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Laksa Sarawak",
@@ -1485,7 +1485,7 @@
     },
     "description": "A flavorful noodle dish with a spicy broth.",
     "reviewRating": 4.9,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "The Spring Shopping Mall",
@@ -1497,7 +1497,7 @@
     },
     "description": "A popular shopping destination with a mix of retail and dining options.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Batu Kawa New Township",
@@ -1509,7 +1509,7 @@
     },
     "description": "A new shopping area featuring various shops and eateries.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Hua Kiew Shopping Complex",
@@ -1521,7 +1521,7 @@
     },
     "description": "A shopping complex with a variety of local and international brands.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Kuching Boulevard Shopping Mall",
@@ -1533,7 +1533,7 @@
     },
     "description": "A shopping center featuring a range of shops and dining options.",
     "reviewRating": 4.4,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Bako National Park",
@@ -1545,7 +1545,7 @@
     },
     "description": "A national park known for its wildlife and beautiful trails.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Kuching Cat Museum",
@@ -1557,7 +1557,7 @@
     },
     "description": "A unique museum dedicated to cats, with various exhibits.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Sarawak Cultural Village",
@@ -1569,7 +1569,7 @@
     },
     "description": "A living museum showcasing the diverse cultures of Sarawak.",
     "reviewRating": 4.9,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Peraya Water Park",
@@ -1581,7 +1581,7 @@
     },
     "description": "A water park with fun slides and activities for all ages.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Gunung Gading National Park",
@@ -1593,7 +1593,7 @@
     },
     "description": "A national park known for its waterfalls and hiking trails.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Bako National Park",
@@ -1605,7 +1605,7 @@
     },
     "description": "A national park with scenic trails and diverse wildlife.",
     "reviewRating": 4.9,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Mount Santubong",
@@ -1617,7 +1617,7 @@
     },
     "description": "A mountain offering hiking trails with stunning views.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kuching Wetlands National Park",
@@ -1629,7 +1629,7 @@
     },
     "description": "A protected area with rich biodiversity and hiking trails.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "The coffee shop",
@@ -1641,7 +1641,7 @@
     },
     "description": "A cozy cafe with a variety of coffee and cakes.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Sushi Tei",
@@ -1653,7 +1653,7 @@
     },
     "description": "A popular cafe known for its sushi and Japanese desserts.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Coffee Estates",
@@ -1665,7 +1665,7 @@
     },
     "description": "A cafe specializing in local coffee blends.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Bubur Lambuk",
@@ -1677,7 +1677,7 @@
     },
     "description": "A unique spot for traditional porridge and coffee.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Sarawak Cultural Village",
@@ -1737,7 +1737,7 @@
     },
     "description": "A fragrant rice dish served with fish curry and coconut.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Keropok Lekor",
@@ -1749,7 +1749,7 @@
     },
     "description": "A traditional fish cracker snack popular in the region.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Sata",
@@ -1761,7 +1761,7 @@
     },
     "description": "Grilled fish paste wrapped in banana leaves.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti Paung",
@@ -1773,7 +1773,7 @@
     },
     "description": "A traditional bread filled with various fillings.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Kuala Terengganu City Centre",
@@ -1785,7 +1785,7 @@
     },
     "description": "A shopping complex with a variety of shops and eateries.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Terengganu Mall",
@@ -1797,7 +1797,7 @@
     },
     "description": "A mall featuring a mix of retail and dining options.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Pasar Besar Kedai Payang",
@@ -1809,7 +1809,7 @@
     },
     "description": "A bustling market known for local crafts and snacks.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Bazar Warisan",
@@ -1821,7 +1821,7 @@
     },
     "description": "A cultural market showcasing Terengganu's heritage.",
     "reviewRating": 4.8,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Sutra Beach Resort",
@@ -1833,7 +1833,7 @@
     },
     "description": "A beach resort offering recreational activities and water sports.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Kuala Terengganu Beach",
@@ -1845,7 +1845,7 @@
     },
     "description": "A scenic beach perfect for relaxation and water sports.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Taman Tamadun Islam",
@@ -1857,7 +1857,7 @@
     },
     "description": "A cultural park showcasing Islamic heritage and architecture.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Merang Water Park",
@@ -1869,7 +1869,7 @@
     },
     "description": "A fun water park with slides and attractions for families.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Taman Negara National Park",
@@ -1881,7 +1881,7 @@
     },
     "description": "A national park with lush rainforests and trekking trails.",
     "reviewRating": 4.9,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kota Gelanggi Caves",
@@ -1893,7 +1893,7 @@
     },
     "description": "Caves with stunning rock formations and hiking trails.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Bukit Keluang",
@@ -1905,7 +1905,7 @@
     },
     "description": "A hill with scenic views and hiking opportunities.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Cherating Beach",
@@ -1917,7 +1917,7 @@
     },
     "description": "A beautiful beach with trails and nature spots.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Kedai Kopi Hai Peng",
@@ -1929,7 +1929,7 @@
     },
     "description": "A charming cafe known for its traditional coffee.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Dapo Jendela",
@@ -1941,7 +1941,7 @@
     },
     "description": "A cafe offering local delicacies and a cozy atmosphere.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Nasi Kerabu Cafe",
@@ -1953,7 +1953,7 @@
     },
     "description": "A cafe specializing in Nasi Kerabu and other local dishes.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Kedai Kopi Tanjung",
@@ -1965,7 +1965,7 @@
     },
     "description": "A local coffee shop known for its warm atmosphere.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Islamic Civilization Park",
@@ -2025,7 +2025,7 @@
     },
     "description": "Stuffed squid, a unique Labuan delicacy.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Ikan Bakar",
@@ -2037,7 +2037,7 @@
     },
     "description": "Grilled fish seasoned with local spices.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Laksa Labuan",
@@ -2049,7 +2049,7 @@
     },
     "description": "A spicy noodle soup unique to Labuan.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Bubur Lambuk",
@@ -2061,7 +2061,7 @@
     },
     "description": "A traditional porridge with spices and herbs.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Labuan Square",
@@ -2073,7 +2073,7 @@
     },
     "description": "A shopping area with local products and souvenirs.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Financial Park",
@@ -2085,7 +2085,7 @@
     },
     "description": "A commercial complex with shops, restaurants, and entertainment.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Labuan Mall",
@@ -2097,7 +2097,7 @@
     },
     "description": "A mall with a variety of retail and dining options.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Pasar Tani Labuan",
@@ -2109,7 +2109,7 @@
     },
     "description": "A farmer's market offering fresh produce and local goods.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Labuan Adventure Park",
@@ -2121,7 +2121,7 @@
     },
     "description": "An outdoor park with various recreational activities.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Labuan Bird Park",
@@ -2133,7 +2133,7 @@
     },
     "description": "A park showcasing a variety of bird species.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Labuan Marine Park",
@@ -2145,7 +2145,7 @@
     },
     "description": "A marine park for snorkeling and diving activities.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Labuan Golf Club",
@@ -2157,7 +2157,7 @@
     },
     "description": "A golf course offering scenic views and challenging play.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Bukit Kertaijaya",
@@ -2169,7 +2169,7 @@
     },
     "description": "A hiking trail with beautiful views of the island.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Tanjung Kubong",
@@ -2181,7 +2181,7 @@
     },
     "description": "A scenic spot with a trail leading to the beach.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Pusat Rekreasi Labuan",
@@ -2193,7 +2193,7 @@
     },
     "description": "A recreational area with walking trails and parks.",
     "reviewRating": 4.5,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Pulau Papan",
@@ -2205,7 +2205,7 @@
     },
     "description": "An island with hiking trails and stunning views.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Cafe 4 U",
@@ -2217,7 +2217,7 @@
     },
     "description": "A cozy cafe known for its coffee and desserts.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Bubur Lambuk Cafe",
@@ -2229,7 +2229,7 @@
     },
     "description": "A cafe offering traditional dishes and local desserts.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Kedai Kopi Dan Roti Bakar 88",
@@ -2241,7 +2241,7 @@
     },
     "description": "A local coffee shop with a traditional ambiance.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Bistro Labuan",
@@ -2253,7 +2253,7 @@
     },
     "description": "A cafe with a relaxed atmosphere and great coffee.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Labuan International Sea Sport Complex",
@@ -2313,7 +2313,7 @@
     },
     "description": "A fragrant rice dish cooked with spices and served with meat.",
     "reviewRating": 4.7,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Satay",
@@ -2325,7 +2325,7 @@
     },
     "description": "Grilled skewers of marinated meat served with peanut sauce.",
     "reviewRating": 4.8,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Roti John",
@@ -2337,7 +2337,7 @@
     },
     "description": "A delicious bread filled with minced meat and egg.",
     "reviewRating": 4.6,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "Keropok Lekor",
@@ -2349,7 +2349,7 @@
     },
     "description": "Fried fish crackers that are popular in the region.",
     "reviewRating": 4.5,
-    "activityCategory": "local specialty"
+    "activityCategory": "Local Specialty"
   },
   {
     "name": "IOI City Mall",
@@ -2361,7 +2361,7 @@
     },
     "description": "A large shopping mall with a variety of retail options.",
     "reviewRating": 4.7,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Alamanda Putrajaya",
@@ -2373,7 +2373,7 @@
     },
     "description": "A shopping center with shops and restaurants.",
     "reviewRating": 4.6,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "The Square @ Jaya One",
@@ -2385,7 +2385,7 @@
     },
     "description": "A vibrant shopping area with various shops and eateries.",
     "reviewRating": 4.5,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Putrajaya Marketplace",
@@ -2397,7 +2397,7 @@
     },
     "description": "A marketplace featuring local products and crafts.",
     "reviewRating": 4.8,
-    "activityCategory": "shopping spree"
+    "activityCategory": "Shopping Spree"
   },
   {
     "name": "Putrajaya Challenge Park",
@@ -2409,7 +2409,7 @@
     },
     "description": "An adventure park with various outdoor activities.",
     "reviewRating": 4.6,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Wet World Water Park",
@@ -2421,7 +2421,7 @@
     },
     "description": "A water park featuring fun rides and slides.",
     "reviewRating": 4.5,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Putrajaya Botanical Garden",
@@ -2433,7 +2433,7 @@
     },
     "description": "A beautiful garden with various plants and walking paths.",
     "reviewRating": 4.7,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Putrajaya Lake",
@@ -2445,7 +2445,7 @@
     },
     "description": "A scenic lake with recreational activities.",
     "reviewRating": 4.8,
-    "activityCategory": "amusement park"
+    "activityCategory": "Amusement Park"
   },
   {
     "name": "Putrajaya Botanical Garden",
@@ -2457,7 +2457,7 @@
     },
     "description": "A large garden with scenic views and walking paths.",
     "reviewRating": 4.7,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Taman Wawasan",
@@ -2469,7 +2469,7 @@
     },
     "description": "A recreational park with jogging trails and green spaces.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Cyberjaya Lake Gardens",
@@ -2481,7 +2481,7 @@
     },
     "description": "A scenic park with walking trails around the lake.",
     "reviewRating": 4.8,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Putrajaya Challenge Park",
@@ -2493,7 +2493,7 @@
     },
     "description": "An adventure park with various outdoor activities.",
     "reviewRating": 4.6,
-    "activityCategory": "leg day"
+    "activityCategory": "Leg Day"
   },
   {
     "name": "Huckleberry Food & Fare",
@@ -2505,7 +2505,7 @@
     },
     "description": "A cafe offering a variety of pastries and coffee.",
     "reviewRating": 4.8,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "The Tea Room",
@@ -2517,7 +2517,7 @@
     },
     "description": "A charming cafe known for its afternoon tea.",
     "reviewRating": 4.7,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Kedai Kopi Putrajaya",
@@ -2529,7 +2529,7 @@
     },
     "description": "A local coffee shop with traditional Malaysian snacks.",
     "reviewRating": 4.6,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "T Cafe",
@@ -2541,7 +2541,7 @@
     },
     "description": "A cafe with a variety of beverages and snacks.",
     "reviewRating": 4.5,
-    "activityCategory": "cafe hopping"
+    "activityCategory": "Cafe Hopping"
   },
   {
     "name": "Putra Mosque",
@@ -2601,7 +2601,7 @@
       },
       "description": "Known for its stunning beaches and water sports activities.",
       "reviewRating": 4.9,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Pulau Redang",
@@ -2613,7 +2613,7 @@
       },
       "description": "A tropical paradise with crystal clear waters and snorkeling opportunities.",
       "reviewRating": 4.8,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Cenang Beach",
@@ -2625,7 +2625,7 @@
       },
       "description": "A lively beach destination famous for its water sports and nightlife.",
       "reviewRating": 4.7,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Kota Kinabalu Marine Park",
@@ -2637,7 +2637,7 @@
       },
       "description": "An exquisite marine park offering diving and snorkeling.",
       "reviewRating": 4.9,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Tunku Abdul Rahman Marine Park",
@@ -2649,7 +2649,7 @@
       },
       "description": "A group of islands known for snorkeling and diving.",
       "reviewRating": 4.8,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Redang Island",
@@ -2661,7 +2661,7 @@
       },
       "description": "Offers stunning coral reefs and marine life for snorkeling.",
       "reviewRating": 4.9,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Sipadan Island",
@@ -2673,7 +2673,7 @@
       },
       "description": "Renowned for diving, with diverse marine species.",
       "reviewRating": 4.9,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Sibu Island",
@@ -2685,7 +2685,7 @@
       },
       "description": "Offers pristine beaches and vibrant marine life.",
       "reviewRating": 4.6,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Teluk Bahang Beach",
@@ -2697,7 +2697,7 @@
       },
       "description": "A beautiful beach known for its calm waters and water sports.",
       "reviewRating": 4.5,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Cherating Beach",
@@ -2709,7 +2709,7 @@
       },
       "description": "Famous for its laid-back vibe and surfing opportunities.",
       "reviewRating": 4.7,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Penang National Park",
@@ -2721,7 +2721,7 @@
       },
       "description": "Offers hiking trails leading to beautiful beaches.",
       "reviewRating": 4.6,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Lombong River",
@@ -2733,7 +2733,7 @@
       },
       "description": "Known for kayaking and beautiful river scenery.",
       "reviewRating": 4.7,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
     {
       "name": "Endau-Rompin National Park",
@@ -2745,7 +2745,7 @@
       },
       "description": "A serene national park with beautiful waterfalls and river activities.",
       "reviewRating": 4.8,
-      "activityCategory": "water experience"
+      "activityCategory": "Water Experience"
     },
   
     {

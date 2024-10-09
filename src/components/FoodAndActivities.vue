@@ -39,8 +39,9 @@ import {useMapState } from "@/stores/mapStores";
 let  mapStore= useMapState();
 
 function filterReturn(activity:any) {
-  mapStore.activityFilter = activity
-  mapStore.stateFilter = ""
+  mapStore.setactivityFilter(activity)
+  mapStore.setStateFilter('')
+  mapStore.setdestinationFilter('')
 }
 function dbclickOpen(activity:any) {
   filterReturn(activity);

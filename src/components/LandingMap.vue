@@ -2,8 +2,8 @@
   <h1 class="mx-auto text-center pb-5">Explore the States</h1>
   <div id="map"></div>
   <!-- <div>{{ stateFilter }}</div> -->
-  <div v-if="showDialog" id ='stateDialog' class="dialog-overlay border-lg">
-    <v-card width="500px" class="dialog-content">
+  <div v-if="showDialog" id ='stateDialog' class="dialog-overlay border-lg" >
+    <v-card width="500px" height="400px" class="dialog-content" @keyup.esc="showDialog = false">
       <v-card-title class="mx-auto justify-center d-flex text-h3">
         {{
         mapStore.stateFilter}}</v-card-title>
@@ -17,10 +17,10 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn @click="showDialog = false"
-          ><a href="/FunctionPage" target="_blank">Learn More</a></v-btn
+        <v-btn @click="StateFilter" class="mx-4 border-sm "
+          ><a href="/functionpage" target="_blank" :style="{ textDecoration: 'none', color: 'black' }">Learn More</a></v-btn
         >
-        <v-btn text="Close Dialog" @click="showDialog = false"></v-btn>
+        <v-btn color="primary" variant="flat" text="Close Dialog" @click="showDialog = false"></v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -31,6 +31,7 @@ import leaflet from "leaflet";
 import { ref, onMounted } from "vue";
 import { useMapState } from "@/stores/mapStores";
 import geofile from "@/assets/map/my.json";
+import destinationAll from "@/assets/Updated_destination.json";
 
 let map: leaflet.Map;
 let userGeoMarker: leaflet.Marker;
@@ -47,11 +48,21 @@ if (navigator.geolocation) {
   console.error('permission is not allowed');
 })}
 
+function StateFilter() {
+  destinationAll.filter((destination) => {
+    if (!destination.state.includes(mapStore.stateFilter)) {
+      console.log('state not found');
+    }
+    
+  })
+  showDialog.value = false
+}
 
 
 onMounted(() => {
+  window.addEventListener('keydown', this.handleEscape);
   
-  
+
   map = leaflet
     .map("map", {
       zoomSnap: 0.1,
@@ -91,6 +102,7 @@ onMounted(() => {
     layer.bringToFront();
   }
 
+  
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
   }
@@ -125,8 +137,10 @@ onMounted(() => {
     stateMarker.on("popupopen", () => {
       const popupElement = document.querySelector(`.open-dialog-btn-${geoprop.properties.name.split(" ").join("")}`);
         popupElement?.addEventListener("click", () => {
+        let selectedState = geoprop.properties.name;
         mapStore.setStateFilter(geoprop.properties.name);
         mapStore.setactivityFilter('')
+        mapStore.setdestinationFilter('')
         // console.log(stateFilter); //state
         showDialog.value = true;
         });
@@ -250,5 +264,6 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensures content and buttons are spaced properly */
+  border-radius: 10px;
 }
 </style>

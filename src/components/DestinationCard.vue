@@ -13,7 +13,7 @@
         <v-card-text>
             <div class="destinationStyle"  id="destinationDescription" > <strong>{{ destination.description }} </strong></div>
             <div class="destinationStyle">Category: <strong>{{ destination.activityCategory }} </strong></div>
-            <div class="destinationStyle">Rating: <i><strong>{{ destination.reviewRating }}</strong></i></div>
+            <div class="destinationStyle" >Rating: <i><strong :style="textColor(destination.reviewRating)">{{ destination.reviewRating }}</strong></i></div>
         </v-card-text>
         </div>
     </v-card>
@@ -47,6 +47,18 @@ export default {
             this.onLiked = !this.onLiked;
             this.$emit("onLiked");
             console.log(this.onLiked);  
+        },
+
+        textColor(rating) {
+            if (rating >= 4.7) {
+                return {color:'green'}
+            } else if (rating >= 4.4) {
+                return {color:'orange'}
+            } else if (rating >=4.0){
+                return {color:'darkjyellow'}
+            } else {
+                return {color:'red'}
+            }
         }
     }
 }
@@ -63,7 +75,7 @@ export default {
 }
 
 .destinationStyle {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #destinationDescription {

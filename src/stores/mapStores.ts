@@ -17,9 +17,9 @@ import {ref} from 'vue';
 
 export const useMapState = defineStore("State", {
   state: () => ({
-    stateFilter: useLocalStorage('stateFilter',ref()),
-    activityFilter: useLocalStorage('activityFilter',ref()),
-    destionationFilter: useLocalStorage('destionationFilter',ref()),
+    stateFilter: useLocalStorage('stateFilter',ref('')),
+    activityFilter: useLocalStorage('activityFilter',ref('')),
+    destinationFilter: useLocalStorage('destinationFilter',ref('')),
     }),
   actions: {setStateFilter(state: string) {
       this.stateFilter = state;
@@ -28,7 +28,7 @@ export const useMapState = defineStore("State", {
       this.activityFilter = activity;
       // console.log(this.stateFilter);
     },setdestinationFilter(destination: string) {
-      this.destionationFilter = destination;
+      this.destinationFilter = destination;
       // console.log(this.stateFilter);
     }}
   
