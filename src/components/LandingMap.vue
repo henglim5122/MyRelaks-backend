@@ -58,7 +58,7 @@ function StateFilter(event: Event) {
   showDialog.value = false
 }
 
-function handleEscape(event:) {
+function handleEscape(event) {
     if (event.key === 'Escape') {
       showDialog.value = false;
     }
