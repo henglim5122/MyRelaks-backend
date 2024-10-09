@@ -36,6 +36,7 @@ import destinationAll from "@/assets/Updated_destination.json";
 let map: leaflet.Map;
 let userGeoMarker: leaflet.Marker;
 const showDialog = ref(false);
+const found = ref(true);
 
 let  mapStore= useMapState();
 
@@ -48,20 +49,23 @@ if (navigator.geolocation) {
   console.error('permission is not allowed');
 })}
 
-function StateFilter() {
-  destinationAll.filter((destination) => {
-    if (!destination.state.includes(mapStore.stateFilter)) {
-      console.log('state not found');
-    }
-    
-  })
+function StateFilter(event: Event) {
+  const found = destinationAll.some((destination) => destination.state === mapStore.stateFilter);
+  if (!found) {
+    alert("State not found")
+    event.preventDefault();
+  }
   showDialog.value = false
 }
 
+function handleEscape(event:) {
+    if (event.key === 'Escape') {
+      showDialog.value = false;
+    }
+  }
 
 onMounted(() => {
-  window.addEventListener('keydown', this.handleEscape);
-  
+  window.addEventListener('keydown', handleEscape);
 
   map = leaflet
     .map("map", {
@@ -208,6 +212,10 @@ onMounted(() => {
   });
 });
 
+onBeforeUnmount(() => {
+  map.remove();
+  document.removeEventListener("keyup", handleEscape);
+})
 // watchEffect(() => {
 //   if (
 //     coords.value.latitude !== Number.POSITIVE_INFINITY &&
