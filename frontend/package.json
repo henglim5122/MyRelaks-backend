@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "capstoneProject",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,18 @@
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
+    "@vueuse/core": "^11.1.0",
     "core-js": "^3.37.1",
+    "leaflet": "^1.9.4",
     "roboto-fontface": "*",
-    "sweetalert2": "^11.14.0",
     "vue": "^3.4.31",
+    "vue-carousel-3d": "^1.0.1",
+    "vue3-leaflet": "^1.0.50",
     "vuetify": "^3.6.11"
   },
   "devDependencies": {
     "@babel/types": "^7.24.7",
+    "@types/leaflet": "^1.9.12",
     "@types/node": "^20.14.10",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-typescript": "^13.0.0",
