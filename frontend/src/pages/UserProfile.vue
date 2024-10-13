@@ -82,15 +82,26 @@
               </v-col>
             </v-row>
 
-            <div class="d-flex justify-center">
-              <v-btn
-                class="mt-5 rounded-pill btn-logout"
-                append-icon="mdi-close-circle-outline"
-                @click="logout"
-              >
-                Log Out
-              </v-btn>
-            </div>
+            <v-row class="d-flex justify-center mt-5">
+              <v-col cols="6" class="d-flex justify-center">
+                <v-btn
+                  class="rounded-pill btn-logout"
+                  append-icon="mdi-close-circle-outline"
+                  @click="logout"
+                >
+                  Log Out
+                </v-btn>
+              </v-col>
+              <v-col cols="6" class="d-flex justify-center">
+                <v-btn
+                  class="rounded-pill btn-logout"
+                  append-icon="mdi-check"
+                  @click="handleSaveButton"
+                >
+                  Save
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-form>
         </v-responsive>
 
@@ -136,6 +147,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2"; // Import SweetAlert2
+
 export default {
   name: "UserProfile",
   data() {
@@ -189,6 +202,7 @@ export default {
     closeDialog() {
       this.dialog = false;
     },
+    // Method to save changes made in the dialog
     saveChanges() {
       if (this.currentField === "name") {
         this.firstName = this.currentFirstName;
@@ -196,7 +210,20 @@ export default {
       } else {
         this[this.currentField] = this.currentValue;
       }
-      this.closeDialog();
+      this.closeDialog(); // Close the dialog without redirection
+    },
+
+    // Method to handle the Save button in the user profile card
+    handleSaveButton() {
+      Swal.fire({
+        icon: "success",
+        title: "Profile has been saved!",
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true,
+      }).then(() => {
+        window.location.href = "/";
+      });
     },
     getFieldLabel(field) {
       const labels = {
@@ -209,7 +236,7 @@ export default {
     },
     submitForm() {
       if (this.$refs.form.validate()) {
-        alert("Form has been submitted.");
+        Swal.fire("Success!", "Form has been submitted.", "success"); // SweetAlert2 form submission alert
       }
     },
     logout() {
@@ -220,6 +247,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: "Kaushan Script", sans-serif;
+}
+
 .profile-container {
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,7 +285,7 @@ export default {
 .btn-logout {
   background-color: #013d5a;
   color: #fff;
-  width: 40%;
+  width: 100%;
   min-width: auto;
   padding: 12px 24px;
   margin: auto;
@@ -269,15 +300,6 @@ export default {
 }
 
 .btn-logout:hover {
-  background-color: #012a40;
-}
-
-.profile-image {
-  object-fit: cover; /* Ensures the image covers the avatar space */
-  border-radius: 50%; /* Makes the image circular */
-}
-
-.title {
-  font-family: "Kaushan Script", sans-serif;
+  background-color: #012b45;
 }
 </style>
