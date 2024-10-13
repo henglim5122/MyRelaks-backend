@@ -222,7 +222,6 @@ export default {
         timer: 1500,
         timerProgressBar: true,
       }).then(() => {
-        // Redirect to the home page after the alert closes
         window.location.href = "/";
       });
     },
@@ -237,16 +236,7 @@ export default {
     },
     submitForm() {
       if (this.$refs.form.validate()) {
-        Swal.fire({
-          title: "Success!",
-          text: "Form has been submitted.",
-          icon: "success",
-          showConfirmButton: false,
-          timer: 1500,
-          timerProgressBar: true,
-        }).then(() => {
-          window.location.href = "/";
-        });
+        Swal.fire("Success!", "Form has been submitted.", "success"); // SweetAlert2 form submission alert
       }
     },
     logout() {
@@ -257,6 +247,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: "Kaushan Script", sans-serif;
+}
+
 .profile-container {
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
