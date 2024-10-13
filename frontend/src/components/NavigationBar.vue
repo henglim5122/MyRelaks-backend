@@ -2,19 +2,24 @@
   <v-app-bar color="#FCF3f3" class="sticky">
     <div class="logo">
       <RouterLink to="/"
-          ><v-img src="../assets/logo2_coloured.png" id="logo-img" ></v-img></RouterLink> 
+        ><v-img src="../assets/logo2_coloured.png" id="logo-img"></v-img
+      ></RouterLink>
     </div>
     <!-- <v-spacer></v-spacer> -->
     <v-tabs class="mx-auto" align-tabs="center">
       <div>
-        <RouterLink to="/"><v-tab value="Home">Home</v-tab></RouterLink>    
+        <RouterLink to="/"><v-tab value="Home">Home</v-tab></RouterLink>
         <!-- <RouterLink to="/Destinations" -->
         <RouterLink to="/functionpage"
-          ><v-tab value="Destination" @click="filterReturn()">Destination</v-tab></RouterLink
+          ><v-tab value="Destination" @click="filterReturn()"
+            >Destination</v-tab
+          ></RouterLink
         >
         <!-- <RouterLink to="/Activities" -->
         <RouterLink to="/functionpage"
-          ><v-tab value="Activities" @click="filterReturn()">Activities</v-tab></RouterLink
+          ><v-tab value="Activities" @click="filterReturn()"
+            >Activities</v-tab
+          ></RouterLink
         >
         <!-- <RouterLink to="/ItineraryPlanner" -->
         <RouterLink to="/aboutus"
@@ -24,32 +29,35 @@
     </v-tabs>
     <!-- <v-spacer></v-spacer> -->
     <div id="sign-in">
-      <RouterLink to="/aboutus">
-      <v-btn
-        id="sign-in-button"
-        append-icon="mdi-account"
-        class="rounded-xl ma-5 text-black"
-        >Sign In
-      </v-btn></RouterLink>
+      <RouterLink to="/login">
+        <v-btn
+          id="sign-in-button"
+          append-icon="mdi-account"
+          class="rounded-xl ma-5 text-black"
+          >Sign In
+        </v-btn></RouterLink
+      >
     </div>
   </v-app-bar>
 </template>
 
 <script>
-import {useMapState } from "@/stores/mapStores";
+import { useMapState } from "@/stores/mapStores";
 import { map } from "leaflet";
 
-let  mapStore= useMapState();
+let mapStore = useMapState();
 
 export default {
   name: "NavigationBar",
-  
+
   methods: {
     filterReturn() {
-      mapStore.stateFilter = ""
-      mapStore.activityFilter = ""
-      mapStore.destionationFilter = ""
-    }}}
+      mapStore.stateFilter = "";
+      mapStore.activityFilter = "";
+      mapStore.destionationFilter = "";
+    },
+  },
+};
 </script>
 
 <style scoped>

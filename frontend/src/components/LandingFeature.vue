@@ -1,7 +1,11 @@
 <template>
   <div class="text-center mx-auto hidden" ref="content">
     <h1>Weekends getaways to explore</h1>
-    <v-sheet class="mx-auto d-flex justity-center align-center" style="background-color: #fcf3f3" :height=height>
+    <v-sheet
+      class="mx-auto d-flex justity-center align-center"
+      style="background-color: #fcf3f3"
+      :height="height"
+    >
       <v-slide-group
         v-model="model"
         class="slide-group-style"
@@ -9,55 +13,72 @@
         show-arrows
       >
         <v-slide-group-item
-          v-for="(destination,index) in shuffledarray"
+          v-for="(destination, index) in shuffledarray"
           :key="index"
-          v-slot="{isSelected, toggle}"
+          v-slot="{ isSelected, toggle }"
           class="slide-group-item"
+        >
+          <v-card
+            class="destinationStyle"
+            :class="{ isSelected: selectedIndex === index }"
+            :color="
+              selectedIndex === index ? 'rgba(1, 61, 90)' : 'grey lighten-4'
+            "
+            @click="handleClickCard(destination, index)"
           >
-          <v-card class='destinationStyle' :class="{isSelected:selectedIndex===index}" :color="selectedIndex===index?'rgba(1, 61, 90)':'grey lighten-4'" 
-          @click=handleClickCard(destination,index)
-          
-          >
-            <v-img
-              :src="destination.src"
-              height="250px"
-              cover
-            ></v-img>
-            <v-card-title class="text-center text-h5 mt-5"><a> {{destination.name}}-{{ destination.id }} </a></v-card-title>
-                
-            <v-card-subtitle>{{destination.location}}</v-card-subtitle>
-            <v-card-text
-              >{{destination.description}}</v-card-text>
-            </v-card
-          ></v-slide-group-item
-        ></v-slide-group>
+            <v-img :src="destination.src" height="250px" cover></v-img>
+            <v-card-title class="text-center text-h5 mt-5"
+              ><a>
+                {{ destination.name }}-{{ destination.id }}
+              </a></v-card-title
+            >
+
+            <v-card-subtitle>{{ destination.location }}</v-card-subtitle>
+            <v-card-text>{{ destination.description }}</v-card-text>
+          </v-card></v-slide-group-item
+        ></v-slide-group
+      >
     </v-sheet>
 
-    <v-dialog v-model="showDialog" class="feature-dialog" persistent @keydown.esc="showDialog = false">
+    <v-dialog
+      v-model="showDialog"
+      class="feature-dialog"
+      persistent
+      @keydown.esc="showDialog = false"
+    >
       <v-card class="feature-card mx-auto rounded-lg">
         <v-row class="my-auto">
           <v-col cols="4" sm="4" md="4">
-            <v-img :src="selectedDestination.src" class="feature-img" cover/>
+            <v-img :src="selectedDestination.src" class="feature-img" cover />
           </v-col>
-          <v-col cols="8" sm="8" md="8" >
+          <v-col cols="8" sm="8" md="8">
             <div class="card-content fill-height">
               <div class="d-flex justify-center align-center">
                 <v-card-title class="text-h5 my-5">
                   {{ selectedDestination.name }}
                 </v-card-title>
                 <v-spacer></v-spacer>
-                <v-icon class="mr-5 mb-10" @click="showDialog = false">mdi-close</v-icon>
+                <v-icon class="mr-5 mb-10" @click="showDialog = false"
+                  >mdi-close</v-icon
+                >
               </div>
               <div>
-                <v-card-subtitle class="my-5">{{ selectedDestination.location }}</v-card-subtitle>
+                <v-card-subtitle class="my-5">{{
+                  selectedDestination.location
+                }}</v-card-subtitle>
                 <v-card-text>
-                  <strong>Details: </strong><br>{{ selectedDestination.description }} <br/><br/>
+                  <strong>Details: </strong><br />{{
+                    selectedDestination.description
+                  }}
+                  <br /><br />
                   <strong>Category: </strong> {{ selectedDestination.category }}
                 </v-card-text>
               </div>
               <v-spacer></v-spacer>
               <div class="text-center">
-                <v-btn id="close-btn-feature" @click="showDialog = false">Close</v-btn>
+                <v-btn id="close-btn-feature" @click="showDialog = false"
+                  >Close</v-btn
+                >
               </div>
             </div>
           </v-col>
@@ -66,12 +87,10 @@
     </v-dialog>
     <!-- <audio ref="flipSound" src="@/assets/sounds/flip.mp3" /> -->
   </div>
-</template> 
-
-
+</template>
 
 <script>
-import { throttleFilter } from '@vueuse/core';
+import { throttleFilter } from "@vueuse/core";
 
 export default {
   name: "LandingSlider",
@@ -90,125 +109,146 @@ export default {
       showDialog: false,
       shuffledarray: [],
       model: null,
-      selectedDestination: {},   
+      selectedDestination: {},
       isOn: false,
       selectedIndex: null,
-      destinations : [
-        {id : 1,
-          src:"src/assets/LandingCarousel/1.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+      destinations: [
+        {
+          id: 1,
+          src: "src/assets/LandingCarousel/1.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 2,
-          src:"src/assets/LandingCarousel/3.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 2,
+          src: "src/assets/LandingCarousel/3.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 3,
-          src:"src/assets/LandingCarousel/3.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 3,
+          src: "src/assets/LandingCarousel/3.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 4,
-          src:"src/assets/LandingCarousel/2.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 4,
+          src: "src/assets/LandingCarousel/2.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 5,
-          src:"src/assets/LandingCarousel/5.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 5,
+          src: "src/assets/LandingCarousel/5.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 6,
-          src:"src/assets/LandingCarousel/2.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 6,
+          src: "src/assets/LandingCarousel/2.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 7,
-          src:"src/assets/LandingCarousel/4.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 7,
+          src: "src/assets/LandingCarousel/4.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 8,
-          src:"src/assets/LandingCarousel/6.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 8,
+          src: "src/assets/LandingCarousel/6.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 9,
-          src:"src/assets/LandingCarousel/6.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+        {
+          id: 9,
+          src: "src/assets/LandingCarousel/6.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
         },
-        {id : 10,
-          src:"src/assets/LandingCarousel/5.jpg",
-        name: "Batu Caves",
-        location: "Kuala Lumpur",
-        category: "Culture Shock",
-        description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-        }
-      ]
-    }
+        {
+          id: 10,
+          src: "src/assets/LandingCarousel/5.jpg",
+          name: "Batu Caves",
+          location: "Kuala Lumpur",
+          category: "Culture Shock",
+          description:
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+        },
+      ],
+    };
   },
   methods: {
-
     shuffle(array) {
       let currentIndex = array.length;
       while (currentIndex !== 0) {
         let randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
         [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+          array[randomIndex],
+          array[currentIndex],
+        ];
       }
-      return array
+      return array;
     },
 
-    handleClickCard(destination,index) {
+    handleClickCard(destination, index) {
       this.selectedDestination = destination;
       this.showDialog = true;
       this.selectedIndex = index;
-      this.isCardSelected = true
-      }
+      this.isCardSelected = true;
+    },
   },
   mounted() {
-    this.shuffledarray = this.shuffle(this.destinations)
+    this.shuffledarray = this.shuffle(this.destinations);
     const options = {
       root: null,
       threshold: 0.4,
-    }
+    };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         } else {
-        entry.target.classList.remove("show");
-      }
+          entry.target.classList.remove("show");
+        }
       });
     }, options);
 
     observer.observe(this.$refs.content);
-  }
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .hidden {
   opacity: 0;
   transform: translateY(30px);
@@ -226,7 +266,6 @@ export default {
   transition: transform 0.1s ease-in-out;
   z-index: 100;
   border-radius: 10px !important;
-
 }
 .slide-group-style {
   height: 100%;
@@ -242,8 +281,8 @@ export default {
 } */
 
 .v-sheet {
-  overflow: visible !important; 
-  position: relative; 
+  overflow: visible !important;
+  position: relative;
 }
 
 .destinationStyle {
@@ -263,7 +302,7 @@ export default {
 }
 
 .feature-img {
-  padding: 20px; 
+  padding: 20px;
   margin-left: 20px;
   width: 500px;
   height: 450px;
@@ -271,7 +310,7 @@ export default {
 }
 
 .card-content {
-  justify-content:  space-between;
+  justify-content: space-between;
   flex-direction: column;
   display: flex;
 }

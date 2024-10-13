@@ -2,7 +2,7 @@
   <v-app>
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <h1 class="text-center mb-6">Mai Relaks</h1>
+        <h1 class="text-center mb-6 text-black title">Mai Relaks</h1>
         <v-responsive
           class="mx-auto border-sm pa-6 rounded-lg bg-grey-lighten-5"
           max-width="400"
@@ -33,9 +33,9 @@
             ></v-text-field>
 
             <!-- Submit Button -->
-            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block
-              >Submit</v-btn
-            >
+            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block>
+              Submit
+            </v-btn>
 
             <!-- Sign In Link -->
             <p class="text-center my-5">
@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
@@ -60,12 +62,47 @@ export default {
     };
   },
   methods: {
-    submitForm() {
+    async submitForm() {
       // Check if the form is valid before proceeding
       if (this.$refs.form.validate()) {
-        // Submit logic goes here
-        alert("Email has been submitted for password reset.");
+        try {
+          // Simulate API call to send the email
+          await this.sendResetPasswordEmail(this.email);
+          // Show success message
+          Swal.fire({
+            title: "Success!",
+            text: "An email has been sent for password reset.",
+            icon: "success",
+            confirmButtonText: "Okay",
+          });
+          // Optionally, reset the email input field
+          this.email = "";
+        } catch (error) {
+          // Show error message
+          Swal.fire({
+            title: "Error!",
+            text: "Failed to send the email. Please try again.",
+            icon: "error",
+            confirmButtonText: "Okay",
+          });
+        }
       }
+    },
+    // Simulated function to send a reset password email
+    sendResetPasswordEmail(email) {
+      return new Promise((resolve, reject) => {
+        // Simulating a successful API call
+        setTimeout(() => {
+          // Here you can implement actual API call logic
+          // If success, call resolve(), otherwise reject()
+          if (email === "test@example.com") {
+            // Simulating a specific email check
+            resolve();
+          } else {
+            reject(new Error("Failed to send email"));
+          }
+        }, 1000); // Simulate network delay
+      });
     },
   },
 };
@@ -74,5 +111,9 @@ export default {
 <style scoped>
 .v-btn {
   min-width: 80%;
+}
+
+.title {
+  font-family: "Kaushan Script", sans-serif;
 }
 </style>
