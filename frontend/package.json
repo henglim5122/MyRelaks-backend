@@ -10,9 +10,11 @@
   "dependencies": {
     "@mdi/font": "7.4.47",
     "@vueuse/core": "^11.1.0",
+    "axios": "^1.7.7",
     "core-js": "^3.37.1",
     "leaflet": "^1.9.4",
     "roboto-fontface": "*",
+    "sweetalert2": "^11.14.2",
     "vue": "^3.4.31",
     "vue-carousel-3d": "^1.0.1",
     "vue3-leaflet": "^1.0.50",

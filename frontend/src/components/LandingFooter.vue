@@ -14,7 +14,9 @@
           <v-col cols="12" sm="12" md="12" class="d-flex justify-center">
             <router-link to="/AboutUs" class="link">About Us</router-link>
             <v-spacer></v-spacer>
-            <router-link to="/Login" target="_blank" class="link">Sign Up</router-link>
+            <router-link to="/Login" target="_blank" class="link"
+              >Sign Up</router-link
+            >
             <v-spacer></v-spacer>
           </v-col>
           <v-col cols="12" sm="12" md="12">
@@ -33,7 +35,7 @@
   </v-footer>
 </template>
 
-<style>
+<style scoped>
 #LandingFooter {
   background-color: rgba(1, 61, 90);
 }

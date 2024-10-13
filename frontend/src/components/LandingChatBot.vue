@@ -48,15 +48,17 @@
               </v-card-subtitle>
               <br />
               <v-card-actions class="justify-center">
-                <a href="/chatbot" target="_blank"><v-btn
-                  id="chat-bot-button"
-                  color="primary"
-                  rounded="xl"
-                  variant="flat"
-                  class="align-center"
-                  width="150px"
-                  >Try Me!</v-btn
-                ></a></v-card-actions
+                <a href="/chatbot" target="_blank"
+                  ><v-btn
+                    id="chat-bot-button"
+                    color="primary"
+                    rounded="xl"
+                    variant="flat"
+                    class="align-center"
+                    width="150px"
+                    >Try Me!</v-btn
+                  ></a
+                ></v-card-actions
               >
             </v-card></v-container
           >
@@ -81,7 +83,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #chat-bot-text-1 {
   font-size: 100px;
   font-weight: bolder;

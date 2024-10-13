@@ -8,7 +8,8 @@
         >
           <h1 class="text-center mb-6">Registration</h1>
 
-          <v-form v-model="valid" fast-fail @submit.prevent="submit">
+          <!-- Add ref="form" to the v-form to access it in the submit method -->
+          <v-form ref="form" v-model="valid" fast-fail @submit.prevent="submit">
             <v-row>
               <v-col cols="12" md="6" class="border-e-md">
                 <GenderSelect v-model:gender="gender" />
@@ -61,11 +62,13 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
 import GenderSelect from "@/components/GenderSelect.vue";
 import PersonalInfoForm from "@/components/PersonalInfoForm.vue";
 import ContactInfoForm from "@/components/ContactInfoForm.vue";
 
 export default {
+  name: "Registration",
   components: {
     GenderSelect,
     PersonalInfoForm,
@@ -90,8 +93,23 @@ export default {
   },
   methods: {
     submit() {
+      // Access the form validation using this.$refs.form.validate()
       if (this.$refs.form.validate()) {
-        alert("Form submitted successfully!");
+        // Trigger SweetAlert2 alert on form submission
+        Swal.fire({
+          title: "Registration Complete!",
+          text: "You have successfully registered.",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+      } else {
+        // Show error message if validation fails
+        Swal.fire({
+          title: "Error",
+          text: "Please fill out the form correctly.",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
       }
     },
   },

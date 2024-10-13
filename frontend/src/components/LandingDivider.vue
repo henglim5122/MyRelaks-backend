@@ -4,7 +4,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 .v-divider {
   filter: blur(3px);
 }

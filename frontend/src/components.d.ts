@@ -21,8 +21,10 @@ declare module 'vue' {
     LandingMap: typeof import('./components/LandingMap.vue')['default']
     NavigationBar: typeof import('./components/NavigationBar.vue')['default']
     PersonalInfoForm: typeof import('./components/PersonalInfoForm.vue')['default']
+    ProfileAvatar: typeof import('./components/ProfileAvatar.vue')['default']
     ProfileCard: typeof import('./components/ProfileCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserProfile: typeof import('./components/UserProfile.vue')['default']
   }
 }

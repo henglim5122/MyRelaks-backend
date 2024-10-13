@@ -4,7 +4,10 @@
       <v-text-field
         label="First Name *"
         :modelValue="firstName"
-        :rules="[validateRequired, validateOnlyLetters]"
+        :rules="[
+          (v) => validateRequired(v, 'First Name'),
+          (v) => validateAlphabets(v),
+        ]"
         required
       />
     </v-col>
@@ -12,7 +15,10 @@
       <v-text-field
         label="Last Name *"
         :modelValue="lastName"
-        :rules="[validateRequired, validateOnlyLetters]"
+        :rules="[
+          (v) => validateRequired(v, 'Last Name'),
+          (v) => validateAlphabets(v),
+        ]"
         required
       />
     </v-col>
@@ -21,14 +27,14 @@
   <v-text-field
     label="Username *"
     :modelValue="username"
-    :rules="[validateRequired]"
+    :rules="[(v) => validateRequired(v, 'Username')]"
     class="mt-9"
     required
   />
   <v-text-field
     label="Email *"
     :modelValue="email"
-    :rules="[validateRequired, validateEmail]"
+    :rules="[(v) => validateRequired(v, 'Email'), validateEmail]"
     type="email"
     class="mt-4"
     required
@@ -50,8 +56,11 @@ export default {
     "update:email",
   ],
   methods: {
-    validateRequired(v) {
-      return !!v || "Field is required";
+    validateRequired(v, fieldName) {
+      return !!v || `${fieldName} is required`;
+    },
+    validateAlphabets(v) {
+      return /^[A-Za-z]+$/.test(v) || "Only alphabets are allowed";
     },
     validateOnlyLetters(v) {
       return /^[A-Za-z]+$/.test(v) || "Must contain only letters";

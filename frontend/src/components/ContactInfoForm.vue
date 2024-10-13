@@ -4,7 +4,7 @@
     type="date"
     :modelValue="formattedDob"
     @update:modelValue="onDobChange"
-    :rules="[validateRequired]"
+    :rules="[(v) => validateRequired(v, 'Date of Birth'), validateAge]"
     required
     class="dob-spacing mt-7"
   ></v-text-field>
@@ -16,7 +16,7 @@
         :modelValue="code"
         :items="countryCodes"
         @update:modelValue="$emit('update:code', $event)"
-        :rules="[validateRequired]"
+        :rules="[(v) => validateRequired(v, 'Code')]"
         solo
         required
         class="no-margin"
@@ -27,7 +27,10 @@
         label="Phone No. *"
         :modelValue="phone"
         @update:modelValue="$emit('update:phone', $event)"
-        :rules="[validateRequired]"
+        :rules="[
+          (v) => validateRequired(v, 'Phone Number'),
+          (v) => validateNumeric(v, 'Phone Number'),
+        ]"
         required
         class="no-margin"
       />
@@ -40,7 +43,10 @@
         label="City *"
         :modelValue="city"
         @update:modelValue="$emit('update:city', $event)"
-        :rules="[validateRequired]"
+        :rules="[
+          (v) => validateRequired(v, 'City'),
+          (v) => validateAlphabets(v),
+        ]"
         required
         class="no-margin"
       />
@@ -51,7 +57,7 @@
         :modelValue="country"
         :items="countryNames"
         @update:modelValue="onCountryChange"
-        :rules="[validateRequired]"
+        :rules="[(v) => validateRequired(v, 'Country')]"
         solo
         required
         class="no-margin"
@@ -64,7 +70,7 @@
     type="password"
     :modelValue="password"
     @update:modelValue="$emit('update:password', $event)"
-    :rules="[validateRequired]"
+    :rules="[(v) => validateRequired(v, 'Password'), validateMinLength]"
     class="mt-9 no-margin"
     required
   />
@@ -73,15 +79,18 @@
     type="password"
     :modelValue="confirmPassword"
     @update:modelValue="$emit('update:confirmPassword', $event)"
-    :rules="[validateRequired, validatePasswordsMatch]"
+    :rules="[
+      (v) => validateRequired(v, 'Confirm Password'),
+      validatePasswordsMatch,
+    ]"
     class="mt-4 no-margin"
     required
   />
 </template>
 
 <script>
-import countries from "./../countries.json";
-import { useDateFormatter } from "@/composables/useDateFormatter";
+import countries from "@/assets/countries.json";
+import { useDateFormatter } from "@/composables/useDateFormatter.js";
 
 export default {
   props: {
@@ -128,11 +137,53 @@ export default {
         return map;
       }, {});
     },
-    validateRequired(v) {
-      return !!v || "Field is required";
+    validateRequired(v, fieldName) {
+      return !!v || `${fieldName} is required`;
+    },
+    validateAlphabets(v) {
+      return /^[A-Za-z]+$/.test(v) || "Only alphabets are allowed";
+    },
+    validateMinLength(v) {
+      return v.length >= 6 || "Password must be at least 6 characters long";
     },
     validatePasswordsMatch(v) {
       return v === this.password || "Passwords must match";
+    },
+    validateNumeric(v, fieldName) {
+      return /^\d+$/.test(v) || `${fieldName} must contain only numbers`;
+    },
+    validateAge(v) {
+      if (!v) return true; // Skip if dob is empty, will be caught by required validation
+
+      const selectedDate = new Date(v);
+      const today = new Date();
+
+      // Calculate the difference in years
+      const age = today.getFullYear() - selectedDate.getFullYear();
+      const monthDiff = today.getMonth() - selectedDate.getMonth();
+      const dayDiff = today.getDate() - selectedDate.getDate();
+
+      // Check if age is under 18 considering the month and day differences
+      if (
+        age > 18 ||
+        (age === 18 && (monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0)))
+      ) {
+        return true;
+      }
+
+      return "You must be at least 18 years old to register";
+    },
+    onDobChange(newDob) {
+      this.formattedDob = newDob;
+      const parsedDate = this.parseDate(newDob); // Parse the new date
+      this.$emit("update:dob", parsedDate); // Emit the parsed date
+
+      // Run the age validation when the DOB changes
+      const ageValid = this.validateAge(newDob);
+      if (ageValid !== true) {
+        // You could add a custom action here if needed
+        console.log("Age validation failed");
+      }
     },
     // Use the methods from the composable
     ...useDateFormatter(),
@@ -162,10 +213,6 @@ export default {
   margin-bottom: 0; /* Ensures no additional margins are added during validation */
 }
 
-.dob-spacing {
-  margin-bottom: 20px; /* Adjust spacing for Date of Birth */
-}
-
 /* Prevent shifting caused by validation messages */
 .v-messages__message {
   margin-top: 0;
@@ -181,27 +228,17 @@ export default {
   margin-bottom: 20px;
 }
 
-/* For Chrome, Safari, Edge (WebKit-based browsers) */
 input[type="date"] {
-  padding-right: 40px; /* Create space for the native calendar icon */
+  -webkit-appearance: none; /* For Chrome */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none;
+}
+
+.dob-spacing {
   position: relative;
-  display: inline-block;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  right: 10px; /* Adjust the right value to move it all the way to the end */
-  padding: 0;
-  cursor: pointer;
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-clear-button {
-  display: none; /* Optional: Hide the spin and clear buttons */
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
-  width: auto;
+.dob-spacing input[type="date"] {
+  width: 100%;
 }
 </style>

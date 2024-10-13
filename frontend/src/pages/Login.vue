@@ -2,7 +2,7 @@
   <v-app>
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <h1 class="text-center mb-6">Mai Relaks</h1>
+        <h1 class="text-center mb-6 text-black title">Mai Relaks</h1>
         <v-responsive
           class="mx-auto border-sm pa-6 rounded-lg bg-grey-lighten-5"
           max-width="400"
@@ -50,11 +50,11 @@
             </p>
 
             <!-- Forgot Password Link -->
-            <p class="text-center my-5 text-subtitle-2">
-              Forgot
-              <RouterLink to="/forgotpassword">
-                <a class="text-decoration-underline">Username/Password</a>
-              </RouterLink>
+            <p class="text-center my-5 text-subtitle-3">
+              Forgot Password? Click
+              <RouterLink to="/ForgotPassword"
+                ><a class="text-decoration-underline">here</a></RouterLink
+              >
             </p>
           </v-form>
         </v-responsive>
@@ -63,21 +63,50 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-  methods: {
-    submitForm() {
-      if (this.$refs.form.validate()) {
-        // Handle form submission
-        alert("Form is valid and submitted.");
-      }
-    },
-  },
+<script setup>
+import Swal from "sweetalert2"; // Import Swal2
+
+const email = ref("");
+const password = ref("");
+// Define email validation regex
+const emailRegex = /.+@.+\..+/;
+
+const submitForm = () => {
+  // Check if the email or password fields are empty
+  if (!email.value || !password.value) {
+    // Show error using SweetAlert2 if fields are empty
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Both Email and Password are required!",
+    });
+    return; // Stop execution if fields are empty
+  }
+
+  // Validate the email using regex
+  if (!emailRegex.test(email.value)) {
+    Swal.fire({
+      icon: "error",
+      title: "Invalid Email or Password",
+      text: "Please enter a valid email address or password!",
+    });
+    return; // Stop execution if email is invalid
+  }
+
+  // Generate random token and save in localStorage if form is valid
+  const tokenKey = "authToken";
+  const randomChars = Array.from({ length: 12 }, () =>
+    Math.random().toString(36).charAt(2)
+  ).join("");
+  localStorage.setItem(tokenKey, randomChars);
+
+  // Redirect to the logged-in page
+  window.location.href = "/loggedin";
 };
 </script>
+
+<style scoped>
+.title {
+  font-family: "Kaushan Script", sans-serif;
+}
+</style>
