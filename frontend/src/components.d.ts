@@ -25,6 +25,5 @@ declare module 'vue' {
     ProfileCard: typeof import('./components/ProfileCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    UserProfile: typeof import('./components/UserProfile.vue')['default']
   }
 }
