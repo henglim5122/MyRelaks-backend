@@ -2,7 +2,15 @@
   <v-app>
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <h1 class="text-center mb-6 title">Mai Relaks</h1>
+        <div class="d-flex align-center justify-center">
+          <v-img
+            src="../assets/logo2_coloured.png"
+            id="logo-img"
+            width="100"
+            height="100"
+            class="mb-10"
+          ></v-img>
+        </div>
         <v-responsive
           class="mx-auto pa-6 rounded-lg profile-container bg-grey-lighten-5"
           max-width="400"
@@ -95,7 +103,7 @@
               <v-col cols="6" class="d-flex justify-center">
                 <v-btn
                   class="rounded-pill btn-logout"
-                  append-icon="mdi-check"
+                  append-icon="mdi-checkbox-marked-circle-outline"
                   @click="handleSaveButton"
                 >
                   Save

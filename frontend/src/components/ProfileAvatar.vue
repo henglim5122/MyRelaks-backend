@@ -25,7 +25,7 @@
     <v-btn
       v-if="profileImage"
       icon
-      class="ml-2 mt-2"
+      class="mt-2 delete-btn"
       @click="removeProfileImage"
     >
       <v-icon>mdi-delete</v-icon>
@@ -44,7 +44,7 @@ export default {
     },
     color: {
       type: String,
-      default: "secondary", // Default avatar color
+      default: "grey", // Default avatar color
     },
   },
   methods: {
@@ -63,14 +63,26 @@ export default {
     },
     removeProfileImage() {
       this.$emit("update:profileImage", null);
+      this.$refs.fileInput.reset();
     },
   },
 };
 </script>
 
 <style scoped>
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile-image {
   object-fit: cover;
   border-radius: 50%;
+}
+
+.delete-btn {
+  margin-top: 8px;
+  align-self: center; /* Center the bin icon below the avatar */
 }
 </style>
