@@ -120,8 +120,4 @@ export default {
 .v-btn {
   min-width: 80%;
 }
-
-.title {
-  font-family: "Kaushan Script", sans-serif;
-}
 </style>
