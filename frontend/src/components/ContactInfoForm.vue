@@ -67,16 +67,18 @@
 
   <v-text-field
     label="Password *"
-    type="password"
+    :type="passwordVisible ? 'text' : 'password'"
     :modelValue="password"
     @update:modelValue="$emit('update:password', $event)"
     :rules="[(v) => validateRequired(v, 'Password'), validateMinLength]"
     class="mt-9 no-margin"
     required
+    :append-inner-icon="passwordVisible ? 'mdi-eye' : 'mdi-eye-off'"
+    @click:append-inner="passwordVisible = !passwordVisible"
   />
   <v-text-field
     label="Confirm Password *"
-    type="password"
+    :type="confirmPasswordVisible ? 'text' : 'password'"
     :modelValue="confirmPassword"
     @update:modelValue="$emit('update:confirmPassword', $event)"
     :rules="[
@@ -85,6 +87,8 @@
     ]"
     class="mt-4 no-margin"
     required
+    :append-inner-icon="confirmPasswordVisible ? 'mdi-eye' : 'mdi-eye-off'"
+    @click:append-inner="confirmPasswordVisible = !confirmPasswordVisible"
   />
 </template>
 
@@ -108,6 +112,8 @@ export default {
       countryNames: [], // Stores the country names
       formattedDob: this.dob, // Initializes formatted date of birth
       countryDialMap: {}, // Map of country names to dial codes
+      passwordVisible: false, // Track visibility of password
+      confirmPasswordVisible: false, // Track visibility of confirm password
     };
   },
   emits: [

@@ -39,9 +39,11 @@
               v-model="password"
               label="Password *"
               placeholder="Enter your password"
-              type="password"
+              :type="passwordVisible ? 'text' : 'password'"
               :rules="[(v) => !!v || 'Password is required']"
               required
+              :append-inner-icon="passwordVisible ? 'mdi-eye' : 'mdi-eye-off'"
+              @click:append-inner="passwordVisible = !passwordVisible"
             ></v-text-field>
 
             <!-- Login Button -->
@@ -76,6 +78,7 @@ import Swal from "sweetalert2"; // Import Swal2
 
 const email = ref("");
 const password = ref("");
+const passwordVisible = ref(false);
 // Define email validation regex
 const emailRegex = /.+@.+\..+/;
 
