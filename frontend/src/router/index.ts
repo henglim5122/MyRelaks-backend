@@ -36,10 +36,31 @@ router.beforeEach(async (to, from) => {
     return token && token.length > 0;
   };
 
+  const getUserRole = () => {
+    return localStorage.getItem("roles");
+  };
+
+  if (to.path.startsWith("/admin") && getUserRole() !== "admin") {
+    return { path: "/" };
+  } else if (to.path.startsWith("/user") && getUserRole() !== "user") {
+    return { path: "/" };
+  }
+
   if (to.path.startsWith("/loggedin") && !isAuthenticated()) {
     return { path: "/login" };
   } else if (to.path.startsWith("/login") && isAuthenticated()) {
     return { path: "/loggedin" };
+  }
+
+  if (
+    to.path.startsWith("/resetpassword") &&
+    (!isAuthenticated() || isAuthenticated())
+  ) {
+    return { path: "/" };
+  }
+
+  if (to.path.startsWith("/userprofile") && !isAuthenticated()) {
+    return { path: "/" };
   }
 });
 
