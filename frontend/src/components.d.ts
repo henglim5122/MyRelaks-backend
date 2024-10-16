@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BotCard: typeof import('./components/BotCard.vue')['default']
     ContactInfoForm: typeof import('./components/ContactInfoForm.vue')['default']
     DestinationCard: typeof import('./components/DestinationCard.vue')['default']
     Dialog: typeof import('./components/Dialog.vue')['default']
