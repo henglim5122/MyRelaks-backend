@@ -2,12 +2,17 @@
   <h1 class="mx-auto text-center pb-5">Explore the States</h1>
   <div id="map"></div>
   <!-- <div>{{ stateFilter }}</div> -->
-  <div v-if="showDialog" id ='stateDialog' class="dialog-overlay border-lg" >
-    <v-card width="500px" height="400px" class="dialog-content" @keyup.esc="showDialog = false">
+  <div v-if="showDialog" id="stateDialog" class="dialog-overlay border-lg">
+    <v-card
+      width="500px"
+      height="400px"
+      class="dialog-content"
+      @keyup.esc="showDialog = false"
+    >
       <v-card-title class="mx-auto justify-center d-flex text-h3">
-        {{
-        mapStore.stateFilter}}</v-card-title>
-      <v-card-text style="text-align: justify;">
+        {{ mapStore.stateFilter }}</v-card-title
+      >
+      <v-card-text style="text-align: justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
         sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -17,10 +22,20 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn @click="StateFilter" class="mx-4 border-sm "
-          ><a href="/functionpage" target="_blank" :style="{ textDecoration: 'none', color: 'black' }">Learn More</a></v-btn
+        <v-btn @click="StateFilter" class="mx-4 border-sm"
+          ><a
+            href="/functionpage"
+            target="_blank"
+            :style="{ textDecoration: 'none', color: 'black' }"
+            >Learn More</a
+          ></v-btn
         >
-        <v-btn color="primary" variant="flat" text="Close Dialog" @click="showDialog = false"></v-btn>
+        <v-btn
+          color="primary"
+          variant="flat"
+          text="Close Dialog"
+          @click="showDialog = false"
+        ></v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -36,36 +51,41 @@ import destinationAll from "@/assets/Updated_destination.json";
 let map: leaflet.Map;
 let userGeoMarker: leaflet.Marker;
 const showDialog = ref(false);
-const found = ref(true);
 
-let  mapStore= useMapState();
+let mapStore = useMapState();
 
 if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
-    console.log(lat, lng);
-}, (error) => {
-  console.error('permission is not allowed');
-})}
-
-function StateFilter(event: Event) {
-  const found = destinationAll.some((destination) => destination.state === mapStore.stateFilter);
-  if (!found) {
-    alert("State not found")
-    event.preventDefault();
-  }
-  showDialog.value = false
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+      console.log(lat, lng);
+    },
+    (error) => {
+      console.error("permission is not allowed");
+    }
+  );
 }
 
-function handleEscape(event) {
-    if (event.key === 'Escape') {
-      showDialog.value = false;
-    }
+function StateFilter(event: Event) {
+  const found = destinationAll.some(
+    (destination) => destination.state === mapStore.stateFilter
+  );
+  if (!found) {
+    alert("State not found");
+    event.preventDefault();
   }
+  showDialog.value = false;
+}
+
+function handleEscape(event: any) {
+  if (event.key === "Escape") {
+    showDialog.value = false;
+  }
+}
 
 onMounted(() => {
-  window.addEventListener('keydown', handleEscape);
+  window.addEventListener("keydown", handleEscape);
 
   map = leaflet
     .map("map", {
@@ -91,11 +111,13 @@ onMounted(() => {
       fillOpacity: 0.3,
     };
   }
-  
-  let geojson = leaflet.geoJSON(geofile, { style: style }).addTo(map);
+
+  let geojson = leaflet
+    .geoJSON(geofile as GeoJSON.GeoJsonObject, { style: style })
+    .addTo(map);
   let geoprops = geofile.features;
-  
-  function highlightFeatureLayer(e) {
+
+  function highlightFeatureLayer(e: any) {
     let layer = e.target;
     layer.setStyle({
       weight: 3,
@@ -106,15 +128,14 @@ onMounted(() => {
     layer.bringToFront();
   }
 
-  
-  function resetHighlight(e) {
+  function resetHighlight(e: any) {
     geojson.resetStyle(e.target);
   }
-  function zoomToFeature(e) {
+  function zoomToFeature(e: any) {
     map.fitBounds(e.target.getBounds());
   }
 
-  function onEachFeature(feature, layer) {
+  function onEachFeature(feature: any, layer: any) {
     layer.on({
       mouseover: highlightFeatureLayer,
       mouseout: resetHighlight,
@@ -123,7 +144,7 @@ onMounted(() => {
   }
 
   geojson = leaflet
-    .geoJson(geofile, {
+    .geoJson(geofile as GeoJSON.GeoJsonObject, {
       style: style,
       onEachFeature: onEachFeature,
     })
@@ -131,57 +152,64 @@ onMounted(() => {
 
   geoprops.forEach((geoprop) => {
     const popupContent = `<strong>${geoprop.properties.name}</strong><br/>
-    <button class='open-dialog-btn-${geoprop.properties.name.split(" ").join("")}'><a><h3>Open Details</h3></a></button>
+    <button class='open-dialog-btn-${geoprop.properties.name
+      .split(" ")
+      .join("")}'><a><h3>Open Details</h3></a></button>
   `;
     const stateMarker = leaflet
       .marker([geoprop.properties.id[0], geoprop.properties.id[1]])
       .addTo(map)
-      .bindPopup(popupContent,{closeButton: false});
+      .bindPopup(popupContent, { closeButton: false });
 
     stateMarker.on("popupopen", () => {
-      const popupElement = document.querySelector(`.open-dialog-btn-${geoprop.properties.name.split(" ").join("")}`);
-        popupElement?.addEventListener("click", () => {
-        let selectedState = geoprop.properties.name;
+      const popupElement = document.querySelector(
+        `.open-dialog-btn-${geoprop.properties.name.split(" ").join("")}`
+      );
+      popupElement?.addEventListener("click", () => {
+        // let selectedState = geoprop.properties.name;
         mapStore.setStateFilter(geoprop.properties.name);
-        mapStore.setactivityFilter('')
-        mapStore.setdestinationFilter('')
+        mapStore.setactivityFilter("");
+        mapStore.setdestinationFilter("");
         // console.log(stateFilter); //state
         showDialog.value = true;
-        });
+      });
     });
   });
 
   if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    const lat = position.coords.latitude;
-    const lng = position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
 
-    if (userGeoMarker) {
-    map.removeLayer(userGeoMarker);
-    }
+        if (userGeoMarker) {
+          map.removeLayer(userGeoMarker);
+        }
 
-    var greenIcon = new leaflet.Icon({
-      iconUrl:
-        "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
-      shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    });
+        var greenIcon = new leaflet.Icon({
+          iconUrl:
+            "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+          shadowUrl:
+            "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        });
 
-    userGeoMarker = leaflet
-      .marker([lat, lng], {
-      // .marker([userMarker.value.latitude, userMarker.value.longitude], {
-        icon: greenIcon,
-      })
-      .addTo(map)
-      .bindPopup("You are here",{closeButton: false}).openPopup();
-      }, (error) => {
-        console.error('permission is not allowed');
+        userGeoMarker = leaflet
+          .marker([lat, lng], {
+            // .marker([userMarker.value.latitude, userMarker.value.longitude], {
+            icon: greenIcon,
+          })
+          .addTo(map)
+          .bindPopup("You are here", { closeButton: false })
+          .openPopup();
+      },
+      (error) => {
+        console.error("permission is not allowed");
       }
-    )
+    );
   }
 
   // if (userGeoMarker) {
@@ -215,7 +243,7 @@ onMounted(() => {
 onBeforeUnmount(() => {
   map.remove();
   document.removeEventListener("keyup", handleEscape);
-})
+});
 // watchEffect(() => {
 //   if (
 //     coords.value.latitude !== Number.POSITIVE_INFINITY &&

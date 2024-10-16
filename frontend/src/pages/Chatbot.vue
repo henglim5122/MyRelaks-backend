@@ -43,7 +43,7 @@
 export default {
   data() {
     return {
-      message: ''
+      message: "",
     };
   },
   methods: {
@@ -52,9 +52,9 @@ export default {
     },
     sendMessage() {
       alert(`Message sent: ${this.message}`);
-      this.message = ''; // Clear input after sending
-    }
-  }
+      this.message = ""; // Clear input after sending
+    },
+  },
 };
 </script>
 
@@ -66,7 +66,7 @@ export default {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
   padding: 20px;
 }
 
@@ -84,7 +84,7 @@ export default {
 
 .brand {
   font-size: 1.8rem;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   font-weight: bold;
   color: #333;
 }
@@ -97,13 +97,13 @@ export default {
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ACB6E5;
+  color: #acb6e5;
 }
 
 .sign-in {
@@ -113,12 +113,12 @@ export default {
   border-radius: 25px;
   cursor: pointer;
   color: white;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   transition: background-color 0.3s ease;
 }
 
 .sign-in:hover {
-  background-color: #ACB6E5;
+  background-color: #acb6e5;
 }
 
 /* Chatbot Interface Styling */
@@ -134,7 +134,7 @@ export default {
 
 h2 {
   font-size: 2.5rem;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   color: #333;
 }
 
@@ -142,7 +142,7 @@ p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #555;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
 }
 
 /* Buttons Styling */
@@ -162,12 +162,12 @@ p {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .buttons button:hover {
-  background-color: #ACB6E5;
+  background-color: #acb6e5;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -185,7 +185,7 @@ input {
   padding: 12px 15px;
   border: 2px solid #ddd;
   border-radius: 50px;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   outline: none;
   transition: border-color 0.3s ease;
   color: black; /* Ensures text color is black */
@@ -201,7 +201,7 @@ button {
   border-radius: 50px;
   color: white;
   cursor: pointer;
-  font-family: 'Courier New', monospace; /* Monospaced font */
+  font-family: "Courier New", monospace; /* Monospaced font */
   transition: background-color 0.3s ease;
   flex-shrink: 0; /* Prevent button from shrinking */
 }
