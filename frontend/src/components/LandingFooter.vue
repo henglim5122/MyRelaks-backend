@@ -14,7 +14,7 @@
           <v-col cols="12" sm="12" md="12" class="d-flex justify-center">
             <router-link to="/AboutUs" class="link">About Us</router-link>
             <v-spacer></v-spacer>
-            <router-link to="/Login" target="_blank" class="link"
+            <router-link to="/registration" target="_blank" class="link"
               >Sign Up</router-link
             >
             <v-spacer></v-spacer>
