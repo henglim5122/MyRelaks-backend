@@ -10,7 +10,7 @@
             "longitude": 100.1887
           },
           "description": "Fragrant rice served with a variety of side dishes, famous in Perlis.",
-          "reviewRating": 4.8
+          "reviewRating": 3
         },
         {
           "name": "Kari Kambing",
@@ -2781,3 +2781,551 @@
     }
   }
   
+
+
+
+
+
+
+
+
+  {
+  "Johor": {
+    "local specialty": [
+      {
+        "name": "Mee Bandung Muar",
+        "location": "Muar",
+        "state": "Johor",
+        "coordinate": { "latitude": 2.0442, "longitude": 102.5689 },
+        "description": "Traditional noodles in a rich, spicy broth made with dried shrimp, beef, and vegetables.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Laksa Johor",
+        "location": "Johor Bahru",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.4842, "longitude": 103.7631 },
+        "description": "Johorean laksa made with spaghetti, served in a fish-based coconut curry.",
+        "reviewRating": 4
+      }
+    ],
+    "shopping spree": [
+      {
+        "name": "Johor Premium Outlets",
+        "location": "Kulai",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.6008, "longitude": 103.6319 },
+        "description": "Luxury brands at discounted prices.",
+        "reviewRating": 5
+      },
+      {
+        "name": "City Square Mall",
+        "location": "Johor Bahru",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.4617, "longitude": 103.7627 },
+        "description": "Popular shopping mall with retail stores, eateries, and a cinema.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Kedah": {
+    "local specialty": [
+      {
+        "name": "Laksa Kedah",
+        "location": "Alor Setar",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.1194, "longitude": 100.3689 },
+        "description": "Traditional rice noodles in a fish-based broth with cucumber, boiled egg, and sambal.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Gulai Nangka",
+        "location": "Alor Setar",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.1201, "longitude": 100.3685 },
+        "description": "Spicy jackfruit curry served with rice.",
+        "reviewRating": 5
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Gunung Jerai",
+        "location": "Yan",
+        "state": "Kedah",
+        "coordinate": { "latitude": 5.7892, "longitude": 100.4304 },
+        "description": "Scenic mountain hiking with panoramic views.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Bukit Wang",
+        "location": "Jitra",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.2881, "longitude": 100.4190 },
+        "description": "Nature reserve with hiking trails and waterfalls.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Penang": {
+    "local specialty": [
+      {
+        "name": "Char Kway Teow",
+        "location": "Gurney Drive",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4386, "longitude": 100.3111 },
+        "description": "Stir-fried noodles with shrimp, cockles, and sausages.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Penang Laksa",
+        "location": "Ayer Itam",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4156, "longitude": 100.2769 },
+        "description": "Spicy fish broth soup with rice noodles.",
+        "reviewRating": 4
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Penang Hill",
+        "location": "Air Itam",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4142, "longitude": 100.2769 },
+        "description": "Hiking trails with panoramic views of Penang Island.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Bukit Jambul",
+        "location": "Bayan Lepas",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.3337, "longitude": 100.2863 },
+        "description": "Challenging hike through lush greenery.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Perak": {
+    "local specialty": [
+      {
+        "name": "Ipoh White Coffee",
+        "location": "Sin Yoon Loong",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.5975, "longitude": 101.0900 },
+        "description": "Coffee with condensed milk, originating from Ipoh.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Hainanese Chicken Rice",
+        "location": "Lou Wong",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.6001, "longitude": 101.0795 },
+        "description": "Poached chicken served with fragrant rice and soy sauce.",
+        "reviewRating": 4
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Bukit Kledang",
+        "location": "Ipoh",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.5986, "longitude": 101.0700 },
+        "description": "Hiking spot offering panoramic views of Ipoh.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Gua Tempurung",
+        "location": "Gopeng",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.4758, "longitude": 101.1877 },
+        "description": "Limestone cave with guided tours of stunning rock formations.",
+        "reviewRating": 5
+      }
+    ]
+  },
+  "Selangor": {
+    "local specialty": [
+      {
+        "name": "Satay Kajang",
+        "location": "Kajang",
+        "state": "Selangor",
+        "coordinate": { "latitude": 2.9938, "longitude": 101.7677 },
+        "description": "Grilled skewers of seasoned meat with peanut sauce.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Nasi Ambeng",
+        "location": "Bangi",
+        "state": "Selangor",
+        "coordinate": { "latitude": 2.9220, "longitude": 101.7839 },
+        "description": "Javanese rice dish with meats and sambal.",
+        "reviewRating": 4
+      }
+    ],
+    "amusement park": [
+      {
+        "name": "Sunway Lagoon",
+        "location": "Subang Jaya",
+        "state": "Selangor",
+        "coordinate": { "latitude": 3.0738, "longitude": 101.6078 },
+        "description": "Theme park with water rides and adventure zones.",
+        "reviewRating": 5
+      },
+      {
+        "name": "KidZania",
+        "location": "Mutiara Damansara",
+        "state": "Selangor",
+        "coordinate": { "latitude": 3.1519, "longitude": 101.6116 },
+        "description": "Interactive role-playing for children.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Kuala Lumpur": {
+    "local specialty": [
+      {
+        "name": "Jalan Alor Street Food",
+        "location": "Bukit Bintang",
+        "state": "Kuala Lumpur",
+        "coordinate": { "latitude": 3.1454, "longitude": 101.7072 },
+        "description": "A haven for street food lovers.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Nasi Lemak Antarabangsa",
+        "location": "Kampung Baru",
+        "state": "Kuala Lumpur",
+        "coordinate": { "latitude": 3.1644, "longitude": 101.6932 },
+        "description": "Famous nasi lemak with aromatic rice and sambal.",
+        "reviewRating": 5
+      }
+    ]
+  },
+  "Negeri Sembilan": {
+    "local specialty": [
+      {
+        "name": "Masak Lemak Cili Api",
+        "location": "Seremban",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.7297, "longitude": 101.9381 },
+        "description": "Spicy coconut milk dish with meat or seafood.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Rendang Negeri Sembilan",
+        "location": "Seremban",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.7298, "longitude": 101.9381 },
+        "description": "Slow-cooked beef dish with rich spices.",
+        "reviewRating": 5
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Gunung Datuk",
+        "location": "Rembau",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.5908, "longitude": 102.0975 },
+        "description": "Popular hiking destination with stunning summit views.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Bukit Batu Putih",
+        "location": "Port Dickson",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.5252, "longitude": 101.7956 },
+        "description": "Scenic hike with panoramic views of the coastline.",
+        "reviewRating": 5
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "Johor": {
+    "local specialty": [
+      {
+        "name": "Mee Bandung Muar",
+        "location": "Muar",
+        "state": "Johor",
+        "coordinate": { "latitude": 2.0442, "longitude": 102.5689 },
+        "description": "Traditional noodles in a rich, spicy broth made with dried shrimp, beef, and vegetables.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Laksa Johor",
+        "location": "Johor Bahru",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.4842, "longitude": 103.7631 },
+        "description": "Johorean laksa made with spaghetti, served in a fish-based coconut curry.",
+        "reviewRating": 4
+      }
+    ],
+    "shopping spree": [
+      {
+        "name": "Johor Premium Outlets",
+        "location": "Kulai",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.6008, "longitude": 103.6319 },
+        "description": "Luxury brands at discounted prices.",
+        "reviewRating": 5
+      },
+      {
+        "name": "City Square Mall",
+        "location": "Johor Bahru",
+        "state": "Johor",
+        "coordinate": { "latitude": 1.4617, "longitude": 103.7627 },
+        "description": "Popular shopping mall with retail stores, eateries, and a cinema.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Kedah": {
+    "local specialty": [
+      {
+        "name": "Laksa Kedah",
+        "location": "Alor Setar",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.1194, "longitude": 100.3689 },
+        "description": "Traditional rice noodles in a fish-based broth with cucumber, boiled egg, and sambal.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Gulai Nangka",
+        "location": "Alor Setar",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.1201, "longitude": 100.3685 },
+        "description": "Spicy jackfruit curry served with rice.",
+        "reviewRating": 5
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Gunung Jerai",
+        "location": "Yan",
+        "state": "Kedah",
+        "coordinate": { "latitude": 5.7892, "longitude": 100.4304 },
+        "description": "Scenic mountain hiking with panoramic views.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Bukit Wang",
+        "location": "Jitra",
+        "state": "Kedah",
+        "coordinate": { "latitude": 6.2881, "longitude": 100.4190 },
+        "description": "Nature reserve with hiking trails and waterfalls.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Penang": {
+    "local specialty": [
+      {
+        "name": "Char Kway Teow",
+        "location": "Gurney Drive",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4386, "longitude": 100.3111 },
+        "description": "Stir-fried noodles with shrimp, cockles, and sausages.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Penang Laksa",
+        "location": "Ayer Itam",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4156, "longitude": 100.2769 },
+        "description": "Spicy fish broth soup with rice noodles.",
+        "reviewRating": 4
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Penang Hill",
+        "location": "Air Itam",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.4142, "longitude": 100.2769 },
+        "description": "Hiking trails with panoramic views of Penang Island.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Bukit Jambul",
+        "location": "Bayan Lepas",
+        "state": "Penang",
+        "coordinate": { "latitude": 5.3337, "longitude": 100.2863 },
+        "description": "Challenging hike through lush greenery.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Perak": {
+    "local specialty": [
+      {
+        "name": "Ipoh White Coffee",
+        "location": "Sin Yoon Loong",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.5975, "longitude": 101.0900 },
+        "description": "Coffee with condensed milk, originating from Ipoh.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Hainanese Chicken Rice",
+        "location": "Lou Wong",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.6001, "longitude": 101.0795 },
+        "description": "Poached chicken served with fragrant rice and soy sauce.",
+        "reviewRating": 4
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Bukit Kledang",
+        "location": "Ipoh",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.5986, "longitude": 101.0700 },
+        "description": "Hiking spot offering panoramic views of Ipoh.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Gua Tempurung",
+        "location": "Gopeng",
+        "state": "Perak",
+        "coordinate": { "latitude": 4.4758, "longitude": 101.1877 },
+        "description": "Limestone cave with guided tours of stunning rock formations.",
+        "reviewRating": 5
+      }
+    ]
+  },
+  "Selangor": {
+    "local specialty": [
+      {
+        "name": "Satay Kajang",
+        "location": "Kajang",
+        "state": "Selangor",
+        "coordinate": { "latitude": 2.9938, "longitude": 101.7677 },
+        "description": "Grilled skewers of seasoned meat with peanut sauce.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Nasi Ambeng",
+        "location": "Bangi",
+        "state": "Selangor",
+        "coordinate": { "latitude": 2.9220, "longitude": 101.7839 },
+        "description": "Javanese rice dish with meats and sambal.",
+        "reviewRating": 4
+      }
+    ],
+    "amusement park": [
+      {
+        "name": "Sunway Lagoon",
+        "location": "Subang Jaya",
+        "state": "Selangor",
+        "coordinate": { "latitude": 3.0738, "longitude": 101.6078 },
+        "description": "Theme park with water rides and adventure zones.",
+        "reviewRating": 5
+      },
+      {
+        "name": "KidZania",
+        "location": "Mutiara Damansara",
+        "state": "Selangor",
+        "coordinate": { "latitude": 3.1519, "longitude": 101.6116 },
+        "description": "Interactive role-playing for children.",
+        "reviewRating": 4
+      }
+    ]
+  },
+  "Kuala Lumpur": {
+    "local specialty": [
+      {
+        "name": "Jalan Alor Street Food",
+        "location": "Bukit Bintang",
+        "state": "Kuala Lumpur",
+        "coordinate": { "latitude": 3.1454, "longitude": 101.7072 },
+        "description": "A haven for street food lovers.",
+        "reviewRating": 5
+      },
+      {
+        "name": "Nasi Lemak Antarabangsa",
+        "location": "Kampung Baru",
+        "state": "Kuala Lumpur",
+        "coordinate": { "latitude": 3.1644, "longitude": 101.6932 },
+        "description": "Famous nasi lemak with aromatic rice and sambal.",
+        "reviewRating": 5
+      }
+    ]
+  },
+  "Negeri Sembilan": {
+    "local specialty": [
+      {
+        "name": "Masak Lemak Cili Api",
+        "location": "Seremban",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.7297, "longitude": 101.9381 },
+        "description": "Spicy coconut milk dish with meat or seafood.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Rendang Negeri Sembilan",
+        "location": "Seremban",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.7298, "longitude": 101.9381 },
+        "description": "Slow-cooked beef dish with rich spices.",
+        "reviewRating": 5
+      }
+    ],
+    "leg day": [
+      {
+        "name": "Gunung Datuk",
+        "location": "Rembau",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.5908, "longitude": 102.0975 },
+        "description": "Popular hiking destination with stunning summit views.",
+        "reviewRating": 4
+      },
+      {
+        "name": "Bukit Batu Putih",
+        "location": "Port Dickson",
+        "state": "Negeri Sembilan",
+        "coordinate": { "latitude": 2.5252, "longitude": 101.7956 },
+        "description": "Scenic hike with panoramic views of the coastline.",
+        "reviewRating": 5
+      }
+    ]
+  }
+}
