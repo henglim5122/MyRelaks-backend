@@ -59,7 +59,7 @@ if (navigator.geolocation) {
     (position) => {
       const lat = position.coords.latitude;
       const lng = position.coords.longitude;
-      console.log(lat, lng);
+      // console.log(lat, lng);
     },
     (error) => {
       console.error("permission is not allowed");
@@ -72,7 +72,7 @@ function StateFilter(event: Event) {
     (destination) => destination.state === mapStore.stateFilter
   );
   if (!found) {
-    alert("State not found");
+    alert("Data for this state is not found");
     event.preventDefault();
   }
   showDialog.value = false;

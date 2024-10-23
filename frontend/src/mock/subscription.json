@@ -1,0 +1,41 @@
+[{
+    "name": "Freemium",
+    "price": 0,
+    "color": "green",
+    "benefit": [
+        "Points system",
+        "Exclusive Offers to your favourite destinations"]
+},
+                                                                                                                                                                                                                                                 
+{
+    "name": "Starter",
+    "price": 14.99,
+    "color": "orange",
+    "benefit": [
+        "10% discount",
+        "Up 5 destinations",
+        "Points system"]
+},
+{
+    "name": "Intermediate",
+    "price": 29.99,
+    "color": "gold",
+    "benefit": [
+        "10% discount",
+        "Up 10 destinations",
+        "Points system",
+        "Free Cancellation & Full Refund"]
+    
+},
+{
+    "name": "Pro",
+    "price": 49.99,
+    "color": "blue",
+    "benefit": [
+        "15% discount",
+        "Up 20 destinations",
+        "Points system",
+        "Free Cancellation & Full Refund",
+        "Exclusive Offers to your favourite destinations"]
+}
+]
