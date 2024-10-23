@@ -13,7 +13,8 @@
         <v-card-text>
             <div class="destinationStyle"  id="destinationDescription" > <strong>{{ destination.description }} </strong></div>
             <div class="destinationStyle">Category: <strong>{{ destination.activityCategory }} </strong></div>
-            <div class="destinationStyle" >Rating: <i><strong :style="textColor(destination.reviewRating)">{{ destination.reviewRating }}</strong></i></div>
+            <div class="destinationStyle" >Rating: <i><strong :style="textColor(destination.reviewRating)">{{ destination.reviewRating }}</strong></i> &nbsp;&nbsp;
+                <v-rating :model-value="destination.reviewRating" readonly half-increments="true" :length="5" :size="15" active-color="yellow-accent-4" color="grey"></v-rating></div>
         </v-card-text>
         </div>
     </v-card>
@@ -55,7 +56,7 @@ export default {
             } else if (rating >= 4.4) {
                 return {color:'orange'}
             } else if (rating >=4.0){
-                return {color:'darkjyellow'}
+                return {color:'darkyellow'}
             } else {
                 return {color:'red'}
             }

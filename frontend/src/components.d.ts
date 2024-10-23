@@ -20,6 +20,7 @@ declare module 'vue' {
     LandingFoodAndActivities: typeof import('./components/LandingFoodAndActivities.vue')['default']
     LandingFooter: typeof import('./components/LandingFooter.vue')['default']
     LandingMap: typeof import('./components/LandingMap.vue')['default']
+    LandingSubscription: typeof import('./components/LandingSubscription.vue')['default']
     NavigationBar: typeof import('./components/NavigationBar.vue')['default']
     PersonalInfoForm: typeof import('./components/PersonalInfoForm.vue')['default']
     ProfileAvatar: typeof import('./components/ProfileAvatar.vue')['default']

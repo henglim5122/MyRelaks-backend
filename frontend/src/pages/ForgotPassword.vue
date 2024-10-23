@@ -2,7 +2,7 @@
   <v-app>
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <div class="d-flex align-center justify-center">
+        <div class="d-flex align-center justify-center" >
           <v-img
             src="../assets/logo2_coloured.png"
             id="logo-img"
@@ -14,6 +14,7 @@
         <v-responsive
           class="mx-auto border-sm pa-6 rounded-lg bg-grey-lighten-5"
           max-width="400"
+          id="container-style"
         >
           <h1 class="text-center my-5">Forgot Password?</h1>
 
@@ -120,4 +121,8 @@ export default {
 .v-btn {
   min-width: 80%;
 }
+
+#container-style {
+  background-color: black;
+  };
 </style>

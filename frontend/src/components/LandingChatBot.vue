@@ -1,8 +1,9 @@
 <template>
   <v-img src="@/assets/beach.jpg" :height="height" cover>
+    <div class="chatBotContainer">
     <v-row class="fill-height">
       <v-col cols="7" md="7" sm="7">
-        <v-container class="ml-15">
+        <v-container class="justify-center align-center">
           <v-row><v-text id="chat-bot-text-1">Personalise</v-text></v-row>
           <v-row
             ><v-text id="chat-bot-text-2">Your Itinerary With </v-text></v-row
@@ -22,10 +23,9 @@
         <v-row justify="center">
           <v-container class="d-flex justify-center align-center">
             <v-card
-              class="chat-bot-card"
+              class="chat-bot-card mx-auto"
               width="400px"
               height="400px"
-              lass="mx-auto"
             >
               <v-card-title id="chat-bot-card-title">
                 Here are a few simple examples of how you can ask the chatbot
@@ -51,7 +51,6 @@
                 <a href="/chatbot" target="_blank"
                   ><v-btn
                     id="chat-bot-button"
-                    color="primary"
                     rounded="xl"
                     variant="flat"
                     class="align-center"
@@ -63,8 +62,9 @@
             </v-card></v-container
           >
         </v-row>
-      </v-col></v-row
-    >
+      </v-col>
+    </v-row>
+  </div>
   </v-img>
 </template>
 
@@ -79,15 +79,28 @@ export default {
       type: String,
       default: "",
     },
+    width: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
 
 <style scoped>
+.chatBotContainer {
+  padding-left: 36px;
+  max-width: 1600px;
+  margin: auto;
+  align-items: center;
+}
+
+
 #chat-bot-text-1 {
   font-size: 100px;
   font-weight: bolder;
   -webkit-text-stroke: 1.5px black;
+  color: white;
 }
 
 #chat-bot-text-2 {
@@ -100,6 +113,7 @@ export default {
   font-size: 40px;
   font-weight: bolder;
   -webkit-text-stroke: 1px black;
+  color: white;
 }
 
 #chat-bot-text-4 {
@@ -109,8 +123,8 @@ export default {
 
 #chat-bot-card {
   background-color: white;
-  border-radius: 10px;
-  border-color: black;
+  border: 15px solid black;
+  
 }
 
 #chat-bot-card-title {
@@ -132,5 +146,7 @@ export default {
 }
 
 #chat-bot-button {
+  background-color: rgba(1, 61, 90);
+  color: white;
 }
 </style>
