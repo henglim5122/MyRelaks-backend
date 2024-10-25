@@ -33,14 +33,14 @@ class UserBase(BaseModel):
     username: str
     email: str
     gender: str
-    user_type: str
-    dob: Optional[date] = None
+    user_type: Optional[str] = "user"
+    dob: Optional[str] = None
     phone_code: Optional[str] = None
     phone_number: Optional[str] = None
     city: Optional[str] = None
     country: Optional[str] = None
-    subscription: bool
-    tier: str
+    subscription: Optional[bool] = False
+    tier: Optional[str] = "Free"
     is_active: bool
     is_email_verified: bool
 
@@ -55,7 +55,7 @@ class UserRequest(BaseModel):
     password: str
     email: str
     gender: str
-    dob: Optional[date] = None  # Optional fields can be marked as Optional
+    dob: Optional[str] = None  
     phone_code: Optional[str] = None
     phone_number: Optional[str] = None
     city: Optional[str] = None
@@ -63,15 +63,16 @@ class UserRequest(BaseModel):
 
 @router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
+    
     try:
         user = Users(
-            username=user_request.username,
             first_name=user_request.first_name,
             last_name=user_request.last_name,
+            username=user_request.username, 
             hashed_password=bcrypt_context.hash(user_request.password),
-            user_type="user",
             email=user_request.email,
             gender=user_request.gender,
+            user_type="user",      
             dob=user_request.dob,
             phone_code=user_request.phone_code,
             phone_number=user_request.phone_number,
@@ -83,7 +84,8 @@ async def register_user(db: db_dependency, user_request: UserRequest):
         db.add(user)
         db.commit()
         db.refresh(user)
-        return {"msg": "User registered successfully", "user_id": user.id}
+        print(user_request)
+        return {"msg": "User registered successfully", "user_id": user}
     except Exception as e:
         db.rollback()  # Ensure no partial commits are left
         raise HTTPException(status_code=500, detail=str(e)) 

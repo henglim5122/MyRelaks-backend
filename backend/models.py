@@ -13,7 +13,7 @@ class Users(Base):
     email = Column(String, unique=True, index=True)
     gender = Column(String)
     user_type = Column(String, default="user")
-    dob = Column(Date, nullable=True)
+    dob = Column(String, nullable=True)
     phone_code = Column(String, nullable=True)
     phone_number = Column(String, nullable=True)
     city = Column(String, nullable=True)

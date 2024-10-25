@@ -4,6 +4,7 @@
       <v-text-field
         label="First Name *"
         :modelValue="firstName"
+        @update:modelValue="$emit('update:firstName', $event)"
         :rules="[
           (v) => validateRequired(v, 'First Name'),
           (v) => validateAlphabets(v),
@@ -15,6 +16,7 @@
       <v-text-field
         label="Last Name *"
         :modelValue="lastName"
+        @update:modelValue="$emit('update:lastName', $event)"
         :rules="[
           (v) => validateRequired(v, 'Last Name'),
           (v) => validateAlphabets(v),
@@ -27,6 +29,7 @@
   <v-text-field
     label="Username *"
     :modelValue="username"
+    @update:modelValue="$emit('update:username', $event)"
     :rules="[(v) => validateRequired(v, 'Username')]"
     class="mt-9"
     required
@@ -34,6 +37,7 @@
   <v-text-field
     label="Email *"
     :modelValue="email"
+    @update:modelValue="$emit('update:email', $event)"
     :rules="[(v) => validateRequired(v, 'Email'), validateEmail]"
     type="email"
     class="mt-4"
