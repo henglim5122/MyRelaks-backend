@@ -39,8 +39,8 @@
               <v-btn
                 class="mt-6 custom-width"
                 type="submit"
-                :disabled="!valid"
                 color="#013D5A"
+                :disabled="!valid"
                 rounded="pill"
                 prepend-icon="mdi-pencil"
               >
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { useUserStore } from "@/stores/userStore"; // Pinia store import
 import Swal from "sweetalert2";
 import GenderSelect from "@/components/GenderSelect.vue";
 import PersonalInfoForm from "@/components/PersonalInfoForm.vue";
@@ -92,16 +93,51 @@ export default {
     };
   },
   methods: {
-    submit() {
+    async submit() {
       // Access the form validation using this.$refs.form.validate()
       if (this.$refs.form.validate()) {
-        // Trigger SweetAlert2 alert on form submission
-        Swal.fire({
-          title: "Registration Complete!",
-          text: "You have successfully registered.",
-          icon: "success",
-          confirmButtonText: "OK",
-        });
+        if (this.password !== this.confirmPassword) {
+          Swal.fire({
+            title: "Error",
+            text: "Passwords do not match.",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+          return;
+        }
+
+        const userStore = useUserStore(); // Access the Pinia user store
+
+        try {
+          await userStore.registerUser({
+            first_name: this.firstName,
+            last_name: this.lastName,
+            username: this.username,
+            email: this.email,
+            password: this.password,
+            gender: this.gender,
+            dob: this.dob ? this.dob.toISOString().split("T")[0] : null,
+            phone_code: this.code || null, // Handle empty strings
+            phone_number: this.phone || null,
+            city: this.city || null,
+            country: this.country || null,
+          });
+          console.log(userStore);
+          Swal.fire({
+            title: "Registration Complete!",
+            text: "You have successfully registered.",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        } catch (err) {
+          console.error("Error registering user:", err);
+          Swal.fire({
+            title: "Error",
+            text: "Failed to register. Please try again.",
+            icon: "error",
+            confirmButtonText: "OK",
+          });
+        }
       } else {
         // Show error message if validation fails
         Swal.fire({

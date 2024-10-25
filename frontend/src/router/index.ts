@@ -30,39 +30,39 @@ const router = createRouter({
   routes: setupLayouts(routes),
 });
 
-router.beforeEach(async (to, from) => {
-  const isAuthenticated = () => {
-    const token = localStorage.getItem("authToken");
-    return token && token.length > 0;
-  };
+// router.beforeEach(async (to, from) => {
+//   const isAuthenticated = () => {
+//     const token = localStorage.getItem("authToken");
+//     return token && token.length > 0;
+//   };
 
-  const getUserRole = () => {
-    return localStorage.getItem("roles");
-  };
+//   const getUserRole = () => {
+//     return localStorage.getItem("roles");
+//   };
 
-  if (to.path.startsWith("/admin") && getUserRole() !== "admin") {
-    return { path: "/" };
-  } else if (to.path.startsWith("/user") && getUserRole() !== "user") {
-    return { path: "/" };
-  }
+//   if (to.path.startsWith("/admin") && getUserRole() !== "admin") {
+//     return { path: "/" };
+//   } else if (to.path.startsWith("/user") && getUserRole() !== "user") {
+//     return { path: "/" };
+//   }
 
-  if (to.path.startsWith("/loggedin") && !isAuthenticated()) {
-    return { path: "/login" };
-  } else if (to.path.startsWith("/login") && isAuthenticated()) {
-    return { path: "/loggedin" };
-  }
+//   if (to.path.startsWith("/loggedin") && !isAuthenticated()) {
+//     return { path: "/login" };
+//   } else if (to.path.startsWith("/login") && isAuthenticated()) {
+//     return { path: "/loggedin" };
+//   }
 
-  if (
-    to.path.startsWith("/resetpassword") &&
-    (!isAuthenticated() || isAuthenticated())
-  ) {
-    return { path: "/" };
-  }
+//   if (
+//     to.path.startsWith("/resetpassword") &&
+//     (!isAuthenticated() || isAuthenticated())
+//   ) {
+//     return { path: "/" };
+//   }
 
-  if (to.path.startsWith("/userprofile") && !isAuthenticated()) {
-    return { path: "/" };
-  }
-});
+//   // if (to.path.startsWith("/userprofile") && !isAuthenticated()) {
+//   //   return { path: "/" };
+//   // }
+// });
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
 router.onError((err, to) => {
