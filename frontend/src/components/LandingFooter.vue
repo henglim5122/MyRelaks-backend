@@ -1,22 +1,19 @@
 <template>
   <v-footer id="LandingFooter" class="border-lg">
-    <v-container>
+    <v-container class="footerContainer">
       <v-row>
         <v-col>
           <v-col cols="12" sm="12" md="12" id="title"> MY RELAKS </v-col>
           <v-col cols="12" sm="12" md="12"></v-col>
           <v-col cols="12" sm="12" md="12">
-            Your gateway to discovering the hidden gems and cultural treasures
-            of Malaysia
+            Your gateway to discovering the hidden gems and cultural treasures of Malaysia
           </v-col>
         </v-col>
         <v-col>
           <v-col cols="12" sm="12" md="12" class="d-flex justify-center">
             <router-link to="/AboutUs" class="link">About Us</router-link>
             <v-spacer></v-spacer>
-            <router-link to="/registration" target="_blank" class="link"
-              >Sign Up</router-link
-            >
+            <router-link to="/registration" target="_blank" class="link">Sign Up</router-link>
             <v-spacer></v-spacer>
           </v-col>
           <v-col cols="12" sm="12" md="12">
@@ -40,8 +37,9 @@
   background-color: rgba(1, 61, 90);
 }
 
-.v-container {
+.footerContainer {
   color: white;
+  width: 1600px;
 }
 
 .link {

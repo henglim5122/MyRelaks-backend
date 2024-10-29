@@ -37,7 +37,7 @@ export default {
 }
 
 .blue-card {
-  background-color: #3f51b5;
+  background-color: rgba(1, 61, 90);
   color: white;
 }
 </style>

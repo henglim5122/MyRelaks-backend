@@ -6,9 +6,7 @@
       </div>
 
       <div class="displayBlock text-center">
-        <v-alert color="error">
-          Display is available only on desktop
-        </v-alert>                                                                 
+        <v-alert color="error"> Display is available only on desktop </v-alert>
       </div>
     </v-main>
   </v-app>
@@ -17,8 +15,8 @@
 <script lang="ts" setup></script>
 
 <style>
-@media only screen and (max-width: 1440px) {
-  .displayNone{
+@media only screen and (max-width: 1150px) {
+  .displayNone {
     display: none;
   }
   .displayBlock {
@@ -26,13 +24,9 @@
   }
 }
 
-@media only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1151px) {
   .displayBlock {
     display: none;
   }
 }
-  
-
 </style>
-
-
