@@ -1,22 +1,17 @@
 <template>
   <div v-for="(profile, index) in profiles" :keys="index" id="profile-card">
     <v-card :width="width" :height="height">
-      <v-img :src="profile.src" id="profile-img" cover />
       <v-dialog width="400px">
         <template v-slot:activator="{ props: activatorProps }">
-          <v-btn id="profile-name" v-bind="activatorProps">
-            {{ profile.name }}</v-btn
-          >
+          <v-img :src="profile.src" id="profile-img" cover v-bind="activatorProps" />
+          <v-btn id="profile-name" v-bind="activatorProps"> {{ profile.name }}</v-btn>
         </template>
         <template v-slot:default="{ isActive }">
           <v-card height="300px" class="custom-card">
-            <v-card-title class="custom-text" id="profile-title">
-              {{ profile.name }}</v-card-title
-            >
+            <v-card-title class="custom-text" id="profile-title"> {{ profile.name }}</v-card-title>
             <v-card-text class="custom-text"
-              >I am {{ profile.name }}, a {{ profile.age }} year-old
-              {{ profile.job }} from {{ profile.location }}.
-              {{ profile.description }}.</v-card-text
+              >I am {{ profile.name }}, a {{ profile.age }} year-old {{ profile.job }} from
+              {{ profile.location }}. {{ profile.description }}.</v-card-text
             >
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -36,7 +31,7 @@
 
 <script>
 export default {
-  name: "profileCard",
+  name: 'profileCard',
   props: {
     profiles: {
       type: Array,
@@ -44,11 +39,11 @@ export default {
     },
     height: {
       type: String,
-      default: "",
+      default: '',
     },
     width: {
       type: String,
-      default: "",
+      default: '',
     },
   },
 };

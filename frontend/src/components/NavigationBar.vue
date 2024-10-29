@@ -14,63 +14,63 @@
         <!-- <RouterLink to="/Destinations" -->
         <v-menu>
           <template v-slot:activator="{ props }">
-            <v-tab value="Destinations" v-bind="props"
-              >Destinations</v-tab
-            >
+            <v-tab value="Destinations" v-bind="props">Destinations</v-tab>
           </template>
           <v-list>
             <v-row>
-              <v-col cols='6' sm="6" md="6">
-                <v-list-item v-for="(state, i) in firstColumn"
-                  :key = 'i'
-                  :value = 'i'>
+              <v-col cols="6" sm="6" md="6">
+                <v-list-item v-for="(state, i) in firstColumn" :key="i" :value="i">
                   <!-- <v-btn > -->
-                    <RouterLink to="/functionpage" :style="{'text-decoration': 'none', 'color': 'black'}">
-                      <v-list-item-title @click="filterReturn(state.title,null)"  class="listItem">
-                        {{ state.title }}
-                      </v-list-item-title>
-                    </RouterLink>
+                  <RouterLink
+                    to="/functionpage"
+                    :style="{ 'text-decoration': 'none', color: 'black' }"
+                  >
+                    <v-list-item-title @click="filterReturn(state.title, null)" class="listItem">
+                      {{ state.title }}
+                    </v-list-item-title>
+                  </RouterLink>
                   <!-- </v-btn> -->
                 </v-list-item>
-              </v-col>  
+              </v-col>
 
-              <v-col cols='6' sm="6" md="6">
-                <v-list-item v-for="(state, i) in secondColumn"
-                  :key = 'i'
-                  :value = 'i' class="listItem">
+              <v-col cols="6" sm="6" md="6">
+                <v-list-item
+                  v-for="(state, i) in secondColumn"
+                  :key="i"
+                  :value="i"
+                  class="listItem"
+                >
                   <!-- <v-btn > -->
-                    <RouterLink to="/functionpage" :style="{'text-decoration': 'none', 'color': 'black'}">
-                      <v-list-item-title @click="filterReturn(state.title,null)" class="listItem">
-                        {{ state.title }}
-                      </v-list-item-title>
-                    </RouterLink>
+                  <RouterLink
+                    to="/functionpage"
+                    :style="{ 'text-decoration': 'none', color: 'black' }"
+                  >
+                    <v-list-item-title @click="filterReturn(state.title, null)" class="listItem">
+                      {{ state.title }}
+                    </v-list-item-title>
+                  </RouterLink>
                   <!-- </v-btn> -->
                 </v-list-item>
-              </v-col>  
+              </v-col>
             </v-row>
           </v-list>
         </v-menu>
 
         <v-menu>
           <template v-slot:activator="{ props }">
-            <v-tab value="Activities" v-bind="props"
-              >Activities</v-tab
-            >
+            <v-tab value="Activities" v-bind="props">Activities</v-tab>
           </template>
           <v-list>
-            <v-list-item
-              v-for="(activity, i) in activities"
-              :key = 'i'
-              :value = 'i'>
-              <RouterLink to="/functionpage" :style="{'text-decoration': 'none', 'color': 'black'}">
-                <v-list-item-title @click="filterReturn(null,activity.title)" class="listItem">
+            <v-list-item v-for="(activity, i) in activities" :key="i" :value="i">
+              <RouterLink to="/functionpage" :style="{ 'text-decoration': 'none', color: 'black' }">
+                <v-list-item-title @click="filterReturn(null, activity.title)" class="listItem">
                   {{ activity.title }}
                 </v-list-item-title>
-                </RouterLink>
+              </RouterLink>
             </v-list-item>
           </v-list>
         </v-menu>
-        <RouterLink to="/aboutus"
+        <RouterLink to="/chatbot"
           ><v-tab value="ItineraryPlanner">Itinerary Planner</v-tab></RouterLink
         >
         <RouterLink to="/accommodation"
@@ -78,13 +78,12 @@
         >
       </div>
     </v-tabs>
-    <div id="sign-in">
-      <v-icon @click="$emit('subscribe')" class="subscribeBtn">mdi-alpha-s-circle</v-icon>
+    <div id="sign-in d-flex align-center justify-center">
+      <v-icon @click="$emit('subscribe')" class="subscribeBtn" v-if="subscribeBtn"
+        >mdi-alpha-s-circle</v-icon
+      >
       <RouterLink to="/login">
-        <v-btn
-          id="sign-in-button"
-          append-icon="mdi-account"
-          class="rounded-xl mx-5 text-white"
+        <v-btn id="sign-in-button" append-icon="mdi-account" class="rounded-xl mx-5 text-white"
           >Sign In
         </v-btn></RouterLink
       >
@@ -93,15 +92,23 @@
 </template>
 
 <script>
-import { useMapState } from "@/stores/mapStores";
-import { map } from "leaflet";
+import { useMapState } from '@/stores/mapStores';
+import { subscribe } from 'firebase/data-connect';
+import { map } from 'leaflet';
 
 let mapStore = useMapState();
 
 export default {
-  name: "NavigationBar",
+  name: 'NavigationBar',
+  props: {
+    subscribeBtn: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     return {
+      localBtn: this.subscribeBtn,
       model: null,
       states: [
         { title: 'All' },
@@ -123,38 +130,38 @@ export default {
         { title: 'Sarawak' },
       ],
       activities: [
-        {title: "All"},
-        {title: "Amusement Park"},
-        {title: "Culture Shock"},
-        {title: "Water Experience"},
-        {title: "Cafe Hopping"},
-        {title: "Local Specialty"},
-        {title: "Shopping Spree"},
-        {title: "Leg Day"},]
+        { title: 'All' },
+        { title: 'Amusement Park' },
+        { title: 'Culture Shock' },
+        { title: 'Water Experience' },
+        { title: 'Cafe Hopping' },
+        { title: 'Local Specialty' },
+        { title: 'Shopping Spree' },
+        { title: 'Leg Day' },
+      ],
     };
   },
   mounted() {
     this.states = this.sortArray(this.states);
     this.activities = this.sortArray(this.activities);
   },
-  emits: ["filter",'subscribe'],
+  emits: ['filter', 'subscribe'],
   methods: {
     filterReturn(state, activity) {
-      this.$emit('filter',{ state, activity })
-      if (state) {state !== 'All' ?
-          mapStore.setStateFilter (state) :mapStore.setStateFilter("")
-          mapStore.setactivityFilter("")}
-      else if (activity) {
-        activity !== 'All' ?
-        mapStore.setactivityFilter(activity) : mapStore.setactivityFilter("")  
-        mapStore.setStateFilter("")
-    }
+      this.$emit('filter', { state, activity });
+      if (state) {
+        state !== 'All' ? mapStore.setStateFilter(state) : mapStore.setStateFilter('');
+        mapStore.setactivityFilter('');
+      } else if (activity) {
+        activity !== 'All' ? mapStore.setactivityFilter(activity) : mapStore.setactivityFilter('');
+        mapStore.setStateFilter('');
+      }
     },
     sortArray(array) {
       // Separate "All" from the rest, sort the rest alphabetically
-      let allItem = array.find(item => item.title === 'All');
+      let allItem = array.find((item) => item.title === 'All');
       let sortedArray = array
-        .filter(item => item.title !== 'All')
+        .filter((item) => item.title !== 'All')
         .sort((a, b) => a.title.localeCompare(b.title));
 
       // Put "All" back at the top
@@ -171,7 +178,7 @@ export default {
     secondColumn() {
       return this.states.slice(Math.ceil(this.states.length / 2));
     },
-  }
+  },
 };
 </script>
 
@@ -201,8 +208,7 @@ export default {
 }
 
 #sign-in {
-  width: 15%;
-  
+  width: 20%;
 }
 
 .sticky {

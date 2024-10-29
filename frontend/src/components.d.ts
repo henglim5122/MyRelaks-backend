@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BotCard: typeof import('./components/BotCard.vue')['default']
     ContactInfoForm: typeof import('./components/ContactInfoForm.vue')['default']
+    CreditCard: typeof import('./components/CreditCard.vue')['default']
     DestinationCard: typeof import('./components/DestinationCard.vue')['default']
     Dialog: typeof import('./components/Dialog.vue')['default']
     FoodAndActivities: typeof import('./components/FoodAndActivities.vue')['default']
@@ -22,6 +23,7 @@ declare module 'vue' {
     LandingMap: typeof import('./components/LandingMap.vue')['default']
     LandingSubscription: typeof import('./components/LandingSubscription.vue')['default']
     NavigationBar: typeof import('./components/NavigationBar.vue')['default']
+    Payment: typeof import('./components/Payment.vue')['default']
     PersonalInfoForm: typeof import('./components/PersonalInfoForm.vue')['default']
     ProfileAvatar: typeof import('./components/ProfileAvatar.vue')['default']
     ProfileCard: typeof import('./components/ProfileCard.vue')['default']

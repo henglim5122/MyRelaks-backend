@@ -1,20 +1,18 @@
 <template>
   <v-app>
+    <NavigationBar :subscribeBtn="false" />
     <v-main class="d-flex align-center justify-center">
       <v-container>
         <div class="d-flex align-center justify-center">
           <v-img
             src="../assets/logo2_coloured.png"
             id="logo-img"
-            width="100"
-            height="100"
+            width="150"
+            height="150"
             class="mb-10"
           ></v-img>
         </div>
-        <v-responsive
-          class="mx-auto border-sm pa-6 rounded-lg bg-grey-lighten-5"
-          max-width="400"
-        >
+        <v-responsive class="mx-auto border-sm pa-6 rounded-lg bg-grey-lighten-5" max-width="400">
           <h1 class="text-center my-5">Login Account</h1>
 
           <v-form fast-fail @submit.prevent="submitForm" class="pa-4">
@@ -47,9 +45,7 @@
             ></v-text-field>
 
             <!-- Login Button -->
-            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block
-              >Login</v-btn
-            >
+            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block>Login</v-btn>
 
             <!-- Registration Link -->
             <p class="text-center my-5">
@@ -74,10 +70,10 @@
 </template>
 
 <script setup>
-import Swal from "sweetalert2"; // Import Swal2
+import Swal from 'sweetalert2'; // Import Swal2
 
-const email = ref("");
-const password = ref("");
+const email = ref('');
+const password = ref('');
 const passwordVisible = ref(false);
 // Define email validation regex
 const emailRegex = /.+@.+\..+/;
@@ -87,9 +83,9 @@ const submitForm = () => {
   if (!email.value || !password.value) {
     // Show error using SweetAlert2 if fields are empty
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Both Email and Password are required!",
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Both Email and Password are required!',
     });
     return; // Stop execution if fields are empty
   }
@@ -97,22 +93,22 @@ const submitForm = () => {
   // Validate the email using regex
   if (!emailRegex.test(email.value)) {
     Swal.fire({
-      icon: "error",
-      title: "Invalid Email or Password",
-      text: "Please enter a valid email address or password!",
+      icon: 'error',
+      title: 'Invalid Email or Password',
+      text: 'Please enter a valid email address or password!',
     });
     return; // Stop execution if email is invalid
   }
 
   // Generate random token and save in localStorage if form is valid
-  const tokenKey = "authToken";
-  const randomChars = Array.from({ length: 12 }, () =>
-    Math.random().toString(36).charAt(2)
-  ).join("");
+  const tokenKey = 'authToken';
+  const randomChars = Array.from({ length: 12 }, () => Math.random().toString(36).charAt(2)).join(
+    ''
+  );
   localStorage.setItem(tokenKey, randomChars);
-
+  localStorage.setItem('roles', 'admin');
   // Redirect to the logged-in page
-  window.location.href = "/loggedin";
+  window.location.href = '/';
 };
 </script>
 

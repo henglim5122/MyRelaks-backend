@@ -1,13 +1,14 @@
 <template>
   <v-app>
+    <NavigationBar />
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <div class="d-flex align-center justify-center" >
+        <div class="d-flex align-center justify-center">
           <v-img
             src="../assets/logo2_coloured.png"
             id="logo-img"
-            width="100"
-            height="100"
+            width="150"
+            height="150"
             class="mb-10"
           ></v-img>
         </div>
@@ -22,12 +23,7 @@
             That’s okay, insert your email address to reset your password
           </p>
 
-          <v-form
-            fast-fail
-            ref="form"
-            @submit.prevent="submitForm"
-            class="pa-4"
-          >
+          <v-form fast-fail ref="form" @submit.prevent="submitForm" class="pa-4">
             <!-- Email Field with Validation -->
             <v-text-field
               v-model="email"
@@ -42,9 +38,7 @@
             ></v-text-field>
 
             <!-- Submit Button -->
-            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block>
-              Submit
-            </v-btn>
+            <v-btn class="mx-auto mt-5" type="submit" color="#013D5A" block> Submit </v-btn>
 
             <!-- Sign In Link -->
             <p class="text-center my-5">
@@ -62,12 +56,12 @@
 </template>
 
 <script>
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 export default {
   data() {
     return {
-      email: "", // Tracks the email input
+      email: '', // Tracks the email input
     };
   },
   methods: {
@@ -79,20 +73,20 @@ export default {
           await this.sendResetPasswordEmail(this.email);
           // Show success message
           Swal.fire({
-            title: "Success!",
-            text: "An email has been sent for password reset.",
-            icon: "success",
-            confirmButtonText: "Okay",
+            title: 'Success!',
+            text: 'An email has been sent for password reset.',
+            icon: 'success',
+            confirmButtonText: 'Okay',
           });
           // Optionally, reset the email input field
-          this.email = "";
+          this.email = '';
         } catch (error) {
           // Show error message
           Swal.fire({
-            title: "Error!",
-            text: "Failed to send the email. Please try again.",
-            icon: "error",
-            confirmButtonText: "Okay",
+            title: 'Error!',
+            text: 'Failed to send the email. Please try again.',
+            icon: 'error',
+            confirmButtonText: 'Okay',
           });
         }
       }
@@ -104,11 +98,11 @@ export default {
         setTimeout(() => {
           // Here you can implement actual API call logic
           // If success, call resolve(), otherwise reject()
-          if (email === "test@example.com") {
+          if (email === 'test@example.com') {
             // Simulating a specific email check
             resolve();
           } else {
-            reject(new Error("Failed to send email"));
+            reject(new Error('Failed to send email'));
           }
         }, 1000); // Simulate network delay
       });
@@ -124,5 +118,5 @@ export default {
 
 #container-style {
   background-color: black;
-  };
+}
 </style>

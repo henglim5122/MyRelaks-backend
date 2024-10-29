@@ -1,0 +1,7 @@
+DB_USER = postgres
+DB_PASSWORD = admin
+DB_HOST = localhost
+DB_PORT = 5432
+DB_NAME = my_relaks_db
+SECRET_KEY = 026ed223eea02feb9b4fe0570fc693462df804eafb60fd0d773296dc0b23644e
+ALGORITHM = HS256
