@@ -1,87 +1,85 @@
 <template>
   <v-img src="@/assets/beach.jpg" :height="height" cover>
     <div class="chatBotContainer">
-    <v-row class="fill-height">
-      <v-col cols="7" md="7" sm="7">
-        <v-container class="justify-center align-center">
-          <v-row><v-text id="chat-bot-text-1">Personalise</v-text></v-row>
-          <v-row
-            ><v-text id="chat-bot-text-2">Your Itinerary With </v-text></v-row
-          >
-          <v-row><v-text id="chat-bot-text-3">MY RELAKS !</v-text></v-row>
+      <v-row class="fill-height">
+        <v-col cols="7" md="7" sm="7">
+          <v-container class="justify-center align-center">
+            <v-row><v-text id="chat-bot-text-1">Personalise</v-text></v-row>
+            <v-row><v-text id="chat-bot-text-2">Your Itinerary With </v-text></v-row>
+            <v-row><v-text id="chat-bot-text-3">MY RELAKS !</v-text></v-row>
 
-          <br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <v-row
-            ><v-text id="chat-bot-text-4"
-              >Plan with ease, explore, and enjoy – <br />your journey begins
-              here with AI
-            </v-text></v-row
-          >
-        </v-container>
-      </v-col>
-      <v-col cols="5" md="5" sm="5" class="d-flex justify-center align-center">
-        <v-row justify="center">
-          <v-container class="d-flex justify-center align-center">
-            <v-card
-              class="chat-bot-card mx-auto"
-              width="400px"
-              height="400px"
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <v-row
+              ><v-text id="chat-bot-text-4"
+                >Plan with ease, explore, and enjoy – <br />your journey begins here with AI
+              </v-text></v-row
             >
-              <v-card-title id="chat-bot-card-title">
-                Here are a few simple examples of how you can ask the chatbot
-                about itinerary planning</v-card-title
-              >
-              <v-card-subtitle class="mx-auto">
-                <v-card-text class="chat-bot-question-example">
-                  <ol>
-                    <v-card-text>
-                      <li>
-                        Plan a 4-person trip to Selangor for next weekend?
-                      </li>
-                      <li>What can 6 of us do in Johor for 3 days?"</li>
-                      <li>
-                        Plan a 4-person trip to Selangor for next weekend?
-                      </li>
-                    </v-card-text>
-                  </ol>
-                </v-card-text>
-              </v-card-subtitle>
-              <br />
-              <v-card-actions class="justify-center">
-                <a href="/chatbot" target="_blank"
-                  ><v-btn
-                    id="chat-bot-button"
-                    rounded="xl"
-                    variant="flat"
-                    class="align-center"
-                    width="150px"
-                    >Try Me!</v-btn
-                  ></a
-                ></v-card-actions
-              >
-            </v-card></v-container
-          >
-        </v-row>
-      </v-col>
-    </v-row>
-  </div>
+          </v-container>
+        </v-col>
+        <v-col cols="5" md="5" sm="5" class="d-flex justify-center align-center">
+          <v-row justify="center">
+            <v-container class="d-flex justify-center align-center">
+              <v-card class="chat-bot-card mx-auto" width="400px" height="400px">
+                <v-card-title id="chat-bot-card-title">
+                  Here are a few simple examples of how you can ask the chatbot about itinerary
+                  planning</v-card-title
+                >
+                <v-card-subtitle class="mx-auto">
+                  <v-card-text class="chat-bot-question-example">
+                    <ol>
+                      <v-card-text>
+                        <li v-for="(item, index) in question" :key="index" id="itemText">
+                          {{ item }}
+                        </li>
+                      </v-card-text>
+                    </ol>
+                  </v-card-text>
+                </v-card-subtitle>
+                <br />
+                <v-card-actions class="justify-center">
+                  <a href="/chatbot" target="_blank"
+                    ><v-btn
+                      id="chat-bot-button"
+                      rounded="xl"
+                      variant="flat"
+                      class="align-center"
+                      width="150px"
+                      >Try Me!</v-btn
+                    ></a
+                  ></v-card-actions
+                >
+              </v-card></v-container
+            >
+          </v-row>
+        </v-col>
+      </v-row>
+    </div>
   </v-img>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      question: [
+        'Plan a 4-person trip to Selangor for next weekend?',
+        'What can 6 of us do in Johor for 3 days?',
+        'Plan a 4-person trip to Selangor for next weekend?',
+      ],
+    };
+  },
   props: {
     src: {
       type: String,
-      default: "",
+      default: '',
     },
     height: {
       type: String,
-      default: "",
+      default: '',
     },
     width: {
       type: String,
-      default: "",
+      default: '',
     },
   },
 };
@@ -94,7 +92,6 @@ export default {
   margin: auto;
   align-items: center;
 }
-
 
 #chat-bot-text-1 {
   font-size: 100px;
@@ -124,7 +121,6 @@ export default {
 #chat-bot-card {
   background-color: white;
   border: 15px solid black;
-  
 }
 
 #chat-bot-card-title {
