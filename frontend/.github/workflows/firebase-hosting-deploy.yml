@@ -1,0 +1,27 @@
+name: Deploy to Firebase Hosting on push to main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Vuetify App
+      run: npm run build
+
+    - name: Deploy to Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: ${{ secrets.GITHUB_TOKEN }}
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        projectId: gaia-capstone05-prd
+        channelId: live
