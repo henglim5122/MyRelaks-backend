@@ -2,6 +2,7 @@
   <v-app>
     <NavigationBar @subscribe="subscribe" @filter="refreshPage" />
     <v-main :class="{ blur: paymentActive }">
+      <div>hi</div>
       <v-container max-width="1600px" id="container-wrapper">
         <LandingCarousel :src="images" />
         <div class="pa-10"></div>
