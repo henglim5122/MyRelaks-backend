@@ -1,4 +1,7 @@
 <template>
+  <v-app>
+    <NavigationBar />
+  <v-main>
   <div id="AboutUs" height="800px">
     <h1 class="mx-auto text-center pt-7">About Us</h1>
     <div class="AboutUs">
@@ -17,6 +20,8 @@
       <ProfileCard :profiles="profiles" height="400px" width="200px" />
     </div>
   </div>
+</v-main>
+  </v-app>
 </template>
 
 <script>

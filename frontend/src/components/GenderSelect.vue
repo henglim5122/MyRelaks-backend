@@ -2,6 +2,7 @@
   <v-radio-group
     class="mt-12"
     :modelValue="gender"
+    @update:modelValue="$emit('update:gender', $event)"
     inline
     :rules="[(v) => !!v || 'Gender is required']"
   >

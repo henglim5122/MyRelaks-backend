@@ -2,10 +2,7 @@
   <v-app>
     <v-main class="d-flex align-center justify-center">
       <v-container>
-        <v-responsive
-          class="mx-auto border pa-6 rounded-lg bg-grey-lighten-5"
-          max-width="1000"
-        >
+        <v-responsive class="mx-auto border pa-6 rounded-lg bg-grey-lighten-5" max-width="1000">
           <h1 class="text-center mb-6">Registration</h1>
 
           <!-- Add ref="form" to the v-form to access it in the submit method -->
@@ -39,8 +36,8 @@
               <v-btn
                 class="mt-6 custom-width"
                 type="submit"
-                :disabled="!valid"
                 color="#013D5A"
+                :disabled="!valid"
                 rounded="pill"
                 prepend-icon="mdi-pencil"
               >
@@ -50,9 +47,7 @@
 
             <p class="text-center mt-4">
               Already have an account?
-              <RouterLink to="/login" class="text-decoration-underline">
-                Login here
-              </RouterLink>
+              <RouterLink to="/login" class="text-decoration-underline"> Login here </RouterLink>
             </p>
           </v-form>
         </v-responsive>
@@ -62,13 +57,14 @@
 </template>
 
 <script>
-import Swal from "sweetalert2";
-import GenderSelect from "@/components/GenderSelect.vue";
-import PersonalInfoForm from "@/components/PersonalInfoForm.vue";
-import ContactInfoForm from "@/components/ContactInfoForm.vue";
+import { useUserStore } from '@/stores/userStore'; // Pinia store import
+import Swal from 'sweetalert2';
+import GenderSelect from '@/components/GenderSelect.vue';
+import PersonalInfoForm from '@/components/PersonalInfoForm.vue';
+import ContactInfoForm from '@/components/ContactInfoForm.vue';
 
 export default {
-  name: "Registration",
+  name: 'Registration',
   components: {
     GenderSelect,
     PersonalInfoForm,
@@ -78,37 +74,72 @@ export default {
     return {
       valid: false,
       gender: null,
-      firstName: "",
-      lastName: "",
-      username: "",
-      email: "",
+      firstName: '',
+      lastName: '',
+      username: '',
+      email: '',
       dob: null,
-      code: "",
-      phone: "",
-      city: "",
-      country: "",
-      password: "",
-      confirmPassword: "",
+      code: '',
+      phone: '',
+      city: '',
+      country: '',
+      password: '',
+      confirmPassword: '',
     };
   },
   methods: {
-    submit() {
+    async submit() {
       // Access the form validation using this.$refs.form.validate()
       if (this.$refs.form.validate()) {
-        // Trigger SweetAlert2 alert on form submission
-        Swal.fire({
-          title: "Registration Complete!",
-          text: "You have successfully registered.",
-          icon: "success",
-          confirmButtonText: "OK",
-        });
+        if (this.password !== this.confirmPassword) {
+          Swal.fire({
+            title: 'Error',
+            text: 'Passwords do not match.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
+          return;
+        }
+
+        const userStore = useUserStore(); // Access the Pinia user store
+
+        try {
+          await userStore.registerUser({
+            first_name: this.firstName,
+            last_name: this.lastName,
+            username: this.username,
+            email: this.email,
+            password: this.password,
+            gender: this.gender,
+            dob: this.dob ? this.dob.toISOString().split('T')[0] : null,
+            phone_code: this.code || null, // Handle empty strings
+            phone_number: this.phone || null,
+            city: this.city || null,
+            country: this.country || null,
+          });
+          console.log(userStore);
+          Swal.fire({
+            title: 'Registration Complete!',
+            text: 'You have successfully registered.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          });
+        } catch (err) {
+          console.error('Error registering user:', err);
+          Swal.fire({
+            title: 'Error',
+            text: 'Failed to register. Please try again.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+          });
+        }
       } else {
         // Show error message if validation fails
         Swal.fire({
-          title: "Error",
-          text: "Please fill out the form correctly.",
-          icon: "error",
-          confirmButtonText: "OK",
+          title: 'Error',
+          text: 'Please fill out the form correctly.',
+          icon: 'error',
+          confirmButtonText: 'OK',
         });
       }
     },
