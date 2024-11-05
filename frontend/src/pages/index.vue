@@ -31,28 +31,31 @@
     <LandingFooter />
 
     <div v-if="paymentActive" class="overlay">
-      <Payment :paymentAmount="selectedSub.price" @close="paymentActive = false" />
+      <Payment
+        :paymentAmount="selectedSub.price"
+        @close="paymentActive = false"
+      />
     </div>
   </v-app>
 </template>
 
 <script>
-import NavigationBar from '@/components/NavigationBar';
-import LandingCarousel from '@/components/LandingCarousel';
+import NavigationBar from "@/components/NavigationBar";
+import LandingCarousel from "@/components/LandingCarousel";
 
 export default {
   data() {
     return {
       images: [
-        'src/assets/LandingCarousel/1.jpg',
-        'src/assets/LandingCarousel/2.jpg',
-        'src/assets/LandingCarousel/3.jpg',
-        'src/assets/LandingCarousel/4.jpg',
-        'src/assets/LandingCarousel/5.jpg',
-        'src/assets/LandingCarousel/6.jpg',
+        "src/assets/LandingCarousel/1.jpg",
+        "src/assets/LandingCarousel/2.jpg",
+        "src/assets/LandingCarousel/3.jpg",
+        "src/assets/LandingCarousel/4.jpg",
+        "src/assets/LandingCarousel/5.jpg",
+        "src/assets/LandingCarousel/6.jpg",
       ],
       paymentActive: false,
-      selectedSub: '',
+      selectedSub: "",
     };
   },
   methods: {
@@ -61,9 +64,9 @@ export default {
     // },
     subscribe() {
       const yOffset = -100;
-      const element = document.getElementById('subscription');
+      const element = document.getElementById("subscription");
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ top: y, behavior: "smooth" });
       // this.$refs.subscription?.scrollIntoView({ behavior: 'smooth' });
     },
     openPayment(subscription) {
@@ -71,13 +74,13 @@ export default {
       this.paymentActive = true;
     },
     handleKeydown(event) {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         this.paymentActive = false;
       }
     },
   },
   mounted() {
-    window.addEventListener('keyup', this.handleKeydown);
+    window.addEventListener("keyup", this.handleKeydown);
   },
 };
 </script>
