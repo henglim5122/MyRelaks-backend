@@ -11,7 +11,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from datetime import date, timedelta, datetime, timezone
 
-load_dotenv(dotenv_path="./../frontend/.env")
+load_dotenv()
 
 router = APIRouter()
 
@@ -99,13 +99,15 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
-def authenticate_user(username: str, password: str, db):
-    user = db.query(Users).filter(Users.username == username).first()
+def authenticate_user(email: str, password: str, db):
+    print(email, password)
+    user = db.query(Users).filter(Users.email == email).first()
     if not user:
         return False
     if not bcrypt_context.verify(password, user.hashed_password):
         return False
     return user
+    
 
 def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     encode = {"sub": username, "id": user_id}
@@ -120,8 +122,9 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: 
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
     else:
-        token = create_access_token(user.username, user.id, timedelta(minutes=20))
+        token = create_access_token(user.email, user.id, timedelta(minutes=20))
         return {"access_token": token, "token_type": "bearer"}
+    
 
 @router.get("/user", response_model=UserBase)
 async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
