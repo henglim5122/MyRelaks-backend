@@ -13,7 +13,8 @@ from datetime import date, timedelta, datetime, timezone
 
 load_dotenv()
 
-router = APIRouter()
+auth_router = APIRouter(tags=["Authorization"])
+user_router = APIRouter(tags=["User"])
 
 def get_db():
     db = SessionLocal()
@@ -61,7 +62,7 @@ class UserRequest(BaseModel):
     city: Optional[str] = None
     country: Optional[str] = None
 
-@router.post("/register")
+@auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
     
     try:
@@ -115,7 +116,7 @@ def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     encode.update({"exp": expires})
     return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
 
-@router.post("/login", response_model=Token)  # Login endpoint
+@auth_router.post("/login", response_model=Token)  # Login endpoint
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: db_dependency):
     user = authenticate_user(form_data.username, form_data.password, db)
 
@@ -126,7 +127,7 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: 
         return {"access_token": token, "token_type": "bearer"}
     
 
-@router.get("/user", response_model=UserBase)
+@user_router.get("/user", response_model=UserBase)
 async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -143,14 +144,14 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
     except JWTError:
         raise HTTPException(status_code=401, detail="Could not validate user.")
     
-@router.get("/user/{user_id}", response_model=UserBase)
+@user_router.get("/user/{user_id}", response_model=UserBase)
 async def get_user(user_id: int, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
-@router.put("/user/{user_id}", response_model=UserBase)
+@user_router.put("/user/{user_id}", response_model=UserBase)
 async def update_user(user_id: int, user_update: UserRequest, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
     if user is None:
@@ -164,7 +165,7 @@ async def update_user(user_id: int, user_update: UserRequest, db: db_dependency)
     db.refresh(user)
     return user
 
-@router.delete("/user/{user_id}", status_code=200)
+@user_router.delete("/user/{user_id}", status_code=200)
 async def delete_user(user_id: int, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
     if user is None:

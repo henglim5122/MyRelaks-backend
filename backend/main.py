@@ -20,4 +20,5 @@ app.add_middleware(
 
 models.Base.metadata.create_all(bind=engine)
 
-app.include_router(auth.router)
+app.include_router(auth.auth_router)
+app.include_router(auth.user_router)
