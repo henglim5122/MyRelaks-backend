@@ -144,6 +144,14 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
     except JWTError:
         raise HTTPException(status_code=401, detail="Could not validate user.")
     
+@user_router.get("/users", response_model=List[UserBase])
+async def get_all_users(db: db_dependency):
+    users = db.query(Users).all()  # Retrieve all users from the database
+    if not users:
+        raise HTTPException(status_code=404, detail="No users found")
+    return users
+
+    
 @user_router.get("/user/{user_id}", response_model=UserBase)
 async def get_user(user_id: int, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
