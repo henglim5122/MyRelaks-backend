@@ -7,42 +7,43 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-from google.cloud.sql.connector import Connector
 
+# Load environment variables from .env file
 load_dotenv()
 
-# Get database credentials from environment variables
+# Retrieve database credentials from environment variables
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
+DATABASE_URL = os.getenv("DATABASE_URL")  # Prefer DATABASE_URL if provided
 
-# Check if all environment variables are set
-if not all([DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME]):
-    raise RuntimeError(
-        "Environment variables for database credentials are not fully set."
-    )
+# Construct the DATABASE_URL if not provided directly
+if not DATABASE_URL:
+    if not all([DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME]):
+        raise RuntimeError("Database credentials are not fully set in the environment variables.")
+    DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-# Construct the database URL
-SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+print(f"Connecting to database: {DATABASE_URL}")
 
-# Create the SQLAlchemy engine
+# Initialize the SQLAlchemy engine
 try:
     engine = create_engine(
-        SQLALCHEMY_DATABASE_URL,
+        DATABASE_URL,
         pool_size=5,
         max_overflow=10,
         pool_timeout=30,
         pool_recycle=1800,
+        echo=True,  # Set to True for SQL query logging (optional)
     )
 except Exception as exc:
     raise RuntimeError(f"Failed to create engine: {exc}") from exc
 
-# Create a session local class
+# Create a sessionmaker for database sessions
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Create a declarative base class
+# Define the Base class for declarative models
 Base = declarative_base()
 
 def get_db():
@@ -55,29 +56,3 @@ def get_db():
         yield db
     finally:
         db.close()
-
-# Cloud SQL connection (commented out, can be enabled if needed)
-# DB_USER = os.getenv("DB_USER")
-# DB_PASSWORD = os.getenv("DB_PASSWORD")
-# DB_NAME = os.getenv("DB_NAME")
-# INSTANCE_CONNECTION_NAME = os.getenv("INSTANCE_CONNECTION_NAME")
-
-# def getconn():
-#     connector = Connector()
-#     conn = connector.connect(
-#         INSTANCE_CONNECTION_NAME,
-#         "pg8000",
-#         user=DB_USER,
-#         password=DB_PASSWORD,
-#         db=DB_NAME
-#     )
-#     return conn
-
-# # Create the SQLAlchemy engine for Cloud SQL (commented out)
-# engine = create_engine(
-#     "postgresql+pg8000://",
-#     creator=getconn,
-# )
-
-# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
