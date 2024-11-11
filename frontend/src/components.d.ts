@@ -12,6 +12,7 @@ declare module 'vue' {
     Dialog: typeof import('./components/Dialog.vue')['default']
     FoodAndActivities: typeof import('./components/FoodAndActivities.vue')['default']
     GenderSelect: typeof import('./components/GenderSelect.vue')['default']
+    Header: typeof import('./components/Header.vue')['default']
     LandingCarousel: typeof import('./components/LandingCarousel.vue')['default']
     LandingChatBot: typeof import('./components/LandingChatBot.vue')['default']
     LandingDivider: typeof import('./components/LandingDivider.vue')['default']
@@ -25,6 +26,5 @@ declare module 'vue' {
     ProfileCard: typeof import('./components/ProfileCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    UserProfile: typeof import('./components/UserProfile.vue')['default']
   }
 }

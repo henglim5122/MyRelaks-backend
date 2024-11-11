@@ -2,9 +2,9 @@
   <v-app>
     <NavigationBar />
     <v-main>
-      <v-row no-gutters>
+      <v-row no-gutters class="main-row">
         <!-- Sidebar (3/12 of the page) -->
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="3">
           <v-navigation-drawer app permanent>
             <v-list>
               <v-list-item>
@@ -43,108 +43,69 @@
           </v-navigation-drawer>
         </v-col>
 
-        <!-- Main Content (9/12 of the page) -->
-        <v-col cols="12" md="9">
-          <div v-for="(destination, index) in filteredDestinations" :key="index">
-            <DestinationCard
-              :destination="destination"
-              height="250px"
-              :isFavorited="isFavorite(destination)"
-              @onLiked="toggleFavorite(destination)"
-              @click="openDetailDialog(destination)"
-            />
-          </div>
+        <!-- Main Content (9/12 of the page) with reduced space -->
+        <v-col cols="12" md="9" class="main-content">
+          <v-row>
+            <v-col v-for="(destination, index) in filteredDestinations" :key="index" cols="12" sm="6" md="6">
+              <DestinationCard
+                :destination="destination"
+                :height="'300px'"
+                :isFavorited="isFavorite(destination)"
+                @onLiked="toggleFavorite(destination)"
+                @click="openDetailDialog(destination)"
+                class="destination-card"
+              />
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
 
       <!-- Filter Popup Dialog -->
-      <v-dialog v-model="showFilterDialog" max-width="600px">
-        <v-card>
-          <v-card-title>
-            <span class="headline">Filter Options</span>
-          </v-card-title>
-
-          <v-card-text>
-            <!-- States selection -->
-            <h3>Select Your States</h3>
-            <v-row>
-              <v-col v-for="state in states" :key="state" cols="auto">
-                <v-checkbox
-                  v-model="tempSelectedStates"
-                  :label="state"
-                  :value="state"
-                />
-              </v-col>
-            </v-row>
-
-            <!-- Activities selection -->
-            <h3>Select Your Activities</h3>
-            <v-row>
-              <v-col v-for="activity in activities" :key="activity" cols="auto">
-                <v-checkbox
-                  v-model="tempSelectedActivities"
-                  :label="activity"
-                  :value="activity"
-                />
-              </v-col>
-            </v-row>
-
-            <!-- Favorites selection -->
-            <h3>Favorites</h3>
-            <v-switch v-model="tempShowFavoritesOnly" label="Show Favorites Only" />
-          </v-card-text>
-
-          <!-- Submit button -->
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="blue darken-2" dark @click="applyFilter">Submit</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-
       <!-- Detail Popup Dialog -->
-      <v-dialog v-model="showDetailDialog" max-width="600px">
-        <v-card class="greyish-blue-background">
-          <v-card-title>
-            <span class="headline">{{ selectedDestination.name || 'Destination Details' }}</span>
-          </v-card-title>
+<v-dialog v-model="showDetailDialog" max-width="600px">
+  <v-card class="greyish-blue-background">
+    <v-card-title>
+      <span class="headline">{{ selectedDestination.name || 'Destination Details' }}</span>
+    </v-card-title>
 
-          <v-card-text>
-            <!-- Destination Image Placeholder -->
-            <v-img src="https://via.placeholder.com/400x250" alt="Destination Image" max-height="250px"></v-img>
+    <v-card-text>
+      <!-- Use destination image from JSON -->
+      <v-img 
+        v-if="selectedDestination.pictureUrl" 
+        :src="selectedDestination.pictureUrl" 
+        alt="Destination Image" 
+        max-height="250px"
+      ></v-img>
 
-            <!-- Destination Description -->
-            <p v-if="selectedDestination.description">{{ selectedDestination.description }}</p>
+      <!-- Destination Description -->
+      <p v-if="selectedDestination.description">{{ selectedDestination.description }}</p>
 
-            <!-- Location -->
-            <p v-if="selectedDestination.location"><strong>Location:</strong> {{ selectedDestination.location }}</p>
+      <!-- Location -->
+      <p v-if="selectedDestination.location"><strong>Location:</strong> {{ selectedDestination.location }}</p>
 
-            <!-- Rating -->
-            <p>
-              <strong>Rating:</strong>
-              <span>
-                <v-icon v-for="star in getStars(selectedDestination.reviewRating)" :key="star" class="gold">{{ star }}</v-icon>
-              </span>
-            </p>
+      <!-- Rating -->
+      <p>
+        <strong>Rating:</strong>
+        <span>
+          <v-icon v-for="star in getStars(selectedDestination.reviewRating)" :key="star" class="gold">{{ star }}</v-icon>
+        </span>
+      </p>
 
-            <!-- Price Range -->
-            <p><strong>Price Range:</strong> $10 - $50</p> <!-- Example placeholder -->
+      <!-- Price Range from JSON -->
+      <p v-if="selectedDestination.priceRange"><strong>Price Range:</strong> {{ selectedDestination.priceRange }}</p>
 
-            <!-- Phone Number -->
-            <p><strong>Phone Number:</strong> (123) 456-7890</p> <!-- Example placeholder -->
+      <!-- Opening Hours from JSON -->
+      <p v-if="selectedDestination.openingHours"><strong>Opening Hours:</strong> {{ selectedDestination.openingHours }}</p>
+    </v-card-text>
 
-            <!-- Opening Hours -->
-            <p><strong>Opening Hours:</strong> 10:00 AM - 10:00 PM</p> <!-- Example placeholder -->
-          </v-card-text>
-
-          <!-- Location Button -->
-          <v-card-actions>
-            <v-btn color="green" :href="getGoogleMapsLink(selectedDestination)" target="_blank">View on Google Maps</v-btn>
-            <v-spacer></v-spacer>
-            <v-btn @click="showDetailDialog = false">Close</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
+    <!-- Location Button -->
+    <v-card-actions>
+      <v-btn color="green" :href="getGoogleMapsLink(selectedDestination)" target="_blank">View on Google Maps</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn @click="showDetailDialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     </v-main>
   </v-app>
 </template>
@@ -152,6 +113,7 @@
 <script>
 import DestinationCard from "@/components/DestinationCard.vue";
 import destinationAll from "@/assets/Updated_destination.json";
+
 
 export default {
   name: "FunctionPage",
@@ -197,7 +159,7 @@ export default {
       if (!destination || !destination.coordinate) return '#';
       const lat = destination.coordinate.latitude; // Accessing latitude
       const lng = destination.coordinate.longitude; // Accessing longitude
-      return `https://www.google.com/maps?q=${lat},${lng}`;
+      return https://www.google.com/maps?q=${lat},${lng};
     },
     toggleFavorite(destination) {
       const index = this.favoriteDestinations.findIndex(fav => fav.name === destination.name);

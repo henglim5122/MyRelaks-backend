@@ -1,3005 +1,2263 @@
 [
   {
+    "name": "Ikan Bakar",
+    "location": "Night Markets, Kangar",
+    "state": "Perlis",
+    "coordinate": { "latitude": 6.4419, "longitude": 100.1987 },
+    "description": "Grilled fish typically served with spicy sauces, a favorite dish at Perlis night markets.",
+    "reviewRating": 4,
+    "activityCategory": "Local Specialty",
+     "pictureUrl": "@/assets/ProfileImage/deshika.jpg",
+     "openingHours": "7:00 AM - 10:00 PM",
+     "priceRange": "RM5 - RM20"
+  },
+  {
+    "name": "Kak Su Laksa Perlis",
+    "location": "Kuala Perlis",
+    "state": "Perlis",
+    "coordinate": { "latitude": 6.3981, "longitude": 100.1408 },
+    "description": "Rice noodle dish served with spicy fish-based gravy, a Perlis signature.",
+    "reviewRating": 5,
+    "activityCategory": "Local Specialty",
+    "pictureUrl": "",
+    "openingHours": "8:00 AM - 8:00 PM",
+     "priceRange": "RM10 - RM20"
+  },
+  {
     "name": "Nasi Ganja",
     "location": "Kangar",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4483,
-      "longitude": 100.1887
-    },
+    "coordinate": { "latitude": 6.4483, "longitude": 100.1887 },
     "description": "Fragrant rice served with a variety of side dishes, famous in Perlis.",
     "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
+    "activityCategory": "Local Specialty",
+    "openingHours": "7:00 AM - 5:00 PM",
+    "priceRange": "RM10 - RM20"
   },
   {
-    "name": "Kari Kambing",
+    "name": "The Store Kangar",
     "location": "Kangar",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4483,
-      "longitude": 100.1887
-    },
-    "description": "Spicy goat curry, a popular dish among locals.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
+    "coordinate": { "latitude": 6.4433, "longitude": 100.1999 },
+    "description": "A local shopping center offering a variety of retail stores, groceries, and local products.",
+    "reviewRating": 4,
+    "activityCategory": "Shopping Spree",
+    "openingHours": "9:00 AM - 6:00 PM",
+    "priceRange": "RM2 - RM50"
   },
   {
-    "name": "Roti Daging",
-    "location": "Kangar",
+    "name": "Padang Besar Market",
+    "location": "Padang Besar",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4483,
-      "longitude": 100.1887
-    },
-    "description": "Delicious flatbread stuffed with spiced meat.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
+    "coordinate": { "latitude": 6.6651, "longitude": 100.3118 },
+    "description": "Famous for duty-free shopping and affordable local goods at the Thailand border.",
+    "reviewRating": 5,
+    "activityCategory": "Shopping Spree",
+    "openingHours": "7:00 AM - 1:00 PM",
+    "priceRange": "RM5 - RM50"
   },
   {
-    "name": "Cendol",
-    "location": "Kangar",
+    "name": "Bukit Keteri",
+    "location": "Keteri",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4483,
-      "longitude": 100.1887
-    },
-    "description": "A sweet dessert made from shaved ice, coconut milk, and green jelly.",
-    "reviewRating": 4.5,
-    "activityCategory": "Local Specialty"
+    "coordinate": { "latitude": 6.5751, "longitude": 100.1942 },
+    "description": "Popular for rock climbing and hiking, offering panoramic views of the Perlis landscape.",
+    "reviewRating": 5,
+    "activityCategory": "Leg Day",
+    "openingHours": "5:00 AM - 5:00 PM",
+    "priceRange": "RM5 - RM15"
+
+
   },
   {
-    "name": "Kangar Mall",
-    "location": "Kangar",
+    "name": "Wang Kelian Viewpoint",
+    "location": "Wang Kelian",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.453,
-      "longitude": 100.1871
-    },
-    "description": "The main shopping mall in Perlis, featuring various retail stores.",
-    "reviewRating": 4.4,
-    "activityCategory": "Shopping Spree"
+    "coordinate": { "latitude": 6.6781, "longitude": 100.1980 },
+    "description": "A scenic viewpoint with stunning sunrise views and a nearby Thai border market.",
+    "reviewRating": 4,
+    "activityCategory": "Leg Day",
+    "openingHours": "4:00 AM - 6:00 PM",
+    "priceRange": "RM5 - RM15"
   },
   {
-    "name": "Perlis Supermarket",
+    "name": "Kangar Cafe",
     "location": "Kangar",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4512,
-      "longitude": 100.1881
-    },
-    "description": "A local supermarket offering a wide range of products.",
-    "reviewRating": 4.2,
-    "activityCategory": "Shopping Spree"
+    "coordinate": { "latitude": 6.4402, "longitude": 100.1989 },
+    "description": "A cozy cafe offering local Perlis delicacies and a range of beverages.",
+    "reviewRating": 4,
+    "activityCategory": "Cafe Hopping",
+    "openingHours": "7:00 AM - 6:00 PM",
+    "priceRange": "RM20 - RM40"
   },
   {
-    "name": "Taman Mall",
-    "location": "Kangar",
+    "name": "Blackwood Coffee & Chocolate",
+    "location": "Kuala Perlis",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4489,
-      "longitude": 100.1865
-    },
-    "description": "A small shopping complex with various shops and eateries.",
-    "reviewRating": 4.3,
-    "activityCategory": "Shopping Spree"
+    "coordinate": { "latitude": 6.3979, "longitude": 100.1409 },
+    "description": "Modern cafe with a focus on chocolate-based drinks and a peaceful atmosphere.",
+    "reviewRating": 5,
+    "activityCategory": "Cafe Hopping",
+    "openingHours": "10:00 AM -9:00 PM",
+    "priceRange": "RM20 - RM40"
+  },
+
+  {
+    "name": "Kota Kayang Museum",
+    "location": "Kuala Perlis",
+    "state": "Perlis",
+    "coordinate": { "latitude": 6.4300, "longitude": 100.1842 },
+    "description": "A museum highlighting the history, culture, and heritage of Perlis.",
+    "reviewRating": 4,
+    "activityCategory": "Culture Shock",
+    "openingHours": "10:00 AM - 5:00 PM",
+    "priceRange": "RM30 - RM50"
+  },
+  {
+    "name": "Al-Hussain Mosque",
+    "location": "Kuala Perlis",
+    "state": "Perlis",
+    "coordinate": { "latitude": 6.3987, "longitude": 100.1409 },
+    "description": "Known as the 'Floating Mosque,' offering beautiful views of the sea.",
+    "reviewRating": 5,
+    "activityCategory": "Culture Shock",
+    "openingHours": "9:00 AM - 5:00 PM",
+    "priceRange": "FREE Entrance Fee"
+
+  },
+
+  {
+    "name": "Timah Tasoh Lake",
+    "location": "Perlis",
+    "state": "Perlis",
+    "coordinate": { "latitude": 6.5205, "longitude": 100.1780 },
+    "description": "A peaceful lake popular for boating and fishing, with scenic surroundings.",
+    "reviewRating": 4,
+    "activityCategory": "Water Experience",
+    "openingHours": "All Day",
+    "priceRange": "FREE Entrance Fee"
+
   },
   {
     "name": "Perlis Night Market",
-    "location": "Kangar",
+    "location": "Perlis",
     "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.45,
-      "longitude": 100.1892
-    },
-    "description": "A vibrant night market selling local goods and food.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Kedah Eco Park",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4475,
-      "longitude": 100.19
-    },
-    "description": "An eco-friendly Amusement Park with various attractions.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Perlis Zoo",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4478,
-      "longitude": 100.1902
-    },
-    "description": "A local zoo featuring a variety of animals.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Water Theme Park",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4468,
-      "longitude": 100.1886
-    },
-    "description": "A fun water park for families and kids.",
-    "reviewRating": 4.4,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Family Fun Park",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4491,
-      "longitude": 100.1875
-    },
-    "description": "An Amusement Park with rides and games for all ages.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Mount Perlis",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4455,
-      "longitude": 100.187
-    },
-    "description": "A popular hiking spot with beautiful views.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kuala Perlis Trail",
-    "location": "Kuala Perlis",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4522,
-      "longitude": 100.173
-    },
-    "description": "A scenic trail for hiking enthusiasts.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Sungai Perlis",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.447,
-      "longitude": 100.191
-    },
-    "description": "A beautiful river perfect for a nature walk.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Perlis State Park",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4463,
-      "longitude": 100.1905
-    },
-    "description": "A park offering various trails and nature activities.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kafe Roti Bakar",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4475,
-      "longitude": 100.186
-    },
-    "description": "A cozy cafe known for its toast and coffee.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Café 88",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.447,
-      "longitude": 100.1872
-    },
-    "description": "A popular spot for coffee and desserts.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Bubur Lambuk Cafe",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4465,
-      "longitude": 100.1876
-    },
-    "description": "A cafe famous for its traditional rice porridge.",
-    "reviewRating": 4.4,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Perlis Coffee House",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.448,
-      "longitude": 100.1888
-    },
-    "description": "A trendy cafe with a variety of beverages.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Perlis State Museum",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4515,
-      "longitude": 100.1879
-    },
-    "description": "A museum showcasing the history and culture of Perlis.",
-    "reviewRating": 4.5,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Wang Kelian Market",
-    "location": "Wang Kelian",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.5942,
-      "longitude": 100.196
-    },
-    "description": "A local market famous for its border trade and local products.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Perlis Heritage Centre",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.4525,
-      "longitude": 100.1891
-    },
-    "description": "A center showcasing the cultural heritage of Perlis.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Tanjung Medang",
-    "location": "Kangar",
-    "state": "Perlis",
-    "coordinate": {
-      "latitude": 6.457,
-      "longitude": 100.19
-    },
-    "description": "A scenic area with cultural significance.",
-    "reviewRating": 4.4,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Lemak",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0731,
-      "longitude": 101.518
-    },
-    "description": "A fragrant rice dish served with sambal, fried chicken, and egg.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Roti John",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0731,
-      "longitude": 101.518
-    },
-    "description": "A popular street food sandwich filled with minced meat and eggs.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Satay",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0731,
-      "longitude": 101.518
-    },
-    "description": "Grilled skewers of meat served with peanut sauce.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Mee Goreng Mamak",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0731,
-      "longitude": 101.518
-    },
-    "description": "Spicy fried noodles with vegetables and proteins.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Sunway Pyramid",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0736,
-      "longitude": 101.5995
-    },
-    "description": "A shopping mall with a variety of shops and restaurants.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "IOI Mall",
-    "location": "Puchong",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0324,
-      "longitude": 101.6052
-    },
-    "description": "A mall featuring numerous retail outlets and dining options.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Setia City Mall",
-    "location": "Setia Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0265,
-      "longitude": 101.4732
-    },
-    "description": "A family-friendly shopping center with diverse offerings.",
-    "reviewRating": 4.4,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Empire Shopping Gallery",
-    "location": "Subang Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0743,
-      "longitude": 101.5724
-    },
-    "description": "A lifestyle mall with a blend of shopping and dining experiences.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Sunway Lagoon",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0736,
-      "longitude": 101.5995
-    },
-    "description": "A popular water theme park with thrilling rides and attractions.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "i-City",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0723,
-      "longitude": 101.5274
-    },
-    "description": "A theme park with various rides, attractions, and light shows.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Wet World",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0708,
-      "longitude": 101.5165
-    },
-    "description": "A water park featuring slides and fun activities for families.",
-    "reviewRating": 4.4,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "KidZania",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0782,
-      "longitude": 101.6095
-    },
-    "description": "An interactive edutainment center for children.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Bukit Tabur",
-    "location": "Taman Melawati",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.1921,
-      "longitude": 101.7784
-    },
-    "description": "A popular hiking spot with scenic views of the Klang Gates.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Gombak Forest Reserve",
-    "location": "Gombak",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.2231,
-      "longitude": 101.6903
-    },
-    "description": "A lush forest reserve with trails for hiking and nature walks.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "FRIM Forest Reserve",
-    "location": "Batu Arang",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.1844,
-      "longitude": 101.6131
-    },
-    "description": "A forest reserve with trails, canopy walk, and nature activities.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kanching Rainforest Waterfall",
-    "location": "Batu Caves",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.2266,
-      "longitude": 101.6277
-    },
-    "description": "A beautiful waterfall with hiking trails and nature spots.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Huckleberry Food & Fare",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0914,
-      "longitude": 101.5822
-    },
-    "description": "A cozy cafe with a variety of pastries and coffee.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Pulp by Papa Palheta",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.097,
-      "longitude": 101.5902
-    },
-    "description": "A trendy spot known for its specialty coffee and unique ambiance.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "The Red Beanbag",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0927,
-      "longitude": 101.5888
-    },
-    "description": "A cafe known for its brunch menu and vibrant atmosphere.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Myeong Dong Topokki",
-    "location": "Petaling Jaya",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0899,
-      "longitude": 101.5966
-    },
-    "description": "A Korean cafe offering topokki and other delicacies.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Batu Caves",
-    "location": "Batu Caves",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.2374,
-      "longitude": 101.6825
-    },
-    "description": "A limestone hill featuring caves and temples, a significant Hindu site.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Selangor Cultural Village",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0736,
-      "longitude": 101.5171
-    },
-    "description": "A village showcasing the diverse cultures of Malaysia.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Shah Alam Lake Park",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0669,
-      "longitude": 101.5285
-    },
-    "description": "A scenic park with a beautiful lake and recreational activities.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Masjid Sultan Salahuddin Abdul Aziz Shah",
-    "location": "Shah Alam",
-    "state": "Selangor",
-    "coordinate": {
-      "latitude": 3.0731,
-      "longitude": 101.5161
-    },
-    "description": "The state mosque of Selangor, known for its stunning architecture.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Kandar",
-    "location": "Chow Kit",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1747,
-      "longitude": 101.6927
-    },
-    "description": "A popular dish of steamed rice served with various curries.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Hokkien Mee",
-    "location": "Chinatown",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1438,
-      "longitude": 101.6941
-    },
-    "description": "A savory noodle dish stir-fried with a variety of ingredients.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Char Kway Teow",
-    "location": "Petaling Street",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1437,
-      "longitude": 101.6953
-    },
-    "description": "A popular stir-fried flat noodle dish with seafood.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Roti Canai",
-    "location": "Little India",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1678,
-      "longitude": 101.6887
-    },
-    "description": "A flaky flatbread often served with curry.",
-    "reviewRating": 4.5,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Suria KLCC",
-    "location": "KLCC",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1576,
-      "longitude": 101.7114
-    },
-    "description": "A premier shopping destination located at the foot of the Petronas Towers.",
-    "reviewRating": 4.8,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Pavilion Kuala Lumpur",
-    "location": "Bukit Bintang",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1496,
-      "longitude": 101.7132
-    },
-    "description": "A high-end shopping mall with luxury brands and dining options.",
-    "reviewRating": 4.9,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Berjaya Times Square",
-    "location": "Bukit Bintang",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1421,
-      "longitude": 101.7115
-    },
-    "description": "One of the largest shopping complexes in Malaysia.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Lot 10",
-    "location": "Bukit Bintang",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1486,
-      "longitude": 101.715
-    },
-    "description": "A shopping mall featuring popular local and international brands.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Sunway Lagoon",
-    "location": "Petaling Jaya",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.0734,
-      "longitude": 101.6052
-    },
-    "description": "A major theme park with water rides, amusement rides, and attractions.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Escape Theme Park",
-    "location": "Petaling Jaya",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.0721,
-      "longitude": 101.6464
-    },
-    "description": "An outdoor park with various thrilling rides and attractions.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "KidZania",
-    "location": "Petaling Jaya",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.0995,
-      "longitude": 101.6024
-    },
-    "description": "A kid-friendly interactive city where children can experience different professions.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Genting Highlands Theme Park",
-    "location": "Genting",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.0672,
-      "longitude": 101.7503
-    },
-    "description": "A hilltop Amusement Park with rides and entertainment.",
-    "reviewRating": 4.9,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Bukit Tunku",
-    "location": "Kuala Lumpur",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.2074,
-      "longitude": 101.6772
-    },
-    "description": "A popular hiking spot with scenic views of the city.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Titiwangsa Lake Gardens",
-    "location": "Titiwangsa",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1855,
-      "longitude": 101.6951
-    },
-    "description": "A beautiful park with walking trails and recreational areas.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Genting Highlands",
-    "location": "Genting",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.0672,
-      "longitude": 101.7503
-    },
-    "description": "A cool hill resort perfect for hiking and outdoor activities.",
-    "reviewRating": 4.9,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "FRIM",
-    "location": "Batu Caves",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.2395,
-      "longitude": 101.633
-    },
-    "description": "The Forest Research Institute Malaysia offers various trails and activities.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "The coffeeholic",
-    "location": "Mont Kiara",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1781,
-      "longitude": 101.65
-    },
-    "description": "A cafe known for its specialty coffee and cozy atmosphere.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Pulp Coffee",
-    "location": "Bangsar",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1467,
-      "longitude": 101.688
-    },
-    "description": "A cafe famous for its artisan coffee and pastries.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Café de Flore",
-    "location": "KLCC",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1603,
-      "longitude": 101.7103
-    },
-    "description": "A charming cafe offering a range of beverages and light meals.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "The pancake house",
-    "location": "Bangsar",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1384,
-      "longitude": 101.6719
-    },
-    "description": "A cozy cafe specializing in pancakes and brunch.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Petronas Twin Towers",
-    "location": "KLCC",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1576,
-      "longitude": 101.7114
-    },
-    "description": "Iconic twin skyscrapers and a must-visit landmark in Malaysia.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Merdeka Square",
-    "location": "Kuala Lumpur",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1469,
-      "longitude": 101.6927
-    },
-    "description": "A historical site marking Malaysia's independence.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Kuala Lumpur Bird Park",
-    "location": "Kuala Lumpur",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1365,
-      "longitude": 101.6837
-    },
-    "description": "A beautiful park housing various bird species.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Islamic Arts Museum",
-    "location": "Kuala Lumpur",
-    "state": "Kuala Lumpur",
-    "coordinate": {
-      "latitude": 3.1601,
-      "longitude": 101.6931
-    },
-    "description": "A museum showcasing Islamic art and heritage.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Kandar",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4141,
-      "longitude": 100.3299
-    },
-    "description": "Steamed rice served with a variety of curries and side dishes.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Char Kway Teow",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4141,
-      "longitude": 100.3299
-    },
-    "description": "Stir-fried flat noodles with prawns and Chinese sausage.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Asam Laksa",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4141,
-      "longitude": 100.3299
-    },
-    "description": "A spicy and sour fish noodle soup.",
-    "reviewRating": 4.9,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Roti Canai",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4141,
-      "longitude": 100.3299
-    },
-    "description": "Flaky Indian flatbread typically served with curry.",
-    "reviewRating": 4.5,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Gurney Plaza",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4262,
-      "longitude": 100.313
-    },
-    "description": "A popular shopping mall with various retail outlets and eateries.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Queensbay Mall",
-    "location": "Bayan Lepas",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.3079,
-      "longitude": 100.4458
-    },
-    "description": "The largest shopping mall in Penang featuring numerous shops.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "1st Avenue Mall",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4159,
-      "longitude": 100.3293
-    },
-    "description": "A trendy shopping destination in the heart of Georgetown.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Sunway Carnival Mall",
-    "location": "Seberang Perai",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.3663,
-      "longitude": 100.3794
-    },
-    "description": "A modern mall with a variety of retail and dining options.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Escape Theme Park",
-    "location": "Teluk Bahang",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.57,
-      "longitude": 100.2008
-    },
-    "description": "An outdoor adventure park with various rides and activities.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Penang Butterfly Farm",
-    "location": "Teluk Bahang",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.5702,
-      "longitude": 100.1985
-    },
-    "description": "A conservation center for butterflies with various species.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Wonderfood Museum",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4131,
-      "longitude": 100.3286
-    },
-    "description": "A quirky museum showcasing the food culture of Penang.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Penang Hill",
-    "location": "Air Itam",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4333,
-      "longitude": 100.2634
-    },
-    "description": "A scenic hill with a cool climate and outdoor activities.",
-    "reviewRating": 4.9,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Penang National Park",
-    "location": "Teluk Bahang",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.57,
-      "longitude": 100.2008
-    },
-    "description": "A national park with trails for hiking and beautiful views.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kek Lok Si Temple",
-    "location": "Air Itam",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4332,
-      "longitude": 100.2634
-    },
-    "description": "A beautiful temple located on a hill with stunning views.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Penang Hill",
-    "location": "Air Itam",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4333,
-      "longitude": 100.2634
-    },
-    "description": "A popular hiking spot with panoramic views of the island.",
-    "reviewRating": 4.9,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Mount Erskine",
-    "location": "Tanjung Bungah",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.42,
-      "longitude": 100.2877
-    },
-    "description": "A moderate hike with stunning views of the coastline.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "The Alley",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4141,
-      "longitude": 100.3299
-    },
-    "description": "A popular cafe known for its bubble tea and desserts.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "The Mugshot Cafe",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4142,
-      "longitude": 100.3311
-    },
-    "description": "A cafe famous for its bagels and specialty coffee.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Café 55",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.412,
-      "longitude": 100.3302
-    },
-    "description": "A cozy spot for brunch and artisanal coffee.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Wheeler's Coffee",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4147,
-      "longitude": 100.3298
-    },
-    "description": "A charming cafe with a vintage vibe and delicious coffee.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Cheong Fatt Tze Mansion",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4152,
-      "longitude": 100.3315
-    },
-    "description": "A historic mansion showcasing the heritage of Penang.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Kek Lok Si Temple",
-    "location": "Air Itam",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4332,
-      "longitude": 100.2634
-    },
-    "description": "The largest Buddhist temple in Malaysia with beautiful architecture.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Penang Street Art",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.414,
-      "longitude": 100.3284
-    },
-    "description": "A collection of murals depicting the local culture and heritage.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Fort Cornwallis",
-    "location": "Georgetown",
-    "state": "Pulau Pinang",
-    "coordinate": {
-      "latitude": 5.4104,
-      "longitude": 100.3305
-    },
-    "description": "The largest fort in Malaysia with historical significance.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Linang",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9804,
-      "longitude": 116.0735
-    },
-    "description": "A traditional dish of rice served with local side dishes.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Sotong Sumbat",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9805,
-      "longitude": 116.0736
-    },
-    "description": "Stuffed squid grilled to perfection, a local delicacy.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Tinotuan",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9804,
-      "longitude": 116.0735
-    },
-    "description": "A traditional rice porridge served with fish.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Sang Nyuk Mian",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9805,
-      "longitude": 116.0736
-    },
-    "description": "A flavorful noodle soup with pork and herbs.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Suria Sabah",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9786,
-      "longitude": 116.0737
-    },
-    "description": "A shopping mall with local and international brands.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "1Borneo Hypermall",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9685,
-      "longitude": 116.0858
-    },
-    "description": "The largest shopping mall in Sabah with a variety of stores.",
-    "reviewRating": 4.4,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Kota Kinabalu Handicraft Market",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.975,
-      "longitude": 116.0712
-    },
-    "description": "A market showcasing local handicrafts and souvenirs.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "KK Plaza",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9786,
-      "longitude": 116.078
-    },
-    "description": "A shopping complex with a variety of retail outlets.",
-    "reviewRating": 4.3,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Wild West Cowboy Town",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9667,
-      "longitude": 116.0722
-    },
-    "description": "A themed Amusement Park with various rides and attractions.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Kota Kinabalu City Park",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9732,
-      "longitude": 116.0816
-    },
-    "description": "A public park with recreational facilities and beautiful views.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Tunku Abdul Rahman Marine Park",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9649,
-      "longitude": 116.0715
-    },
-    "description": "A group of islands offering snorkeling and diving activities.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Borneo Marine Research Institute",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9803,
-      "longitude": 116.0721
-    },
-    "description": "A research institute with educational exhibits and activities.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Mount Kinabalu",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 6.0673,
-      "longitude": 116.5583
-    },
-    "description": "Malaysia's highest peak, offering challenging trails and breathtaking views.",
-    "reviewRating": 4.9,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Tun Mustapha Park",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 6.0676,
-      "longitude": 116.6186
-    },
-    "description": "A beautiful park with walking trails and scenic landscapes.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Klias River Cruise",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.811,
-      "longitude": 115.7676
-    },
-    "description": "An eco-tourism cruise along the Klias River with stunning wildlife.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Mamutik Island",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9695,
-      "longitude": 116.0804
-    },
-    "description": "An island offering hiking and beautiful beach experiences.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "D'Place Kinabalu",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.974,
-      "longitude": 116.0712
-    },
-    "description": "A cozy cafe known for its local dishes and desserts.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Chilling Cafe",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9791,
-      "longitude": 116.0763
-    },
-    "description": "A popular spot for coffee and light bites.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Nook Cafe",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9795,
-      "longitude": 116.0725
-    },
-    "description": "A vibrant cafe offering specialty coffee and a variety of meals.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Brew42",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9735,
-      "longitude": 116.072
-    },
-    "description": "A trendy cafe known for its coffee and desserts.",
-    "reviewRating": 4.9,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Mari Mari Cultural Village",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.8702,
-      "longitude": 116.0857
-    },
-    "description": "An immersive experience showcasing the culture of Sabah's indigenous people.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Sabah State Museum",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9798,
-      "longitude": 116.0663
-    },
-    "description": "A museum displaying the rich history and culture of Sabah.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Atkinson Clock Tower",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9792,
-      "longitude": 116.0732
-    },
-    "description": "A historical landmark and the oldest structure in Kota Kinabalu.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Tunku Abdul Rahman Park",
-    "location": "Kota Kinabalu",
-    "state": "Sabah",
-    "coordinate": {
-      "latitude": 5.9649,
-      "longitude": 116.0715
-    },
-    "description": "A marine park featuring diverse marine life and activities.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Sarawak Laksa",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5536,
-      "longitude": 110.3592
-    },
-    "description": "A spicy noodle soup with coconut milk and shrimp.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Kolo Mee",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5536,
-      "longitude": 110.3592
-    },
-    "description": "Egg noodles served with minced pork and shallots.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Nasi Aruk",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5536,
-      "longitude": 110.3592
-    },
-    "description": "A traditional rice dish served with local specialties.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Laksa Sarawak",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5536,
-      "longitude": 110.3592
-    },
-    "description": "A flavorful noodle dish with a spicy broth.",
-    "reviewRating": 4.9,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "The Spring Shopping Mall",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5565,
-      "longitude": 110.3685
-    },
-    "description": "A popular shopping destination with a mix of retail and dining options.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Batu Kawa New Township",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5638,
-      "longitude": 110.3623
-    },
-    "description": "A new shopping area featuring various shops and eateries.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Hua Kiew Shopping Complex",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5586,
-      "longitude": 110.3638
-    },
-    "description": "A shopping complex with a variety of local and international brands.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Kuching Boulevard Shopping Mall",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.553,
-      "longitude": 110.3526
-    },
-    "description": "A shopping center featuring a range of shops and dining options.",
-    "reviewRating": 4.4,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Bako National Park",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.4891,
-      "longitude": 110.5755
-    },
-    "description": "A national park known for its wildlife and beautiful trails.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Kuching Cat Museum",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.546,
-      "longitude": 110.3757
-    },
-    "description": "A unique museum dedicated to cats, with various exhibits.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Sarawak Cultural Village",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5664,
-      "longitude": 110.3511
-    },
-    "description": "A living museum showcasing the diverse cultures of Sarawak.",
-    "reviewRating": 4.9,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Peraya Water Park",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5238,
-      "longitude": 110.3914
-    },
-    "description": "A water park with fun slides and activities for all ages.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Gunung Gading National Park",
-    "location": "Lundu",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.6385,
-      "longitude": 109.9252
-    },
-    "description": "A national park known for its waterfalls and hiking trails.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Bako National Park",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.4891,
-      "longitude": 110.5755
-    },
-    "description": "A national park with scenic trails and diverse wildlife.",
-    "reviewRating": 4.9,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Mount Santubong",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5673,
-      "longitude": 110.4193
-    },
-    "description": "A mountain offering hiking trails with stunning views.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kuching Wetlands National Park",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5081,
-      "longitude": 110.3864
-    },
-    "description": "A protected area with rich biodiversity and hiking trails.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "The coffee shop",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5535,
-      "longitude": 110.3592
-    },
-    "description": "A cozy cafe with a variety of coffee and cakes.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Sushi Tei",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5535,
-      "longitude": 110.3592
-    },
-    "description": "A popular cafe known for its sushi and Japanese desserts.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Coffee Estates",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5535,
-      "longitude": 110.3592
-    },
-    "description": "A cafe specializing in local coffee blends.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Bubur Lambuk",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5535,
-      "longitude": 110.3592
-    },
-    "description": "A unique spot for traditional porridge and coffee.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Sarawak Cultural Village",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5664,
-      "longitude": 110.3511
-    },
-    "description": "A living museum showcasing the diverse cultures of Sarawak.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Kuching Waterfront",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5536,
-      "longitude": 110.3589
-    },
-    "description": "A vibrant waterfront area with cultural performances.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Fort Margherita",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5587,
-      "longitude": 110.3698
-    },
-    "description": "A historical fort with cultural significance.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "The Sarawak Museum",
-    "location": "Kuching",
-    "state": "Sarawak",
-    "coordinate": {
-      "latitude": 1.5533,
-      "longitude": 110.3589
-    },
-    "description": "A museum highlighting the rich history and culture of Sarawak.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Dagang",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3299,
-      "longitude": 103.1428
-    },
-    "description": "A fragrant rice dish served with fish curry and coconut.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Keropok Lekor",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3299,
-      "longitude": 103.1428
-    },
-    "description": "A traditional fish cracker snack popular in the region.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Sata",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3299,
-      "longitude": 103.1428
-    },
-    "description": "Grilled fish paste wrapped in banana leaves.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Roti Paung",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3299,
-      "longitude": 103.1428
-    },
-    "description": "A traditional bread filled with various fillings.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Kuala Terengganu City Centre",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3285,
-      "longitude": 103.1472
-    },
-    "description": "A shopping complex with a variety of shops and eateries.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Terengganu Mall",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3293,
-      "longitude": 103.1357
-    },
-    "description": "A mall featuring a mix of retail and dining options.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Pasar Besar Kedai Payang",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3316,
-      "longitude": 103.1441
-    },
-    "description": "A bustling market known for local crafts and snacks.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Bazar Warisan",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3312,
-      "longitude": 103.1439
-    },
-    "description": "A cultural market showcasing Terengganu's heritage.",
-    "reviewRating": 4.8,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Sutra Beach Resort",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3332,
-      "longitude": 103.1763
-    },
-    "description": "A beach resort offering recreational activities and water sports.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Kuala Terengganu Beach",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3288,
-      "longitude": 103.1437
-    },
-    "description": "A scenic beach perfect for relaxation and water sports.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Taman Tamadun Islam",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3198,
-      "longitude": 103.1512
-    },
-    "description": "A cultural park showcasing Islamic heritage and architecture.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Merang Water Park",
-    "location": "Merang",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.7658,
-      "longitude": 103.4512
-    },
-    "description": "A fun water park with slides and attractions for families.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Taman Negara National Park",
-    "location": "Jerantut",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 4.1995,
-      "longitude": 102.6366
-    },
-    "description": "A national park with lush rainforests and trekking trails.",
-    "reviewRating": 4.9,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kota Gelanggi Caves",
-    "location": "Kota Gelanggi",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 4.3058,
-      "longitude": 102.765
-    },
-    "description": "Caves with stunning rock formations and hiking trails.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Bukit Keluang",
-    "location": "Kuala Besut",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.726,
-      "longitude": 102.6327
-    },
-    "description": "A hill with scenic views and hiking opportunities.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Cherating Beach",
-    "location": "Cherating",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 4.1871,
-      "longitude": 103.4118
-    },
-    "description": "A beautiful beach with trails and nature spots.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Kedai Kopi Hai Peng",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3292,
-      "longitude": 103.1455
-    },
-    "description": "A charming cafe known for its traditional coffee.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Dapo Jendela",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3311,
-      "longitude": 103.1415
-    },
-    "description": "A cafe offering local delicacies and a cozy atmosphere.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Nasi Kerabu Cafe",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3275,
-      "longitude": 103.1443
-    },
-    "description": "A cafe specializing in Nasi Kerabu and other local dishes.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Kedai Kopi Tanjung",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3302,
-      "longitude": 103.1446
-    },
-    "description": "A local coffee shop known for its warm atmosphere.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Islamic Civilization Park",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3264,
-      "longitude": 103.1461
-    },
-    "description": "A cultural park showcasing Islamic architecture and history.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Kampung Cina",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3289,
-      "longitude": 103.1516
-    },
-    "description": "A historic area showcasing Chinese heritage and culture.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Masjid Tengku Tengah Zaharah",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3178,
-      "longitude": 103.1281
-    },
-    "description": "A beautiful floating mosque, unique in architecture.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Pasar Payang",
-    "location": "Kuala Terengganu",
-    "state": "Terengganu",
-    "coordinate": {
-      "latitude": 5.3325,
-      "longitude": 103.142
-    },
-    "description": "A lively market for local crafts and food.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Sotong Sumbat",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2811,
-      "longitude": 115.2484
-    },
-    "description": "Stuffed squid, a unique Labuan delicacy.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Ikan Bakar",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2753,
-      "longitude": 115.2493
-    },
-    "description": "Grilled fish seasoned with local spices.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Laksa Labuan",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2811,
-      "longitude": 115.2484
-    },
-    "description": "A spicy noodle soup unique to Labuan.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Bubur Lambuk",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2808,
-      "longitude": 115.248
-    },
-    "description": "A traditional porridge with spices and herbs.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Labuan Square",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2753,
-      "longitude": 115.2493
-    },
-    "description": "A shopping area with local products and souvenirs.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Financial Park",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2843,
-      "longitude": 115.2486
-    },
-    "description": "A commercial complex with shops, restaurants, and entertainment.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Labuan Mall",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2842,
-      "longitude": 115.2416
-    },
-    "description": "A mall with a variety of retail and dining options.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Pasar Tani Labuan",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2762,
-      "longitude": 115.2421
-    },
-    "description": "A farmer's market offering fresh produce and local goods.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Labuan Adventure Park",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2843,
-      "longitude": 115.2486
-    },
-    "description": "An outdoor park with various recreational activities.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Labuan Bird Park",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2861,
-      "longitude": 115.2483
-    },
-    "description": "A park showcasing a variety of bird species.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Labuan Marine Park",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2837,
-      "longitude": 115.2494
-    },
-    "description": "A marine park for snorkeling and diving activities.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Labuan Golf Club",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2768,
-      "longitude": 115.248
-    },
-    "description": "A golf course offering scenic views and challenging play.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Bukit Kertaijaya",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2664,
-      "longitude": 115.2372
-    },
-    "description": "A hiking trail with beautiful views of the island.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Tanjung Kubong",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2841,
-      "longitude": 115.2445
-    },
-    "description": "A scenic spot with a trail leading to the beach.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Pusat Rekreasi Labuan",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.279,
-      "longitude": 115.2489
-    },
-    "description": "A recreational area with walking trails and parks.",
-    "reviewRating": 4.5,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Pulau Papan",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2927,
-      "longitude": 115.2548
-    },
-    "description": "An island with hiking trails and stunning views.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Cafe 4 U",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2768,
-      "longitude": 115.2495
-    },
-    "description": "A cozy cafe known for its coffee and desserts.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Bubur Lambuk Cafe",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2765,
-      "longitude": 115.246
-    },
-    "description": "A cafe offering traditional dishes and local desserts.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Kedai Kopi Dan Roti Bakar 88",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2762,
-      "longitude": 115.2453
-    },
-    "description": "A local coffee shop with a traditional ambiance.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Bistro Labuan",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2756,
-      "longitude": 115.2458
-    },
-    "description": "A cafe with a relaxed atmosphere and great coffee.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Labuan International Sea Sport Complex",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2834,
-      "longitude": 115.2478
-    },
-    "description": "A complex hosting various water sports and events.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Peace Park",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.275,
-      "longitude": 115.249
-    },
-    "description": "A park dedicated to the memory of WWII soldiers.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Labuan War Memorial",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2811,
-      "longitude": 115.2442
-    },
-    "description": "A memorial honoring those who fought during WWII.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Surrender Point",
-    "location": "Labuan",
-    "state": "Labuan",
-    "coordinate": {
-      "latitude": 5.2674,
-      "longitude": 115.2485
-    },
-    "description": "The site where Japanese troops surrendered during WWII.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Nasi Beriyani",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9296,
-      "longitude": 101.676
-    },
-    "description": "A fragrant rice dish cooked with spices and served with meat.",
-    "reviewRating": 4.7,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Satay",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9296,
-      "longitude": 101.676
-    },
-    "description": "Grilled skewers of marinated meat served with peanut sauce.",
-    "reviewRating": 4.8,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Roti John",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9296,
-      "longitude": 101.676
-    },
-    "description": "A delicious bread filled with minced meat and egg.",
-    "reviewRating": 4.6,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "Keropok Lekor",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9296,
-      "longitude": 101.676
-    },
-    "description": "Fried fish crackers that are popular in the region.",
-    "reviewRating": 4.5,
-    "activityCategory": "Local Specialty"
-  },
-  {
-    "name": "IOI City Mall",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9434,
-      "longitude": 101.6828
-    },
-    "description": "A large shopping mall with a variety of retail options.",
-    "reviewRating": 4.7,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Alamanda Putrajaya",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9348,
-      "longitude": 101.6722
-    },
-    "description": "A shopping center with shops and restaurants.",
-    "reviewRating": 4.6,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "The Square @ Jaya One",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9442,
-      "longitude": 101.6771
-    },
-    "description": "A vibrant shopping area with various shops and eateries.",
-    "reviewRating": 4.5,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Putrajaya Marketplace",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9268,
-      "longitude": 101.6758
-    },
-    "description": "A marketplace featuring local products and crafts.",
-    "reviewRating": 4.8,
-    "activityCategory": "Shopping Spree"
-  },
-  {
-    "name": "Putrajaya Challenge Park",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9534,
-      "longitude": 101.6888
-    },
-    "description": "An adventure park with various outdoor activities.",
-    "reviewRating": 4.6,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Wet World Water Park",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9226,
-      "longitude": 101.6748
-    },
-    "description": "A water park featuring fun rides and slides.",
-    "reviewRating": 4.5,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Putrajaya Botanical Garden",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9498,
-      "longitude": 101.6886
-    },
-    "description": "A beautiful garden with various plants and walking paths.",
-    "reviewRating": 4.7,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Putrajaya Lake",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9287,
-      "longitude": 101.6772
-    },
-    "description": "A scenic lake with recreational activities.",
-    "reviewRating": 4.8,
-    "activityCategory": "Amusement Park"
-  },
-  {
-    "name": "Putrajaya Botanical Garden",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9498,
-      "longitude": 101.6886
-    },
-    "description": "A large garden with scenic views and walking paths.",
-    "reviewRating": 4.7,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Taman Wawasan",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9325,
-      "longitude": 101.6768
-    },
-    "description": "A recreational park with jogging trails and green spaces.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Cyberjaya Lake Gardens",
-    "location": "Cyberjaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9258,
-      "longitude": 101.6463
-    },
-    "description": "A scenic park with walking trails around the lake.",
-    "reviewRating": 4.8,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Putrajaya Challenge Park",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9534,
-      "longitude": 101.6888
-    },
-    "description": "An adventure park with various outdoor activities.",
-    "reviewRating": 4.6,
-    "activityCategory": "Leg Day"
-  },
-  {
-    "name": "Huckleberry Food & Fare",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9287,
-      "longitude": 101.6772
-    },
-    "description": "A cafe offering a variety of pastries and coffee.",
-    "reviewRating": 4.8,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "The Tea Room",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.928,
-      "longitude": 101.6765
-    },
-    "description": "A charming cafe known for its afternoon tea.",
-    "reviewRating": 4.7,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Kedai Kopi Putrajaya",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9265,
-      "longitude": 101.6754
-    },
-    "description": "A local coffee shop with traditional Malaysian snacks.",
-    "reviewRating": 4.6,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "T Cafe",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.931,
-      "longitude": 101.6758
-    },
-    "description": "A cafe with a variety of beverages and snacks.",
-    "reviewRating": 4.5,
-    "activityCategory": "Cafe Hopping"
-  },
-  {
-    "name": "Putra Mosque",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9294,
-      "longitude": 101.6881
-    },
-    "description": "A stunning mosque known for its pink dome and architecture.",
-    "reviewRating": 4.9,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Putrajaya International Convention Centre",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.93,
-      "longitude": 101.6757
-    },
-    "description": "A convention center with modern facilities and architecture.",
-    "reviewRating": 4.7,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Putrajaya Landscape",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9301,
-      "longitude": 101.6752
-    },
-    "description": "Beautiful landscaping around the city, ideal for photos.",
-    "reviewRating": 4.8,
-    "activityCategory": "cultural shock"
-  },
-  {
-    "name": "Bountiful Garden",
-    "location": "Putrajaya",
-    "state": "Putrajaya",
-    "coordinate": {
-      "latitude": 2.9259,
-      "longitude": 101.6704
-    },
-    "description": "A garden offering various plants and scenic views.",
-    "reviewRating": 4.6,
-    "activityCategory": "cultural shock"
-  },
-    {
-      "name": "Langkawi Island",
+    "coordinate": { "latitude": 6.4402, "longitude": 100.1989 },
+    "description": "A vibrant night market featuring traditional Perlis delicacies and live entertainment.",
+    "reviewRating": 4,
+    "activityCategory": "Local Specialty",
+    "openingHours": "7:00 PM - 2:00 AM",
+    "priceRange": "RM2 - RM50"
+  },
+
+  {
+      "name": "Laksa Kedah",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1161, "longitude": 100.3678 },
+      "description": "Traditional rice noodles in a fish-based broth with cucumber, boiled egg, and sambal.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM10 - RM20"
+  },
+  {
+      "name": "Gulai Nangka",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1235, "longitude": 100.3608 },
+      "description": "Spicy jackfruit curry served with rice.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "9:00 AM - 3:00 PM",
+      "priceRange": "RM5 - RM25"
+
+  },
+
+  {
+      "name": "Aman Central Mall",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1248, "longitude": 100.3694 },
+      "description": "The largest mall in Alor Setar offering retail stores, restaurants, and entertainment.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM10 - RM200"
+
+  },
+  {
+      "name": "Cenang Mall",
       "location": "Langkawi",
       "state": "Kedah",
-      "coordinate": {
-        "latitude": 6.2873,
-        "longitude": 99.6052
-      },
-      "description": "Known for its stunning beaches and water sports activities.",
-      "reviewRating": 4.9,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Pulau Redang",
-      "location": "Kuala Terengganu",
-      "state": "Terengganu",
-      "coordinate": {
-        "latitude": 5.7494,
-        "longitude": 103.0076
-      },
-      "description": "A tropical paradise with crystal clear waters and snorkeling opportunities.",
-      "reviewRating": 4.8,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Cenang Beach",
-      "location": "Langkawi",
-      "state": "Kedah",
-      "coordinate": {
-        "latitude": 6.2893,
-        "longitude": 99.6617
-      },
-      "description": "A lively beach destination famous for its water sports and nightlife.",
-      "reviewRating": 4.7,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Kota Kinabalu Marine Park",
-      "location": "Kota Kinabalu",
-      "state": "Sabah",
-      "coordinate": {
-        "latitude": 5.8942,
-        "longitude": 116.0891
-      },
-      "description": "An exquisite marine park offering diving and snorkeling.",
-      "reviewRating": 4.9,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Tunku Abdul Rahman Marine Park",
-      "location": "Kota Kinabalu",
-      "state": "Sabah",
-      "coordinate": {
-        "latitude": 5.9295,
-        "longitude": 116.0823
-      },
-      "description": "A group of islands known for snorkeling and diving.",
-      "reviewRating": 4.8,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Redang Island",
-      "location": "Kuala Terengganu",
-      "state": "Terengganu",
-      "coordinate": {
-        "latitude": 5.7490,
-        "longitude": 103.0038
-      },
-      "description": "Offers stunning coral reefs and marine life for snorkeling.",
-      "reviewRating": 4.9,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Sipadan Island",
-      "location": "Semporna",
-      "state": "Sabah",
-      "coordinate": {
-        "latitude": 4.0772,
-        "longitude": 118.6000
-      },
-      "description": "Renowned for diving, with diverse marine species.",
-      "reviewRating": 4.9,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Sibu Island",
-      "location": "Mersing",
-      "state": "Johor",
-      "coordinate": {
-        "latitude": 2.3694,
-        "longitude": 104.1987
-      },
-      "description": "Offers pristine beaches and vibrant marine life.",
-      "reviewRating": 4.6,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Teluk Bahang Beach",
-      "location": "Penang",
-      "state": "Pulau Pinang",
-      "coordinate": {
-        "latitude": 5.3916,
-        "longitude": 100.1935
-      },
-      "description": "A beautiful beach known for its calm waters and water sports.",
+      "coordinate": { "latitude": 6.2981, "longitude": 99.7277 },
+      "description": "A beachside shopping complex featuring fashion boutiques and duty-free stores.",
       "reviewRating": 4.5,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Cherating Beach",
-      "location": "Pahang",
-      "state": "Pahang",
-      "coordinate": {
-        "latitude": 4.2387,
-        "longitude": 103.4175
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM10 - RM200"
+  },
+
+  {
+      "name": "Langkawi Wildlife Park",
+      "location": "Langkawi",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.3751, "longitude": 99.8559 },
+      "description": "Interactive wildlife park with bird shows and feeding sessions.",
+      "reviewRating": 4.3,
+      "activityCategory": "Amusement Park",
+      "openingHours": "9:00 AM - 5:00 PM",
+      "priceRange": "RM20"
+
+  },
+  {
+      "name": "Underwater World Langkawi",
+      "location": "Langkawi",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.2925, "longitude": 99.7224 },
+      "description": "Marine and freshwater aquarium featuring a 15-meter walk-through tunnel.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 5:00 PM",
+      "priceRange": "RM30"
+  },
+
+  {
+      "name": "Gunung Jerai",
+      "location": "Yan",
+      "state": "Kedah",
+      "coordinate": { "latitude": 5.7892, "longitude": 100.4264 },
+      "description": "Scenic mountain hiking with panoramic views.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      
+      "openingHours": "8:00 AM - 5:00 PM",
+      "priceRange": "RM5 - RM15"
+  },
+  {
+      "name": "Bukit Wang",
+      "location": "Jitra",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.3084, "longitude": 100.3988 },
+      "description": "Nature reserve with hiking trails and waterfalls.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "5:00 AM - 7:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+
+  {
+      "name": "LIMA Tiga",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1166, "longitude": 100.3701 },
+      "description": "Trendy cafe known for brunch and coffee options.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM10 - RM50"
+
+  },
+  {
+      "name": "Art Cafe Alor Setar",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1232, "longitude": 100.3678 },
+      "description": "Artsy cafe offering delicious cakes and specialty coffee.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "8:00 AM - 5:00 PM",
+      "priceRange": "RM15 - RM30"
+
+
+  },
+
+  {
+      "name": "Zahir Mosque",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1238, "longitude": 100.3684 },
+      "description": "One of the grandest and oldest mosques in Malaysia, known for its Moorish architecture.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "9:00 AM - 5:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "Paddy Museum",
+      "location": "Alor Setar",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.1849, "longitude": 100.4330 },
+      "description": "Museum dedicated to the history and significance of rice cultivation.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 5:00 PM",
+      "priceRange": "RM10 per entry"
+
+  },
+  
+  {
+      "name": "Langkawi Sky Bridge",
+      "location": "Langkawi",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.3707, "longitude": 99.6682 },
+      "description": "Suspension bridge offering breathtaking views of the Andaman Sea and Langkawi islands.",
+      "reviewRating": 4.8,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  {
+      "name": "Pulau Payar Marine Park",
+      "location": "Langkawi",
+      "state": "Kedah",
+      "coordinate": { "latitude": 6.0635, "longitude": 100.0509 },
+      "description": "A marine park popular for snorkeling and diving.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  {
+      "name": "Char Kway Teow",
+      "location": "Gurney Drive",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4356, "longitude": 100.3098 },
+      "description": "Stir-fried noodles with shrimp, cockles, and sausages.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM10 - RM20"
+
       },
-      "description": "Famous for its laid-back vibe and surfing opportunities.",
-      "reviewRating": 4.7,
-      "activityCategory": "Water Experience"
-    },
-    {
+      {
+      "name": "Penang Laksa",
+      "location": "Ayer Itam",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4007, "longitude": 100.2776 },
+      "description": "Spicy fish broth soup with rice noodles.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM25"
+      },
+      {
+      "name": "Nasi Kandar",
+      "location": "Line Clear Nasi Kandar, George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4197, "longitude": 100.3328 },
+      "description": "Popular Indian-Muslim rice dish served with a variety of curries and meats.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM25"
+
+      },
+      {
+      "name": "Gurney Plaza",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4387, "longitude": 100.3083 },
+      "description": "Upscale shopping mall with international and local brands.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM100 - RM500"
+
+      },
+      {
+      "name": "Penang Times Square",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4139, "longitude": 100.3245 },
+      "description": "Shopping mall with a variety of retail stores, cafes, and a cinema.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM100 - RM500"
+      },
+      {
+      "name": "Escape Theme Park",
+      "location": "Teluk Bahang",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4519, "longitude": 100.2346 },
+      "description": "Adventure theme park with rope courses, zip lines, and water slides.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM20 - RM50"
+
+      },
+      {
+      "name": "Penang Avatar Secret Garden",
+      "location": "Tanjung Tokong",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4659, "longitude": 100.3087 },
+      "description": "Beautiful garden inspired by the movie Avatar, with LED lights and lush landscapes.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM15 - RM30"
+
+
+      },
+      {
+      "name": "Penang Hill",
+      "location": "Air Itam",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4145, "longitude": 100.2769 },
+      "description": "Hiking trails with panoramic views of Penang Island.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+      "name": "Bukit Jambul",
+      "location": "Bayan Lepas",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.3362, "longitude": 100.2876 },
+      "description": "Challenging hike through lush greenery.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+      "name": "China House",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4156, "longitude": 100.3382 },
+      "description": "Famous cafe with a long cake counter and a variety of coffee options.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 PM - 2:00 AM",
+      "priceRange": "RM10 - RM50"
+        
+      },
+      {
+      "name": "The Alley Penang",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4165, "longitude": 100.3376 },
+      "description": "Hidden gem cafe known for churros and creative drinks.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 12:00 AM",
+      "priceRange": "RM5 - RM30"
+
+
+      },
+      {
+      "name": "Cheong Fatt Tze Mansion",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4215, "longitude": 100.3337 },
+      "description": "A historical mansion known for its blue facade and unique architectural blend.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+      "name": "Clan Jetties",
+      "location": "George Town",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4165, "longitude": 100.3420 },
+      "description": "Stilted houses along the water, representing Penang’s traditional Chinese clans.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+        
+      },
+      {
+      "name": "Batu Ferringhi Beach",
+      "location": "Batu Ferringhi",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4716, "longitude": 100.2499 },
+      "description": "Popular beach offering water sports, resorts, and a vibrant night market.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
       "name": "Penang National Park",
-      "location": "Penang",
-      "state": "Pulau Pinang",
-      "coordinate": {
-        "latitude": 5.3033,
-        "longitude": 100.2047
+      "location": "Teluk Bahang",
+      "state": "Penang",
+      "coordinate": { "latitude": 5.4492, "longitude": 100.1973 },
+      "description": "Protected area with hiking trails leading to secluded beaches and scenic views.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
       },
-      "description": "Offers hiking trails leading to beautiful beaches.",
-      "reviewRating": 4.6,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Lombong River",
-      "location": "Sabah",
-      "state": "Sabah",
+           
+      {
+      "name": "Ipoh White Coffee",
+      "location": "Sin Yoon Loong, Ipoh Old Town",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 5.0034,
-        "longitude": 118.0710
+          "latitude": 4.5975,
+          "longitude": 101.0900
       },
-      "description": "Known for kayaking and beautiful river scenery.",
-      "reviewRating": 4.7,
-      "activityCategory": "Water Experience"
-    },
-    {
-      "name": "Endau-Rompin National Park",
-      "location": "Johor",
-      "state": "Johor",
+      "description": "Iconic white coffee served with condensed milk, a must-try in Ipoh.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "7:00 AM - 7:00 PM",
+      "priceRange": "RM10 - RM20"
+      },
+      {
+      "name": "Hainanese Chicken Rice",
+      "location": "Lou Wong, Ipoh",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 2.1592,
-        "longitude": 103.6013
+          "latitude": 4.6005,
+          "longitude": 101.0824
       },
-      "description": "A serene national park with beautiful waterfalls and river activities.",
-      "reviewRating": 4.8,
-      "activityCategory": "Water Experience"
-    },
+      "description": "Poached chicken served with fragrant rice and soy sauce, a famous Ipoh dish.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM25"
+      },
   
-    {
-      "name": "Penang Street Art",
-      "location": "George Town",
-      "state": "Pulau Pinang",
+      {
+      "name": "Ipoh Parade",
+      "location": "Ipoh",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 5.4184,
-        "longitude": 100.3293
+          "latitude": 4.5979,
+          "longitude": 101.0892
       },
-      "description": "Famous for its vibrant street art reflecting local culture.",
-      "reviewRating": 4.8,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Batu Caves",
-      "location": "Selangor",
-      "state": "Selangor",
+      "description": "Popular shopping mall in Ipoh offering fashion, food, and entertainment.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+      },
+      {
+      "name": "Kinta City Shopping Centre",
+      "location": "Ipoh",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 3.2372,
-        "longitude": 101.6828
+          "latitude": 4.6114,
+          "longitude": 101.1149
       },
-      "description": "A limestone hill with stunning caves and temples, showcasing Indian culture.",
-      "reviewRating": 4.7,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Cultural Village",
-      "location": "Kuching",
-      "state": "Sarawak",
+      "description": "Another prominent mall in Ipoh, with a range of retail shops and restaurants.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+      },
+  
+      {
+      "name": "Lost World of Tambun",
+      "location": "Tambun, Ipoh",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 1.5771,
-        "longitude": 110.3598
+          "latitude": 4.6259,
+          "longitude": 101.1552
       },
-      "description": "A living museum showcasing traditional Sarawak cultures and practices.",
-      "reviewRating": 4.6,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Malacca Heritage City",
-      "location": "Malacca City",
-      "state": "Malacca",
+      "description": "A theme park offering water rides, hot springs, and a petting zoo.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM35 - RM60"
+      },
+  
+      {
+      "name": "Bukit Kledang",
+      "location": "Ipoh",
+      "state": "Perak",
       "coordinate": {
-        "latitude": 2.1877,
-        "longitude": 102.2539
+          "latitude": 4.6227,
+          "longitude": 101.0484
       },
-      "description": "A UNESCO World Heritage Site with a rich blend of cultures.",
-      "reviewRating": 4.9,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Petronas Twin Towers",
-      "location": "Kuala Lumpur",
+      "description": "A scenic hiking trail that offers panoramic views of Ipoh.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+      "name": "Kellie's Castle",
+      "location": "Batu Gajah",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.4744,
+          "longitude": 101.0654
+      },
+      "description": "A Scottish-style castle with a mysterious history, surrounded by gardens.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+  
+      {
+      "name": "Plan B",
+      "location": "Ipoh Old Town",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.5970,
+          "longitude": 101.0789
+      },
+      "description": "Trendy cafe known for its fusion of local and Western dishes, housed in a heritage building.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 7:00 PM",
+      "priceRange": "RM10 - RM20"
+
+      },
+      {
+      "name": "Thumb's Cafe",
+      "location": "Ipoh",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.6001,
+          "longitude": 101.0882
+      },
+      "description": "A rustic cafe offering traditional Malay food and drinks in a cozy setting.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 7:00 PM",
+      "priceRange": "RM5 - RM30"
+
+      },
+  
+      {
+      "name": "Han Chin Pet Soo",
+      "location": "Ipoh",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.5976,
+          "longitude": 101.0799
+      },
+      "description": "A museum dedicated to the history of Ipoh's Hakka miners and their lives.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+      },
+      {
+      "name": "Birch Memorial Clock Tower",
+      "location": "Ipoh",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.5979,
+          "longitude": 101.0801
+      },
+      "description": "Historical clock tower commemorating the British Resident of Perak, James W. W. Birch.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+
+      {
+      "name": "Gua Tempurung",
+      "location": "Gopeng",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.4301,
+          "longitude": 101.1860
+      },
+      "description": "Limestone cave known for its breathtaking rock formations and guided tours.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+      "name": "River Rafting at Kampar River",
+      "location": "Gopeng",
+      "state": "Perak",
+      "coordinate": {
+          "latitude": 4.4374,
+          "longitude": 101.1817
+      },
+      "description": "Exciting river rafting experience with rapids and scenic nature surroundings.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+      },
+            
+      {
+      "name": "Jalan Alor Street Food",
+      "location": "Bukit Bintang",
       "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 3.1587,
-        "longitude": 101.7113
+          "latitude": 3.1454,
+          "longitude": 101.7072
       },
-      "description": "Iconic skyscrapers that reflect Malaysia's modern architecture.",
-      "reviewRating": 4.9,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Kampung Kuantan Firefly Park",
-      "location": "Selangor",
-      "state": "Selangor",
-      "coordinate": {
-        "latitude": 3.4255,
-        "longitude": 101.1571
+      "description": "A haven for street food lovers offering local favorites such as grilled meats, noodles, and seafood.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM30"
+
       },
-      "description": "A unique experience watching fireflies in their natural habitat.",
-      "reviewRating": 4.6,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Genting Highlands",
-      "location": "Pahang",
-      "state": "Pahang",
-      "coordinate": {
-        "latitude": 5.4233,
-        "longitude": 100.33
-      },
-      "description": "A cool escape with a vibrant casino and theme park.",
-      "reviewRating": 4.5,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "National Mosque",
-      "location": "Kuala Lumpur",
+      {
+      "name": "Nasi Lemak Antarabangsa",
+      "location": "Kampung Baru",
       "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 3.1731,
-        "longitude": 101.6880
+          "latitude": 3.1644,
+          "longitude": 101.6932
       },
-      "description": "A stunning architectural marvel and symbol of Islam in Malaysia.",
-      "reviewRating": 4.7,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "A Famosa Fort",
-      "location": "Malacca City",
-      "state": "Malacca",
+      "description": "Famous nasi lemak with fragrant rice, sambal, fried chicken, and other toppings.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM20 - RM40"
+
+      },
+
+      {
+      "name": "Suria KLCC",
+      "location": "Kuala Lumpur City Centre",
+      "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 2.1948,
-        "longitude": 102.2512
+          "latitude": 3.1579,
+          "longitude": 101.7123
       },
-      "description": "A historical landmark representing colonial history.",
-      "reviewRating": 4.6,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Kota Bharu Cultural Centre",
-      "location": "Kota Bharu",
-      "state": "Kelantan",
+      "description": "High-end shopping mall located at the base of the Petronas Twin Towers with a range of international luxury brands.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+      },
+      {
+      "name": "Pavilion Kuala Lumpur",
+      "location": "Bukit Bintang",
+      "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 6.1275,
-        "longitude": 102.2399
+          "latitude": 3.1486,
+          "longitude": 101.7135
       },
-      "description": "Experience the rich culture of Kelantan through arts and crafts.",
-      "reviewRating": 4.5,
-      "activityCategory": "Culture Shock"
-    },
-    {
+      "description": "Premier shopping destination featuring high-end fashion, dining, and entertainment options.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+      },
+  
+      {
+      "name": "SuperPark Malaysia",
+      "location": "Avenue K, KLCC",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.1581,
+          "longitude": 101.7127
+      },
+      "description": "Indoor activity park offering a wide range of sports, games, and obstacle courses for all ages.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+      },
+      {
+      "name": "Aquaria KLCC",
+      "location": "Kuala Lumpur City Centre",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.1555,
+          "longitude": 101.7136
+      },
+      "description": "Aquarium with over 5,000 different aquatic and land-bound creatures, featuring a walk-through underwater tunnel.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM35 - RM100"
+
+      },
+  
+      {
+      "name": "Bukit Bintang Walk",
+      "location": "Bukit Bintang",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.1484,
+          "longitude": 101.7133
+      },
+      "description": "A scenic hiking trail offering panoramic views of Kuala Lumpur and the Klang Gates Dam.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "6:00 AM - 2:00 AM",
+      "priceRange": "FREE Entrance Fee"
+      },
+
+
+      {
+      "name": "Bukit Tabur",
+      "location": "Taman Melawati",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.2230,
+          "longitude": 101.7501
+      },
+      "description": "Popular hiking trail offering stunning views of Kuala Lumpur and the Klang Gates Dam.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+      },
+  
+      {
+      "name": "VCR Cafe",
+      "location": "Bukit Bintang",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.1439,
+          "longitude": 101.7079
+      },
+      "description": "Popular cafe known for its specialty coffee and cozy environment.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+      },
+      {
+      "name": "Merchant’s Lane",
+      "location": "Petaling Street",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.1449,
+          "longitude": 101.6975
+      },
+      "description": "Charming cafe with a vintage vibe serving fusion brunch dishes and coffee.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+      },
+  
+      {
       "name": "Sultan Abdul Samad Building",
-      "location": "Kuala Lumpur",
+      "location": "Dataran Merdeka",
       "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 3.1406,
-        "longitude": 101.6932
+          "latitude": 3.1487,
+          "longitude": 101.6946
       },
-      "description": "A stunning architectural landmark reflecting Malaysia's colonial past.",
-      "reviewRating": 4.8,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Kota Kinabalu Cultural Heritage Board",
-      "location": "Kota Kinabalu",
-      "state": "Sabah",
-      "coordinate": {
-        "latitude": 5.9763,
-        "longitude": 116.0737
+      "description": "Iconic landmark in Kuala Lumpur with Moorish architecture, housing government offices.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
       },
-      "description": "Showcases the diverse cultures and traditions of Sabah.",
-      "reviewRating": 4.4,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Sarawak Cultural Village",
-      "location": "Kuching",
-      "state": "Sarawak",
-      "coordinate": {
-        "latitude": 1.5771,
-        "longitude": 110.3598
-      },
-      "description": "An award-winning living museum of Sarawak's heritage.",
-      "reviewRating": 4.7,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Fort Cornwallis",
-      "location": "George Town",
-      "state": "Pulau Pinang",
-      "coordinate": {
-        "latitude": 5.4141,
-        "longitude": 100.3285
-      },
-      "description": "A historical fort that offers a glimpse into Penang's past.",
-      "reviewRating": 4.5,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Thean Hou Temple",
-      "location": "Kuala Lumpur",
+      {
+      "name": "National Mosque of Malaysia (Masjid Negara)",
+      "location": "Jalan Perdana",
       "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 3.1444,
-        "longitude": 101.6887
+          "latitude": 3.1466,
+          "longitude": 101.6921
       },
-      "description": "A beautiful temple showcasing traditional Chinese architecture.",
-      "reviewRating": 4.8,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Malacca Sultanate Palace Museum",
-      "location": "Malacca City",
-      "state": "Malacca",
+      "description": "Grand mosque known for its modernist design and large, star-shaped dome.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+      },
+
+      {
+      "name": "Lake Gardens",
+      "location": "Perdana Botanical Gardens",
+      "state": "Kuala Lumpur",
       "coordinate": {
-        "latitude": 2.1934,
-        "longitude": 102.2489
+          "latitude": 3.1455,
+          "longitude": 101.6875
       },
-      "description": "A museum that represents the history of the Malacca Sultanate.",
-      "reviewRating": 4.5,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Royal Selangor Visitor Centre",
-      "location": "Selangor",
+      "description": "Beautiful park with lakes, fountains, and recreational activities like paddle boating.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+      },
+
+  {
+      "name": "Batu Caves",
+      "location": "Gombak",
+      "state": "Kuala Lumpur",
+      "coordinate": {
+          "latitude": 3.2379,
+          "longitude": 101.6842
+      },
+      "description": "Iconic limestone hill with a series of caves and cave temples, requiring a climb up 272 colorful steps.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "5:00 AM - 8:00 PM",
+      "priceRange": "RM5 - RM15"
+      },
+  {
+      "name": "Satay Kajang",
+      "location": "Kajang",
       "state": "Selangor",
       "coordinate": {
-        "latitude": 3.1860,
-        "longitude": 101.6794
+      "latitude": 2.9934,
+      "longitude": 101.7883
       },
-      "description": "Experience the craftsmanship of pewter-making in Malaysia.",
-      "reviewRating": 4.6,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Taman Negara National Park",
-      "location": "Pahang",
+      "description": "Grilled skewers of seasoned meat served with a spicy peanut sauce, a famous dish in Kajang.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM30"
+  },
+  {
+      "name": "Nasi Ambeng",
+      "location": "Bangi",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 2.9213,
+      "longitude": 101.7731
+      },
+      "description": "Traditional Javanese rice dish served with chicken, beef rendang, sambal, and noodles.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM20 - RM40"
+
+  },
+  
+  {
+      "name": "Sunway Pyramid",
+      "location": "Subang Jaya",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0731,
+      "longitude": 101.6067
+      },
+      "description": "Iconic shopping mall with an Egyptian theme offering international brands, dining, and entertainment.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "One Utama Shopping Mall",
+      "location": "Bandar Utama",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.1479,
+      "longitude": 101.6153
+      },
+      "description": "One of the largest shopping malls in Malaysia, offering a wide range of retail, dining, and leisure options.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Sunway Lagoon",
+      "location": "Subang Jaya",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0729,
+      "longitude": 101.6053
+      },
+      "description": "Theme park featuring water rides, adventure parks, and a wildlife park.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM150 - RM250"
+  },
+  {
+      "name": "i-City",
+      "location": "Shah Alam",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0660,
+      "longitude": 101.4854
+      },
+      "description": "Digital lights theme park featuring LED displays, amusement rides, and a water park.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "9:00 AM - 1:00 AM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Batu Caves",
+      "location": "Gombak",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.2379,
+      "longitude": 101.6842
+      },
+      "description": "Iconic limestone hill with a series of caves and cave temples, requiring a climb up 272 colorful steps.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "5:00 AM - 8:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Taman Botani Negara",
+      "location": "Shah Alam",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0724,
+      "longitude": 101.5127
+      },
+      "description": "National botanical garden offering scenic trails, gardens, and a canopy walkway.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Garage 51",
+      "location": "Subang Jaya",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0739,
+      "longitude": 101.6061
+      },
+      "description": "Trendy cafe with a garage theme, offering creative brunch dishes and artisanal coffee.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Podgy & The Banker",
+      "location": "Sri Hartamas",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.1590,
+      "longitude": 101.6652
+      },
+      "description": "Cozy cafe with a minimalist vibe, serving coffee, cakes, and light meals.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+
+  {
+      "name": "Sultan Salahuddin Abdul Aziz Mosque",
+      "location": "Shah Alam",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.0782,
+      "longitude": 101.5189
+      },
+      "description": "Malaysia's largest mosque, known for its stunning blue dome and Islamic architecture.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Batu Caves Temple",
+      "location": "Gombak",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.2379,
+      "longitude": 101.6842
+      },
+      "description": "Hindu temple dedicated to Lord Murugan, known for its giant statue and cave temples.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  
+  {
+      "name": "Paya Indah Wetlands",
+      "location": "Dengkil",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 2.8737,
+      "longitude": 101.6895
+      },
+      "description": "Nature reserve offering lake cruises, birdwatching, and fishing activities.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Taman Tasik Titiwangsa",
+      "location": "Titiwangsa",
+      "state": "Selangor",
+      "coordinate": {
+      "latitude": 3.1762,
+      "longitude": 101.7046
+      },
+      "description": "Recreational park with a lake for paddle boating and scenic walks.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  
+  {
+      "name": "Masak Lemak Cili Api",
+      "location": "Seremban",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.7297,
+      "longitude": 101.9381
+      },
+      "description": "Spicy coconut milk dish with a variety of meats, known for its bold flavors in Negeri Sembilan.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM20 - RM40"
+  },
+  {
+      "name": "Rendang Negeri Sembilan",
+      "location": "Seremban",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.7298,
+      "longitude": 101.9381
+      },
+      "description": "Slow-cooked beef dish with rich spices, a traditional delicacy of Negeri Sembilan.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+        "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM5 - RM20"
+  },
+  
+  {
+      "name": "Palm Mall",
+      "location": "Seremban",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.7253,
+      "longitude": 101.9441
+      },
+      "description": "The largest shopping mall in Seremban offering a variety of retail, dining, and entertainment options.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+
+  {
+      "name": "A'Famosa Resort",
+      "location": "Alor Gajah",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.4381,
+      "longitude": 102.1946
+      },
+      "description": "A resort with a water park, safari, and theme park activities.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  
+  {
+      "name": "Gunung Datuk",
+      "location": "Rembau",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.5908,
+      "longitude": 102.0975
+      },
+      "description": "Popular hiking destination with a challenging climb and breathtaking views from the summit.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day"
+  },
+  {
+      "name": "Bukit Batu Putih",
+      "location": "Port Dickson",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.5252,
+      "longitude": 101.7956
+      },
+      "description": "Scenic hiking trail offering panoramic views of the coastline.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Pickle & Fig",
+      "location": "Seremban",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.7246,
+      "longitude": 101.9352
+      },
+      "description": "Popular cafe offering sandwiches, smoothies, and a cozy atmosphere.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+        "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "OpenHouse Cafe",
+      "location": "Port Dickson",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.5249,
+      "longitude": 101.7970
+      },
+      "description": "Beachside cafe known for its relaxing ambiance and great coffee.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+    
+  },
+  
+  {
+      "name": "Royal Museum Seri Menanti",
+      "location": "Seri Menanti",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.6466,
+      "longitude": 102.2505
+      },
+      "description": "Traditional wooden palace showcasing the royal history of Negeri Sembilan.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Istana Lama Seri Menanti",
+      "location": "Kuala Pilah",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.7390,
+      "longitude": 102.2637
+      },
+      "description": "A royal palace turned museum, displaying artifacts from the Negeri Sembilan royal family.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:30 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  
+  {
+      "name": "Port Dickson Beach",
+      "location": "Port Dickson",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.5153,
+      "longitude": 101.8014
+      },
+      "description": "Popular beach with water sports, resorts, and family-friendly activities.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  {
+      "name": "Blue Lagoon",
+      "location": "Port Dickson",
+      "state": "Negeri Sembilan",
+      "coordinate": {
+      "latitude": 2.4459,
+      "longitude": 101.8611
+      },
+      "description": "Secluded beach with calm waters, ideal for swimming and snorkeling.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours": "10:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+
+  {
+      "name": "Chicken Rice Balls",
+      "location": "Jonker Street",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1962, "longitude": 102.2467 },
+      "description": "Famous rice balls served with poached chicken, a local Melaka specialty.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "5:00 PM - 2:00 AM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Cendol Durian",
+      "location": "Jonker 88, Jonker Street",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1974, "longitude": 102.2462 },
+      "description": "A popular dessert made with shaved ice, coconut milk, and durian.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "5:00 PM - 2:00 AM",
+      "priceRange":"RM10 - RM20"
+
+  },
+  
+  {
+      "name": "Dataran Pahlawan Melaka Megamall",
+      "location": "Bandar Hilir",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1896, "longitude": 102.2494 },
+      "description": "A large shopping mall offering retail stores, restaurants, and entertainment options.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Mahkota Parade",
+      "location": "Melaka",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1909, "longitude": 102.2464 },
+      "description": "Popular shopping mall with a variety of local and international brands.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "A'Famosa Resort",
+      "location": "Alor Gajah",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.4381, "longitude": 102.1946 },
+      "description": "Resort offering a water park, safari, and theme park activities.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "Melaka Wonderland Theme Park",
+      "location": "Ayer Keroh",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.2875, "longitude": 102.3016 },
+      "description": "Water theme park featuring water slides, wave pools, and other attractions.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 10:00 PM",
+      "priceRange": "RM60 - RM90"
+
+
+  },
+  
+  {
+      "name": "Bukit China",
+      "location": "Melaka",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.2033, "longitude": 102.2507 },
+      "description": "Historic hill known for its large Chinese cemetery and scenic walking trails.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+
+  },
+  {
+      "name": "St. Paul's Hill",
+      "location": "Bandar Hilir",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1934, "longitude": 102.2497 },
+      "description": "A popular hiking spot offering views of Melaka and access to historical ruins.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "The Daily Fix",
+      "location": "Jonker Street",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1962, "longitude": 102.2471 },
+      "description": "A cozy cafe located in a heritage shop, known for its pandan pancakes and coffee.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Calanthe Art Cafe",
+      "location": "Jonker Street",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1977, "longitude": 102.2455 },
+      "description": "Unique cafe offering coffee from all 13 states of Malaysia.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+  },
+  
+  {
+      "name": "A Famosa Fort",
+      "location": "Bandar Hilir",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1924, "longitude": 102.2509 },
+      "description": "One of the oldest surviving European architectural remains in Southeast Asia.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "The Stadthuys",
+      "location": "Red Square, Melaka",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.1945, "longitude": 102.2497 },
+      "description": "A historic Dutch colonial building in Melaka, now housing a museum.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  
+  {
+      "name": "Melaka River Cruise",
+      "location": "Melaka River",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.2007, "longitude": 102.2476 },
+      "description": "Scenic boat ride along the Melaka River, offering views of historical landmarks and murals.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "All Day",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "Pantai Klebang",
+      "location": "Klebang",
+      "state": "Melaka",
+      "coordinate": { "latitude": 2.2215, "longitude": 102.2154 },
+      "description": "A beach popular for its coconut shakes and beautiful sand dunes.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours": "10:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Mee Bandung Muar",
+      "location": "Muar",
+      "state": "Johor",
+      "coordinate": { "latitude": 2.0507, "longitude": 102.5686 },
+      "description": "Traditional noodles in a rich, spicy broth made with dried shrimp, beef, and vegetables.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "5:00 PM - 2:00 AM",
+      "priceRange": "RM$ - RM$$"
+
+
+  },
+  {
+      "name": "Laksa Johor",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4927, "longitude": 103.7414 },
+      "description": "Johorean laksa made with spaghetti, served in a fish-based coconut curry.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "5:00 PM - 2:00 AM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Johor Premium Outlets",
+      "location": "Kulai",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.6033, "longitude": 103.6226 },
+      "description": "Luxury brands at discounted prices.",
+      "reviewRating": 5,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$" 
+  },
+  {
+      "name": "City Square Mall",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4632, "longitude": 103.7629 },
+      "description": "Popular shopping mall with retail stores, eateries, and a cinema.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Legoland Malaysia",
+      "location": "Iskandar Puteri",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4259, "longitude": 103.6330 },
+      "description": "A theme park and water park with Lego-themed attractions and rides.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 8:00 PM",
+      "priceRange": "RM$$ - RM$$$"
+
+  },
+  {
+      "name": "Desaru Coast Adventure Waterpark",
+      "location": "Bandar Penawar",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.5524, "longitude": 104.2609 },
+      "description": "Water park with wave pools, slides, and a lazy river.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 8:00 PM",
+      "priceRange":"RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Gunung Ledang",
+      "location": "Tangkak",
+      "state": "Johor",
+      "coordinate": { "latitude": 2.3586, "longitude": 102.6129 },
+      "description": "Popular hiking destination with challenging trails and stunning views.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "8:00 AM - 8:00 PM",
+      "priceRange":"FREE Entrance Fee" 
+
+  },
+  {
+      "name": "Mount Pulai",
+      "location": "Kulai",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.6090, "longitude": 103.5642 },
+      "description": "Mountain with scenic hiking trails, waterfalls, and panoramic views.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "8:00 AM - 8:00 PM",
+      "priceRange":"FREE Entrance Fee" 
+
+
+  },
+  
+  {
+      "name": "IT Roo Cafe",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4585, "longitude": 103.7631 },
+      "description": "Famous for its chicken chop and local delicacies.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  {
+      "name": "Faculty of Caffeine",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4601, "longitude": 103.7620 },
+      "description": "Trendy cafe offering artisanal coffee and brunch items.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Sultan Abu Bakar State Mosque",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4576, "longitude": 103.7460 },
+      "description": "Victorian and Moorish architecture with a view of the Straits of Johor.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  {
+      "name": "Istana Bukit Serene",
+      "location": "Johor Bahru",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.4660, "longitude": 103.7104 },
+      "description": "Royal palace of the Sultan of Johor, known for grand architecture.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  
+  {
+      "name": "Desaru Beach",
+      "location": "Bandar Penawar",
+      "state": "Johor",
+      "coordinate": { "latitude": 1.5549, "longitude": 104.2661 },
+      "description": "Beautiful beach with water sports activities and golden sand.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+
+                                  
+  {
+      "name": "Keropok Lekor",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3282, "longitude": 103.1370 },
+      "description": "Famous fish crackers made from ground fish and sago flour, typically served with a spicy dipping sauce.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM"
+
+  },
+  {
+      "name": "Nasi Dagang",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3289, "longitude": 103.1424 },
+      "description": "A fragrant rice dish steamed with coconut milk, served with a side of tuna curry and pickled vegetables.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM15 - RM40"
+
+  },
+  
+  {
+      "name": "Pasar Payang",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3333, "longitude": 103.1332 },
+      "description": "A popular central market selling a variety of local crafts, batik, textiles, and fresh produce.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "8:00 AM - 1:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  {
+      "name": "Mydin Mall",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3027, "longitude": 103.0974 },
+      "description": "A large shopping mall offering a mix of retail stores, restaurants, and family-friendly entertainment.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours": "10:00 AM - 9:30 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Kenyir Water Park",
+      "location": "Tasik Kenyir",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.0144, "longitude": 102.8187 },
+      "description": "Water park located within Kenyir Lake, offering fun water slides and activities surrounded by natural beauty.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 3:00 PM",
+      "priceRange": "RM35 - RM60"
+  },
+  {
+      "name": "Islamic Heritage Park",
+      "location": "Pulau Wan Man",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3245, "longitude": 103.1375 },
+      "description": "A park featuring scaled replicas of famous Islamic monuments, such as the Taj Mahal and the Dome of the Rock.",
+      "reviewRating": 5,
+      "activityCategory": "Amusement Park",
+      "openingHours": "8:00 AM - 3:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  
+  {
+      "name": "Bukit Besar",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3086, "longitude": 103.1362 },
+      "description": "A popular hiking spot that offers panoramic views of Kuala Terengganu from the top.",
+      "reviewRating": 4,
+      "activityCategory": "Leg Day",
+      "openingHours": "8:00 AM - 6:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "Taman Negara",
+      "location": "Kuala Berang",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 4.8402, "longitude": 102.3724 },
+      "description": "Explore the trails, flora, and fauna of Malaysia’s oldest national park, located partially in Terengganu.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours": "8:00 AM - 6:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+
+  {
+      "name": "Star Anise Cafe",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3330, "longitude": 103.1383 },
+      "description": "Charming cafe offering great coffee and a selection of cakes, sandwiches, and local snacks.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+  },
+  {
+      "name": "Ganu Coffee",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3376, "longitude": 103.1372 },
+      "description": "Popular coffee spot known for its cozy atmosphere and artisanal brews.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours": "7:00 AM - 8:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  
+  {
+      "name": "Crystal Mosque",
+      "location": "Pulau Wan Man",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3245, "longitude": 103.1375 },
+      "description": "A stunning mosque made of steel, glass, and crystal, known for its modern architecture.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Terengganu State Museum",
+      "location": "Kuala Terengganu",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.3115, "longitude": 103.1123 },
+      "description": "The largest museum in Malaysia, showcasing Terengganu’s cultural heritage, natural history, and Islamic art.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours": "10:00 AM - 5:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+
+  {
+      "name": "Redang Island",
+      "location": "Redang",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.7749, "longitude": 103.0058 },
+      "description": "Famous island for snorkeling, diving, and its crystal-clear waters teeming with marine life.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+
+  },
+  {
+      "name": "Perhentian Islands",
+      "location": "Besut",
+      "state": "Terengganu",
+      "coordinate": { "latitude": 5.9162, "longitude": 102.7342 },
+      "description": "Beautiful islands known for pristine beaches, clear waters, and a variety of water sports.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours": "7:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+
+      {
+        "name": "Nasi Kerabu",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1256, "longitude": 102.2383 },
+        "description": "A traditional dish of blue-colored rice served with fried chicken, fish crackers, and a variety of herbs.",
+        "reviewRating": 5,
+        "activityCategory": "Local Specialty",
+        "openingHours": "11:00 AM - 10:00 PM",
+        "priceRange": "RM15 - RM40"
+
+      },
+      {
+        "name": "Laksam",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1238, "longitude": 102.2421 },
+        "description": "Thick, rolled rice noodles served with a rich and creamy fish-based coconut milk gravy.",
+        "reviewRating": 4,
+        "activityCategory": "Local Specialty",
+        "openingHours": "11:00 AM - 10:00 PM",
+        "priceRange": "RM15 - RM30"
+      },
+   
+      {
+        "name": "Siti Khadijah Market",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1298, "longitude": 102.2402 },
+        "description": "A famous local market offering traditional goods, clothing, and fresh produce, run predominantly by women.",
+        "reviewRating": 5,
+        "activityCategory": "Shopping Spree",
+        "openingHours": "10:00 AM - 9:00 PM",
+        "priceRange": "RM$ - RM$$"
+
+      },
+      {
+        "name": "KB Mall",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1310, "longitude": 102.2360 },
+        "description": "A modern shopping mall with a variety of retail outlets and eateries.",
+        "reviewRating": 4,
+        "activityCategory": "Shopping Spree",
+        "openingHours": "10:00 AM - 9:00 PM",
+        "priceRange": "RM$ - RM$$"
+      },
+    
+      {
+        "name": "Pantai Cahaya Bulan",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1661, "longitude": 102.3011 },
+        "description": "A popular beach with scenic views and water activities like kite flying and picnicking.",
+        "reviewRating": 4,
+        "activityCategory": "Amusement Park",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+
+
+      },
+  
+      {
+        "name": "Gunung Stong",
+        "location": "Kuala Krai",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 5.3503, "longitude": 101.9546 },
+        "description": "A challenging mountain hike with scenic waterfalls, including the highest waterfall in Southeast Asia, Jelawang Waterfall.",
+        "reviewRating": 5,
+        "activityCategory": "Leg Day",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+
+
+      },
+      {
+        "name": "Bukit Bakar",
+        "location": "Machang",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 5.7612, "longitude": 102.2033 },
+        "description": "A popular hiking and recreational area surrounded by lush greenery.",
+        "reviewRating": 4,
+        "activityCategory": "Leg Day",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+
+      },
+   
+      {
+        "name": "Sun Two Cafe",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1235, "longitude": 102.2407 },
+        "description": "Cozy cafe known for serving a variety of local and Western fusion dishes.",
+        "reviewRating": 4,
+        "activityCategory": "Cafe Hopping",
+        "openingHours": "7:00 AM - 6:00 PM",
+        "priceRange": "RM$ - RM$$"
+
+      },
+      {
+        "name": "Beco Cafe",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1334, "longitude": 102.2381 },
+        "description": "Charming spot offering great coffee and local desserts.",
+        "reviewRating": 4,
+        "activityCategory": "Cafe Hopping",
+        "openingHours": "7:00 AM - 6:00 PM",
+        "priceRange": "RM$ - RM$$"
+      },
+  
+      {
+        "name": "Istana Jahar",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1280, "longitude": 102.2422 },
+        "description": "A royal palace turned museum showcasing Kelantan’s cultural heritage and royal history.",
+        "reviewRating": 4,
+        "activityCategory": "Culture Shock",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+
+      },
+      {
+        "name": "Kampung Kraftangan",
+        "location": "Kota Bharu",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1323, "longitude": 102.2441 },
+        "description": "A village dedicated to traditional Kelantanese crafts such as batik, wood carving, and silverware.",
+        "reviewRating": 5,
+        "activityCategory": "Culture Shock",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+
+      },
+    
+      {
+        "name": "Pantai Irama",
+        "location": "Bachok",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.0461, "longitude": 102.4073 },
+        "description": "Known as the 'Beach of Melody,' a scenic spot for swimming and beach activities.",
+        "reviewRating": 4,
+        "activityCategory": "Water Experience",
+        "openingHours": "All Day",
+        "priceRange": "FREE Entrance Fee"
+      },
+      {
+        "name": "Riverside Cruise",
+        "location": "Tumpat",
+        "state": "Kelantan",
+        "coordinate": { "latitude": 6.1954, "longitude": 102.1612 },
+        "description": "A relaxing boat cruise along the Kelantan River, with views of traditional Malay villages.",
+        "reviewRating": 4,
+        "activityCategory": "Water Experience",
+        "openingHours": "All Day",
+        "priceRange": "RM$ - RM$$"
+
+      },
+      {
+      "name": "Putrajaya Seafood Restaurant",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9273, "longitude": 101.6696 },
+      "description": "A fine-dining seafood restaurant offering a scenic view of the lake.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+      "openingHours": "11:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  {
+      "name": "Dorsett Putrajaya",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9160, "longitude": 101.6807 },
+      "description": "Popular for its buffet-style meals offering both local and international cuisines.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+      "openingHours": "8:00 AM - 11:00 PM",
+      "priceRange": "RM$$ - RM$$$"
+  },
+
+  {
+      "name": "Alamanda Shopping Centre",
+      "location": "Precinct 1, Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9408, "longitude": 101.7049 },
+      "description": "The main shopping mall in Putrajaya, offering a variety of stores, eateries, and entertainment options.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree", 
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+
+  {
+      "name": "Putrajaya Botanical Garden",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9431, "longitude": 101.7014 },
+      "description": "The largest botanical garden in Malaysia, offering scenic walking trails and themed gardens.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+  },
+  {
+      "name": "Taman Saujana Hijau",
+      "location": "Presint 11, Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9493, "longitude": 101.7021 },
+      "description": "A hilltop park with European-style landscapes and panoramic views of Putrajaya.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange":"FREE Entrance Fee"
+
+  },
+
+  {
+      "name": "Serabei Cafe",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9230, "longitude": 101.6778 },
+      "description": "Charming cafe offering local Kelantanese dishes and fusion meals.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Boost Juice Bars",
+      "location": "Alamanda Shopping Centre, Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9408, "longitude": 101.7049 },
+      "description": "Popular spot for fresh fruit smoothies and juices.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+
+  {
+      "name": "Putra Mosque",
+      "location": "Putra Square",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9360, "longitude": 101.6913 },
+      "description": "Iconic pink-domed mosque known for its stunning architecture and lakefront location.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Millennium Monument",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9275, "longitude": 101.6907 },
+      "description": "National monument offering panoramic views of Putrajaya and the surrounding lake.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+       "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+
+  {
+      "name": "Putrajaya Lake Cruise",
+      "location": "Putrajaya Lake",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9346, "longitude": 101.6907 },
+      "description": "A scenic cruise offering views of Putrajaya's landmarks, including the Putra Mosque and Seri Wawasan Bridge.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours":"10:00 AM - 10:00 PM", 
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Seri Wawasan Bridge",
+      "location": "Putrajaya",
+      "state": "Putrajaya",
+      "coordinate": { "latitude": 2.9374, "longitude": 101.6919 },
+      "description": "An architectural marvel and a popular spot for photography, best viewed from the lake or a boat.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+       "openingHours":"10:00 AM - 8.00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Nasi Kebuli",
+      "location": "Kuantan",
       "state": "Pahang",
-      "coordinate": {
-        "latitude": 4.1885,
-        "longitude": 102.3706
-      },
-      "description": "The oldest rainforest in the world, offering eco-tourism experiences.",
-      "reviewRating": 4.8,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Kek Lok Si Temple",
-      "location": "Penang",
-      "state": "Pulau Pinang",
-      "coordinate": {
-        "latitude": 5.3539,
-        "longitude": 100.2955
-      },
-      "description": "The largest Buddhist temple in Malaysia, showcasing stunning architecture.",
-      "reviewRating": 4.7,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Islamic Arts Museum Malaysia",
-      "location": "Kuala Lumpur",
-      "state": "Kuala Lumpur",
-      "coordinate": {
-        "latitude": 3.1581,
-        "longitude": 101.6945
-      },
-      "description": "A museum dedicated to Islamic art and culture.",
-      "reviewRating": 4.9,
-      "activityCategory": "Culture Shock"
-    },
-    {
-      "name": "Borneo Cultural Festival",
-      "location": "Sibu",
-      "state": "Sarawak",
-      "coordinate": {
-        "latitude": 2.2905,
-        "longitude": 111.8468
-      },
-      "description": "An annual festival showcasing the cultural diversity of Borneo.",
-      "reviewRating": 4.6,
-      "activityCategory": "Culture Shock"
-    }
+      "coordinate": { "latitude": 3.8072, "longitude": 103.3280 },
+      "description": "Fragrant rice dish cooked with spices and served with tender meat, often accompanied by sambal.",
+      "reviewRating": 5,
+      "activityCategory": "Local Specialty",
+       "openingHours":"10:00 AM - 6:00 PM",
+      "priceRange": "RM5 - RM15"
+  },
+  {
+      "name": "Patin Tempoyak",
+      "location": "Kuantan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.8072, "longitude": 103.3280 },
+      "description": "Catfish cooked in a tangy fermented durian sauce, a must-try local delicacy.",
+      "reviewRating": 4,
+      "activityCategory": "Local Specialty",
+       "openingHours":"10:00 AM - 4:00 PM",
+      "priceRange": "RM10 - RM50"
+  },
+
+  {
+      "name": "East Coast Mall",
+      "location": "Kuantan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.8004, "longitude": 103.3247 },
+      "description": "A modern shopping mall with a variety of shops, restaurants, and entertainment options.",
+      "reviewRating": 4,
+      "activityCategory": "Shopping Spree",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  {
+      "name": "Giant Hypermarket",
+      "location": "Kuantan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.8070, "longitude": 103.3473 },
+      "description": "A large hypermarket offering groceries and household items at affordable prices.",
+      "reviewRating": 3,
+      "activityCategory": "Shopping Spree",
+       "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
   
+  {
+      "name": "Berjaya Hills Resort",
+      "location": "Bukit Tinggi",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.1064, "longitude": 101.7548 },
+      "description": "A resort with various activities including a theme park, animal park, and French village.",
+      "reviewRating": 4,
+      "activityCategory": "Amusement Park",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
   
-]
+  {
+      "name": "Cameron Highlands",
+      "location": "Cameron Highlands",
+      "state": "Pahang",
+      "coordinate": { "latitude": 4.4759, "longitude": 101.3622 },
+      "description": "Famous for its cool climate, tea plantations, and scenic hiking trails.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Taman Negara",
+      "location": "Kuala Tahan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 4.3301, "longitude": 102.3744 },
+      "description": "The oldest national park in Malaysia, featuring lush rainforests and diverse wildlife.",
+      "reviewRating": 5,
+      "activityCategory": "Leg Day",
+      "openingHours":"10:00 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  },
+  
+  {
+      "name": "Coffee Cottage",
+      "location": "Cameron Highlands",
+      "state": "Pahang",
+      "coordinate": { "latitude": 4.4758, "longitude": 101.3605 },
+      "description": "A cozy cafe known for its homemade cakes and coffee with a view of the hills.",
+      "reviewRating": 4,
+      "activityCategory": "Cafe Hopping",
+      "openingHours":"10:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+
+  },
+  {
+      "name": "The Lord's Cafe",
+      "location": "Cameron Highlands",
+      "state": "Pahang",
+      "coordinate": { "latitude": 4.4750, "longitude": 101.3623 },
+      "description": "Famous for its scones and tea in a charming setting.",
+      "reviewRating": 5,
+      "activityCategory": "Cafe Hopping",
+      "openingHours":"10:00 AM - 6:00 PM",
+      "priceRange": "RM$ - RM$$"
+  },
+  
+  {
+      "name": "Sultan Ahmad Shah State Mosque",
+      "location": "Kuantan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.8111, "longitude": 103.3289 },
+      "description": "An iconic mosque known for its stunning architecture and serene surroundings.",
+      "reviewRating": 5,
+      "activityCategory": "Culture Shock",
+      "openingHours":"7:00 AM - 8:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+
+
+  },
+  {
+      "name": "Pahang Museum",
+      "location": "Kuantan",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.8103, "longitude": 103.3248 },
+      "description": "A museum showcasing the history and culture of Pahang.",
+      "reviewRating": 4,
+      "activityCategory": "Culture Shock",
+      "openingHours":"10:00 AM - 5:00 PM",
+      "priceRange": "FREE Entrance Fee"
+  },
+  
+  {
+      "name": "Cherating Beach",
+      "location": "Cherating",
+      "state": "Pahang",
+      "coordinate": { "latitude": 4.2376, "longitude": 103.4165 },
+      "description": "A beautiful beach known for its clear waters, ideal for swimming and water sports.",
+      "reviewRating": 5,
+      "activityCategory": "Water Experience",
+      "openingHours":"All Day",
+      "priceRange": "FREE Entrance Fee"
+  },
+  {
+      "name": "Lake Chini",
+      "location": "Lake Chini",
+      "state": "Pahang",
+      "coordinate": { "latitude": 3.4054, "longitude": 102.6758 },
+      "description": "A picturesque lake surrounded by lush greenery, known for its biodiversity.",
+      "reviewRating": 4,
+      "activityCategory": "Water Experience",
+      "openingHours":"6:30 AM - 10:00 PM",
+      "priceRange": "FREE Entrance Fee"
+
+  }
+  ]
+                  
+          
+            
