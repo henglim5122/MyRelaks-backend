@@ -21,3 +21,11 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+check_env.py
+package-lock.json
+venv/
+__pycache__/
+*.pyc
+.flake8
+.pylintrc
