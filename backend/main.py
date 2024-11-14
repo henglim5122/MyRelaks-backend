@@ -6,6 +6,7 @@ from routes import auth, itinerary, destination, payment
 
 origins = [
     "http://localhost:3000",
+    "http://localhost:5173",
 ]
 
 

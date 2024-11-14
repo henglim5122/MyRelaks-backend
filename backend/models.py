@@ -1,5 +1,5 @@
 from database import Base 
-from sqlalchemy import Column, Integer, String, ForeignKey, Date, DateTime, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey, Date, DateTime, Boolean, Text
 from sqlalchemy.sql import func
 
 class Users(Base):
@@ -9,6 +9,7 @@ class Users(Base):
     first_name = Column(String, index=True)
     last_name = Column(String, index=True)
     username = Column(String, unique=True, index=True)
+    profile_image = Column(Text, nullable=True)
     hashed_password = Column(String)
     email = Column(String, unique=True, index=True)
     gender = Column(String)
@@ -21,8 +22,8 @@ class Users(Base):
     is_active = Column(Boolean, default=True)
     is_email_verified = Column(Boolean, default=False)
     updated_at = Column(DateTime, nullable=True)
-    password_reset_token = Column(String, nullable=True)
-    password_reset_expires = Column(DateTime, nullable=True)
+    password_reset_token = Column(String(128), nullable=True, index=True)
+    password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Boolean, default=False)  
     tier = Column(String, default="Free") 
 
