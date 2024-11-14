@@ -25,3 +25,43 @@ class Users(Base):
     password_reset_expires = Column(DateTime, nullable=True)
     subscription = Column(Boolean, default=False)  
     tier = Column(String, default="Free") 
+
+
+class Destination(Base):
+    __tablename__ = "destination"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    location = Column(String, index=True)
+    state = Column(String, index=True)
+    description = Column(String)
+    coordinates = Column(String, nullable=True)
+    rating = Column(Integer, unique=True)
+    min_price = Column(Integer, nullable=True)
+    max_prce = Column(Integer, nullable=True)
+    src = Column(String, nullable=True)
+    liked_by = Column(Boolean, default=False)
+
+
+class Payment(Base):
+    __tablename__ = "payment_information"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    aspect = Column(String)
+    payment_amount = Column(Integer)
+    payment_method = Column(String)
+    payment_status = Column(String, default="Pending")
+    payment_date = Column(DateTime, default=func.now())
+    encrypted_payment_info = Column(String,unique=True)
+
+
+class Itinerary_Record(Base):
+    __tablename__ = "itinerary_record"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    trip_name = Column(String)
+    trip_dates = Column(Date)
+    total_budget = Column(Integer)
+    estimated_cost = Column(Integer)

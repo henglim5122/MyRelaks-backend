@@ -41,7 +41,7 @@ class UserBase(BaseModel):
     city: Optional[str] = None
     country: Optional[str] = None
     subscription: Optional[bool] = False
-    tier: Optional[str] = "Free"
+    tier: Optional[str] = None
     is_active: bool
     is_email_verified: bool
 
@@ -56,11 +56,16 @@ class UserRequest(BaseModel):
     password: str
     email: str
     gender: str
-    dob: Optional[str] = None  
+    dob: str
     phone_code: Optional[str] = None
-    phone_number: Optional[str] = None
-    city: Optional[str] = None
-    country: Optional[str] = None
+    phone_number: str
+    city: str
+    country: str
+    # dob: Optional[str] = None  
+    # phone_code: Optional[str] = None
+    # phone_number: Optional[str] = None
+    # city: Optional[str] = None
+    # country: Optional[str] = None
 
 @auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
@@ -80,7 +85,7 @@ async def register_user(db: db_dependency, user_request: UserRequest):
             city=user_request.city,
             country=user_request.country,
             subscription=False,
-            tier='Free'
+            tier=False,
         )
         db.add(user)
         db.commit()
@@ -127,7 +132,7 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: 
         return {"access_token": token, "token_type": "bearer"}
     
 
-@user_router.get("/user", response_model=UserBase)
+# @user_router.get("/user", response_model=UserBase)
 async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])

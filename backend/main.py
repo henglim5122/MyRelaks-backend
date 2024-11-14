@@ -2,14 +2,16 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import models
 from database import engine
-from routes.auth import auth_router, user_router
-
-app = FastAPI()
+from routes import auth, itinerary, destination, payment
 
 origins = [
     "http://localhost:3000",
 ]
 
+
+models.Base.metadata.create_all(bind=engine)
+
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -17,8 +19,5 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-models.Base.metadata.create_all(bind=engine)
-
-app.include_router(auth_router)
-app.include_router(user_router)
+app.include_router(auth.auth_router)
+app.include_router(auth.user_router)
