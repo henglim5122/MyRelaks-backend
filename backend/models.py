@@ -25,7 +25,7 @@ class Users(Base):
     password_reset_token = Column(String(128), nullable=True, index=True)
     password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Boolean, default=False)  
-    tier = Column(String, default="Free") 
+    tier = Column(String, nullable=True,default=True) 
 
 
 class Destination(Base):
@@ -35,12 +35,14 @@ class Destination(Base):
     name = Column(String, index=True)
     location = Column(String, index=True)
     state = Column(String, index=True)
+    coordinate = Column(String, nullable=True)
     description = Column(String)
-    coordinates = Column(String, nullable=True)
-    rating = Column(Integer, unique=True)
-    min_price = Column(Integer, nullable=True)
-    max_prce = Column(Integer, nullable=True)
-    src = Column(String, nullable=True)
+    reviewRating = Column(Integer, unique=True)
+    activityCategory = Column(String, nullable=True)
+    src = Column(String)
+    openingHours = Column(String, nullable=True)
+    minPrice = Column(Integer, nullable=True)
+    maxPrice = Column(Integer, nullable=True)
     liked_by = Column(Boolean, default=False)
 
 

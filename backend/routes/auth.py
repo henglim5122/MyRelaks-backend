@@ -257,7 +257,7 @@ async def reset_password(reset_data: PasswordReset, db: db_dependency):
         )
     
 
-# @user_router.get("/user", response_model=UserBase)
+@user_router.get("/user", response_model=UserBase)
 async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
