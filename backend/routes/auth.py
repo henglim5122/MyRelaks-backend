@@ -148,13 +148,14 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
-def authenticate_user(email: str, password: str, db):
-    print(email, password)
-    user = db.query(Users).filter(Users.email == email).first()
+def authenticate_user(username: str, password: str, db):
+    # print(username, password)
+    user = db.query(Users).filter(Users.username == username).first()
     if not user:
         return False
     if not bcrypt_context.verify(password, user.hashed_password):
         return False
+    # print(user)
     return user
     
 
@@ -171,7 +172,7 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: 
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
     else:
-        token = create_access_token(user.email, user.id, timedelta(minutes=20))
+        token = create_access_token(user.email, user.id, timedelta(minutes=720))
         return {"access_token": token, "token_type": "bearer"}
     
 @auth_router.post("/forgot-password", status_code=status.HTTP_200_OK)

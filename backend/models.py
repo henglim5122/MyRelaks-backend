@@ -1,5 +1,5 @@
 from database import Base 
-from sqlalchemy import Column, Integer, String, ForeignKey, Date, DateTime, Boolean, Text
+from sqlalchemy import Column, Integer, String, ForeignKey, Date, DateTime, Boolean, Text, Float,Float
 from sqlalchemy.sql import func
 
 class Users(Base):
@@ -37,12 +37,12 @@ class Destination(Base):
     state = Column(String, index=True)
     coordinate = Column(String, nullable=True)
     description = Column(String)
-    reviewRating = Column(Integer, unique=True)
+    reviewRating = Column(Float, nullable=True)
     activityCategory = Column(String, nullable=True)
     src = Column(String)
     openingHours = Column(String, nullable=True)
-    minPrice = Column(Integer, nullable=True)
-    maxPrice = Column(Integer, nullable=True)
+    minPrice = Column(Float, nullable=True)
+    maxPrice = Column(Float, nullable=True)
     liked_by = Column(Boolean, default=False)
 
 
@@ -52,7 +52,7 @@ class Payment(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     aspect = Column(String)
-    payment_amount = Column(Integer)
+    payment_amount = Column(Float)
     payment_method = Column(String)
     payment_status = Column(String, default="Pending")
     payment_date = Column(DateTime, default=func.now())
@@ -66,5 +66,5 @@ class Itinerary_Record(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     trip_name = Column(String)
     trip_dates = Column(Date)
-    total_budget = Column(Integer)
-    estimated_cost = Column(Integer)
+    total_budget = Column(Float)
+    estimated_cost = Column(Float)
