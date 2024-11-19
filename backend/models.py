@@ -43,7 +43,7 @@ class Destination(Base):
     openingHours = Column(String, nullable=True)
     minPrice = Column(Float, nullable=True)
     maxPrice = Column(Float, nullable=True)
-    liked_by = Column(Boolean, default=False)
+    
 
 
 class Payment(Base):
@@ -68,3 +68,12 @@ class Itinerary_Record(Base):
     trip_dates = Column(Date)
     total_budget = Column(Float)
     estimated_cost = Column(Float)
+
+  
+class CustomerPreference(Base):
+    __tablename__ = "customer_preference"
+    
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    destination_id = Column(Integer, ForeignKey("destination.id"))
+

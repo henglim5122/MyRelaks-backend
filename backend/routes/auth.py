@@ -142,7 +142,8 @@ async def register_user(db: db_dependency, user_request: UserRequest):
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 
-oauth2_bearer = OAuth2PasswordBearer(tokenUrl="login")
+
+oauth2_bearer = OAuth2PasswordBearer(tokenUrl="token")
 
 class Token(BaseModel):
     access_token: str
@@ -165,16 +166,37 @@ def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     encode.update({"exp": expires})
     return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
 
-@auth_router.post("/login", response_model=Token)  # Login endpoint
-async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: db_dependency):
+@auth_router.post("/token", response_model=Token)
+async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], db: db_dependency):
     user = authenticate_user(form_data.username, form_data.password, db)
-
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
-    else:
-        token = create_access_token(user.email, user.id, timedelta(minutes=720))
-        return {"access_token": token, "token_type": "bearer"}
-    
+    token = create_access_token(user.username, user.id, timedelta(minutes=120))
+    return {"access_token": token, "token_type": "bearer"}
+
+@user_router.get("/user", response_model=UserBase)
+async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        user_id: int = payload.get("id")
+        
+        if username is None or user_id is None:
+            raise HTTPException(status_code=401, detail="Could not validate user.")
+        
+        user = db.query(Users).filter(Users.id == user_id).first()
+        if user is None:
+            raise HTTPException(status_code=401, detail="Could not validate user.")
+        
+        return user
+    except JWTError:
+        raise HTTPException(status_code=401, detail="Could not validate user.")
+        
+
+
+
+
+        
 @auth_router.post("/forgot-password", status_code=status.HTTP_200_OK)
 async def forgot_password(request: PasswordResetRequest, db: db_dependency):
     try:
@@ -258,22 +280,7 @@ async def reset_password(reset_data: PasswordReset, db: db_dependency):
         )
     
 
-@user_router.get("/user", response_model=UserBase)
-async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db_dependency):
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        user_id: int = payload.get("id")
-        if username is None or user_id is None:
-            raise HTTPException(status_code=401, detail="Could not validate user.")
-        
-        user = db.query(Users).filter(Users.id == user_id).first()
-        if user is None:
-            raise HTTPException(status_code=401, detail="Could not validate user.")
-        
-        return user  # The UserBase model now returns additional fields
-    except JWTError:
-        raise HTTPException(status_code=401, detail="Could not validate user.")
+
     
 @user_router.get("/users", response_model=List[UserBase])
 async def get_all_users(db: db_dependency):
@@ -335,3 +342,5 @@ async def delete_user(user_id: int, db: db_dependency):
     db.delete(user)
     db.commit()
     return None
+
+# @user_router.put("/user/{user_id}/subscription")
