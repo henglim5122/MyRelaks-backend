@@ -43,8 +43,6 @@ class Destination(Base):
     openingHours = Column(String, nullable=True)
     minPrice = Column(Float, nullable=True)
     maxPrice = Column(Float, nullable=True)
-    liked_by = Column(Boolean, default=False)
-
 
 class Payment(Base):
     __tablename__ = "payment_information"
