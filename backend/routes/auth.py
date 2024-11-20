@@ -11,9 +11,6 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from datetime import date, timedelta, datetime, timezone
 import secrets
-import logging
-
-logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -50,8 +47,12 @@ class UserBase(BaseModel):
     is_active: bool
     is_email_verified: bool
 
+
     class Config:
-        orm_mode = True  
+        orm_mode = True
+        json_encoders = {
+            datetime: lambda dt: dt.isoformat() if dt else None
+        }
 
 # User Registration Model
 class UserRequest(BaseModel):  
@@ -72,42 +73,13 @@ class UserRequest(BaseModel):
     # phone_number: Optional[str] = None
     # city: Optional[str] = None
     # country: Optional[str] = None
+    
+class ForgotPasswordRequest(BaseModel):
+    email: str
 
-class PasswordResetRequest(BaseModel):
-    email: EmailStr  # This ensures email validation
-
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "email": "user@example.com"
-            }
-        }
-
-class PasswordReset(BaseModel):
+class ResetPasswordRequest(BaseModel):
     token: str
     new_password: str
-
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "token": "your-reset-token",
-                "new_password": "newSecurePassword123"
-            }
-        }
-
-    @field_validator('token')
-    @classmethod
-    def validate_token(cls, v):
-        if not (32 <= len(v) <= 128):
-            raise ValueError('Token must be between 32 and 128 characters')
-        return v
-
-    @field_validator('new_password')
-    @classmethod
-    def validate_password(cls, v):
-        if not (8 <= len(v) <= 100):
-            raise ValueError('Password must be between 8 and 100 characters')
-        return v
 
 @auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
@@ -198,87 +170,77 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
 
         
 @auth_router.post("/forgot-password", status_code=status.HTTP_200_OK)
-async def forgot_password(request: PasswordResetRequest, db: db_dependency):
+async def forgot_password(request: ForgotPasswordRequest, db: db_dependency):
     try:
-        # Log the incoming request
-        logger.info(f"Received password reset request for email: {request.email}")
-        
-        # Check if email exists
         user = db.query(Users).filter(Users.email == request.email).first()
-        
-        # Even if user doesn't exist, don't reveal this information
         if not user:
-            logger.info(f"No user found for email: {request.email}")
-            return {"message": "If the email exists, a password reset link has been sent"}
-
-        # Generate token
-        reset_token = secrets.token_urlsafe(32)
-        reset_expiry = datetime.now(timezone.utc) + timedelta(hours=1)
-
-        try:
-            # Update user with reset token
-            user.password_reset_token = reset_token
-            user.password_reset_expires = reset_expiry
-            db.commit()
-            logger.info(f"Reset token generated for user: {user.id}")
-
-        except Exception as db_error:
-            logger.error(f"Database error while updating reset token: {str(db_error)}")
-            db.rollback()
             raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="Database error occurred"
+                status_code=404,
+                detail="No account found with this email address"
             )
-
-        # Generate reset link
-        reset_link = f"localhost:3000/reset-password?token={reset_token}"
-        logger.info(f"Reset link generated: {reset_link}")
-
+        
+        # Generate reset token
+        reset_token = secrets.token_urlsafe(32)
+        user.password_reset_token = reset_token
+        user.password_reset_expires = datetime.now(timezone.utc) + timedelta(hours=1)
+        
+        # Save token to database
+        db.commit()
+        
         return {
-            "message": "Password reset instructions have been sent",
-            "debug_link": reset_link  # Remove in production
+            "status": "success",
+            "message": "Password reset instructions sent",
+            "token": user.password_reset_token
         }
-
+        
+    except HTTPException as he:
+        raise he
     except Exception as e:
-        logger.error(f"Unexpected error in forgot_password: {str(e)}")
-        logger.exception(e)  # This will log the full stack trace
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            status_code=500,
             detail=str(e)
         )
 
-@auth_router.post("/reset-password", status_code=status.HTTP_200_OK)
-async def reset_password(reset_data: PasswordReset, db: db_dependency):
+@auth_router.post("/reset-password")
+async def reset_password(request: ResetPasswordRequest, db: db_dependency):
     try:
-        user = db.query(Users).filter(
-            Users.password_reset_token == reset_data.token,
-            Users.password_reset_expires > datetime.now(timezone.utc)
-        ).first()
+        user = db.query(Users).filter(Users.password_reset_token == request.token).first()
         
         if not user:
             raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="Invalid or expired reset token"
+                status_code=404,
+                detail="Invalid reset token"
             )
-        
+            
+        current_time = datetime.now(timezone.utc)
+        if user.password_reset_expires < current_time:
+            raise HTTPException(
+                status_code=400,
+                detail="Reset token has expired"
+            )
+            
         # Update password
-        user.hashed_password = bcrypt_context.hash(reset_data.new_password)
+        user.hashed_password = bcrypt_context.hash(request.new_password)
+        
+        # Clear reset token
         user.password_reset_token = None
         user.password_reset_expires = None
         
+        # Save changes
         db.commit()
-        return {"message": "Password has been reset successfully"}
         
-    except HTTPException:
-        raise
+        return {
+            "status": "success",
+            "message": "Password has been reset successfully"
+        }
+        
+    except HTTPException as he:
+        raise he
     except Exception as e:
-        logger.error(f"Error in password reset: {str(e)}")
-        db.rollback()
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="An error occurred while resetting the password"
+            status_code=500,
+            detail=str(e)
         )
-    
 
 
     
