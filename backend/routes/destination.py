@@ -58,13 +58,18 @@ async def get_liked_destination_by_user_id(db: db_dependency, user: user_depende
         raise HTTPException(status_code=401, detail="Not authenticated")
     return db.query(CustomerPreference).filter(CustomerPreference.user_id == user_id).all()
 
-# @router.get("/liked_destinations/{destination_id}")
-# async def get_liked_destination_by_user_id(db: db_dependency, user: user_dependency):
-#     if user is None:
-#         raise HTTPException(status_code=401, detail="Not authenticated")
-#     return db.query(CustomerPreference).filter(CustomerPreference.user_id == user.get("id")).all()
-
-
+@router.delete("/liked_destinations/{user_id}")
+async def delete_destination_by_user_id(db: db_dependency, user: user_dependency, user_id: int = Path(gt=0)):
+    if user is None:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    result = db.query(CustomerPreference).filter(CustomerPreference.user_id == user_id).all()
+    if result is None:
+        return {"message": "Destination List not found"}
+    else:
+        db.query(CustomerPreference).filter(CustomerPreference.user_id == user_id).delete()
+        db.commit()
+        # db.refresh()
+        return {"message": "Destinations all removed successfully"}
 
     
 @router.post("/liked_destinations")
