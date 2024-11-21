@@ -11,6 +11,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from datetime import date, timedelta, datetime, timezone
 import secrets
+from dateutil.relativedelta import relativedelta
+
 
 load_dotenv()
 
@@ -81,6 +83,10 @@ class ResetPasswordRequest(BaseModel):
     token: str
     new_password: str
 
+class UpdateUserSubscriptionRequest(BaseModel):
+    subscription: str
+    
+
 @auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
     
@@ -143,7 +149,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
     user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
-    token = create_access_token(user.username, user.id, timedelta(minutes=120))
+    token = create_access_token(user.username, user.id, timedelta(hours=6))
     return {"access_token": token, "token_type": "bearer"}
 
 @user_router.get("/user", response_model=UserBase)
@@ -339,4 +345,29 @@ async def delete_user(user_id: int, db: db_dependency):
     db.commit()
     return None
 
+@user_router.put("/user_subscription/{user_id}")
+async def update_user_subscription(user_id: int, subscription: UpdateUserSubscriptionRequest, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    # if (user.subscription == False):
+    #     print(subscription.subscription)
+    #     user.subscription = True
+    #     user.tier = subscription.subscription
+    #     user.subscription_time = datetime.now(timezone.utc)
+    #     db.commit()
+    # else:
+    #     print("User already has a subscription")
+    print(subscription.subscription)
+    user.subscription = True
+    user.tier = subscription.subscription
+    user.subscription_time = datetime.now(timezone.utc).date()
+    if (subscription.subscription == "Freemium"):
+        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=1)).date()
+    else:
+        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+    db.commit()
+
+    db.refresh(user)
+    return user
 # @user_router.put("/user/{user_id}/subscription")

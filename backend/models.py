@@ -26,6 +26,8 @@ class Users(Base):
     password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Boolean, default=False)  
     tier = Column(String, nullable=True,default=None) 
+    subscription_time = Column(DateTime, nullable=True)
+    subscription_expire = Column(DateTime, nullable=True)
     points = Column(Integer, nullable=True,default=None)
 
 
