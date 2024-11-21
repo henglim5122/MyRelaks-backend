@@ -44,9 +44,9 @@ class UserBase(BaseModel):
     country: Optional[str] = None
     subscription: Optional[bool] = False
     tier: Optional[str] = None
-    is_active: bool
+    last_login: Optional[datetime] = None
     is_email_verified: bool
-
+    points: Optional[int] = 0
 
     class Config:
         orm_mode = True
@@ -100,7 +100,7 @@ async def register_user(db: db_dependency, user_request: UserRequest):
             city=user_request.city,
             country=user_request.country,
             subscription=False,
-            tier=False,
+            tier=None,
         )
         db.add(user)
         db.commit()
@@ -157,6 +157,9 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
         user = db.query(Users).filter(Users.id == user_id).first()
+        
+        db.commit()
+        db.refresh(user)
         if user is None:
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
@@ -165,7 +168,22 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
         raise HTTPException(status_code=401, detail="Could not validate user.")
         
 
+@user_router.get("/user/{user_id}", response_model=UserBase)
+async def get_user(user_id: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
 
+@user_router.put("/user/{user_id}/{email}/add_points/")
+async def update_user_points(user_id: int, email: str, points: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    user.points += points
+    db.commit()
+    db.refresh(user)
+    return user
 
 
         
@@ -252,12 +270,28 @@ async def get_all_users(db: db_dependency):
     return users
 
     
-@user_router.get("/user/{user_id}", response_model=UserBase)
-async def get_user(user_id: int, db: db_dependency):
-    user = db.query(Users).filter(Users.id == user_id).first()
+
+
+@user_router.put("/user/{user_id}/{email}/login_time")
+async def update_user_login_time(user_id: int, email: str, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
+    if user.last_login is None:
+        user.last_login = datetime.now(timezone.utc)
+        user.points = 100
+        print('Login time updated')
+    elif user.last_login < datetime.now(timezone.utc) - timedelta(days=1):
+        user.last_login = datetime.now(timezone.utc)
+        user.points += 100
+        print('Login time updated')
+    else:
+        print('Login time not updated')
+    db.commit()
+    db.refresh(user)
     return user
+
+
 
 @user_router.put("/user/{user_id}", response_model=UserBase)
 async def update_user(user_id: int, user_update: dict, db: db_dependency):

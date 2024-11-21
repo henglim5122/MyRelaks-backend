@@ -19,13 +19,14 @@ class Users(Base):
     phone_number = Column(String, nullable=True)
     city = Column(String, nullable=True)
     country = Column(String, nullable=True) 
-    is_active = Column(Boolean, default=True)
+    last_login = Column(DateTime(timezone=True), nullable=True)
     is_email_verified = Column(Boolean, default=False)
     updated_at = Column(DateTime, nullable=True)
     password_reset_token = Column(String(128), nullable=True, index=True)
     password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Boolean, default=False)  
-    tier = Column(String, nullable=True,default=True) 
+    tier = Column(String, nullable=True,default=None) 
+    points = Column(Integer, nullable=True,default=None)
 
 
 class Destination(Base):
@@ -65,7 +66,7 @@ class Itinerary_Record(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     trip_name = Column(String)
-    trip_dates = Column(Date)
+    trip_ai_record = Column(JSON)
     total_budget = Column(Float)
     estimated_cost = Column(Float)
 
