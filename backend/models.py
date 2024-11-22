@@ -28,6 +28,9 @@ class Users(Base):
     tier = Column(String, nullable=True,default=None) 
     subscription_time = Column(DateTime, nullable=True)
     subscription_expire = Column(DateTime, nullable=True)
+    number_of_offers = Column(Integer, nullable=True)
+    discount = Column(Integer, nullable=True,default=0)
+    freemium_subscription_before = Column(Boolean, default=False)
     points = Column(Integer, nullable=True,default=None)
 
 

@@ -44,10 +44,18 @@ class UserBase(BaseModel):
     phone_number: Optional[str] = None
     city: Optional[str] = None
     country: Optional[str] = None
-    subscription: Optional[bool] = False
-    tier: Optional[str] = None
     last_login: Optional[datetime] = None
     is_email_verified: bool
+    updated_at: Optional[datetime] = None
+    password_reset_token: Optional[str] = None
+    password_reset_expires: Optional[datetime] = None
+    subscription: Optional[bool] = False
+    tier: Optional[str] = None
+    subscription_time: Optional[datetime] = None
+    subscription_expire: Optional[datetime] = None
+    number_of_offers: Optional[int] = 0
+    discount: Optional[int] = 0
+    freemium_subscription_before: Optional[bool] = None
     points: Optional[int] = 0
 
     class Config:
@@ -84,7 +92,7 @@ class ResetPasswordRequest(BaseModel):
     new_password: str
 
 class UpdateUserSubscriptionRequest(BaseModel):
-    subscription: str
+    tier: str
     
 
 @auth_router.post("/register")
@@ -105,8 +113,6 @@ async def register_user(db: db_dependency, user_request: UserRequest):
             phone_number=user_request.phone_number,
             city=user_request.city,
             country=user_request.country,
-            subscription=False,
-            tier=None,
         )
         db.add(user)
         db.commit()
@@ -346,7 +352,7 @@ async def delete_user(user_id: int, db: db_dependency):
     return None
 
 @user_router.put("/user_subscription/{user_id}")
-async def update_user_subscription(user_id: int, subscription: UpdateUserSubscriptionRequest, db: db_dependency):
+async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionRequest, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
@@ -358,16 +364,74 @@ async def update_user_subscription(user_id: int, subscription: UpdateUserSubscri
     #     db.commit()
     # else:
     #     print("User already has a subscription")
-    print(subscription.subscription)
-    user.subscription = True
-    user.tier = subscription.subscription
-    user.subscription_time = datetime.now(timezone.utc).date()
-    if (subscription.subscription == "Freemium"):
-        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=1)).date()
-    else:
-        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
-    db.commit()
+    tier = tier.tier
+    tiers = ["Freemium", "Starter", "Intermediate", "Pro"]
+   
+    if (user.tier is None):
+        user.tier = tier
+        user.subscription = True
+        user.subscription_time = datetime.now(timezone.utc).date()
+        if (tier == "Freemium"):
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=1)).date()
+            user.number_of_offers = 0
+            user.discount = 0
+            user.freemium_subscription_before = True
+            print("Freemium subscription")
+            db.commit()
+            db.refresh(user)
+        else:
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+            if (user.tier == "Starter"):
+                user.discount = 10
+                user.number_of_offers = 5
+                print("Starter subscription")
+            elif (user.tier == "Intermediate"):
+                user.discount = 10
+                user.number_of_offers = 10
+                print("Intermediate subscription")
+            elif (user.tier == "Pro"):
+                user.discount = 20
+                user.number_of_offers = 15
+                print("Pro subscription")
+        db.commit()
+        db.refresh(user)
+        return user
+    
+    elif (user.tier is not None and user.freemium_subscription_before == True):
+        if tier == "Freemium" and user.freemium_subscription_before:
+            print("Cannot subscribe to Freemium again")
 
+            raise HTTPException(status_code=400, detail="Cannot subscribe to Freemium again")
+        if tiers.index(tier) > tiers.index(user.tier):
+            print(tier)
+            print(user.tier)
+            print( tiers.index(tier))
+            print( tiers.index(user.tier))
+            user.tier = tier
+            print(user.tier)
+            user.subscription = True        
+            user.subscription_time = datetime.now(timezone.utc).date()
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+            if (tier == "Starter"):
+                user.discount = 10
+                user.number_of_offers = 5
+                print("Starter upgraded")
+                
+            elif (tier == "Intermediate"):
+                user.discount = 10
+                user.number_of_offers = 10
+                print("Intermediate upgraded")
+                
+            elif (tier == "Pro"):
+                user.discount = 20
+                user.number_of_offers = 15
+                print("Pro upgraded")
+            db.commit()
+            db.refresh(user)
+            return user
+        else:
+            print("Cant upgrade subscription")
+            raise HTTPException(status_code=400, detail="Cant downgrade subscription")
+    db.commit()
     db.refresh(user)
-    return user
 # @user_router.put("/user/{user_id}/subscription")
