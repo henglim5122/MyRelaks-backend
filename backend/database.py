@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-from google.cloud.sql.connector import Connector
+# from google.cloud.sql.connector import Connector
 
 load_dotenv()
 
