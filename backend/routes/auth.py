@@ -11,6 +11,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from datetime import date, timedelta, datetime, timezone
 import secrets
+from dateutil.relativedelta import relativedelta
+
 
 load_dotenv()
 
@@ -44,9 +46,9 @@ class UserBase(BaseModel):
     country: Optional[str] = None
     subscription: Optional[bool] = False
     tier: Optional[str] = None
-    is_active: bool
+    last_login: Optional[datetime] = None
     is_email_verified: bool
-
+    points: Optional[int] = 0
 
     class Config:
         orm_mode = True
@@ -81,6 +83,10 @@ class ResetPasswordRequest(BaseModel):
     token: str
     new_password: str
 
+class UpdateUserSubscriptionRequest(BaseModel):
+    subscription: str
+    
+
 @auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
     
@@ -100,7 +106,7 @@ async def register_user(db: db_dependency, user_request: UserRequest):
             city=user_request.city,
             country=user_request.country,
             subscription=False,
-            tier=False,
+            tier=None,
         )
         db.add(user)
         db.commit()
@@ -143,7 +149,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
     user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
-    token = create_access_token(user.username, user.id, timedelta(minutes=120))
+    token = create_access_token(user.username, user.id, timedelta(hours=6))
     return {"access_token": token, "token_type": "bearer"}
 
 @user_router.get("/user", response_model=UserBase)
@@ -157,6 +163,9 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
         user = db.query(Users).filter(Users.id == user_id).first()
+        
+        db.commit()
+        db.refresh(user)
         if user is None:
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
@@ -165,7 +174,22 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
         raise HTTPException(status_code=401, detail="Could not validate user.")
         
 
+@user_router.get("/user/{user_id}", response_model=UserBase)
+async def get_user(user_id: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
 
+@user_router.put("/user/{user_id}/{email}/add_points/")
+async def update_user_points(user_id: int, email: str, points: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    user.points += points
+    db.commit()
+    db.refresh(user)
+    return user
 
 
         
@@ -252,12 +276,28 @@ async def get_all_users(db: db_dependency):
     return users
 
     
-@user_router.get("/user/{user_id}", response_model=UserBase)
-async def get_user(user_id: int, db: db_dependency):
-    user = db.query(Users).filter(Users.id == user_id).first()
+
+
+@user_router.put("/user/{user_id}/{email}/login_time")
+async def update_user_login_time(user_id: int, email: str, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
+    if user.last_login is None:
+        user.last_login = datetime.now(timezone.utc)
+        user.points = 100
+        print('Login time updated')
+    elif user.last_login < datetime.now(timezone.utc) - timedelta(days=1):
+        user.last_login = datetime.now(timezone.utc)
+        user.points += 100
+        print('Login time updated')
+    else:
+        print('Login time not updated')
+    db.commit()
+    db.refresh(user)
     return user
+
+
 
 @user_router.put("/user/{user_id}", response_model=UserBase)
 async def update_user(user_id: int, user_update: dict, db: db_dependency):
@@ -305,4 +345,29 @@ async def delete_user(user_id: int, db: db_dependency):
     db.commit()
     return None
 
+@user_router.put("/user_subscription/{user_id}")
+async def update_user_subscription(user_id: int, subscription: UpdateUserSubscriptionRequest, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    # if (user.subscription == False):
+    #     print(subscription.subscription)
+    #     user.subscription = True
+    #     user.tier = subscription.subscription
+    #     user.subscription_time = datetime.now(timezone.utc)
+    #     db.commit()
+    # else:
+    #     print("User already has a subscription")
+    print(subscription.subscription)
+    user.subscription = True
+    user.tier = subscription.subscription
+    user.subscription_time = datetime.now(timezone.utc).date()
+    if (subscription.subscription == "Freemium"):
+        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=1)).date()
+    else:
+        user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+    db.commit()
+
+    db.refresh(user)
+    return user
 # @user_router.put("/user/{user_id}/subscription")

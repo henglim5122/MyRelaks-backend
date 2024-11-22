@@ -7,6 +7,7 @@ from routes import auth, itinerary, destination, payment
 origins = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://gaia-capstone05-prd.web.app"
 ]
 
 
