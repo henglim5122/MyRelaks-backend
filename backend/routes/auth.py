@@ -290,13 +290,16 @@ async def update_user_login_time(user_id: int, email: str, db: db_dependency):
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
     if user.last_login is None:
-        user.last_login = datetime.now(timezone.utc)
+        user.last_login = datetime.now(timezone.utc).date()
         user.points = 100
         print('Login time updated')
-    elif user.last_login < datetime.now(timezone.utc) - timedelta(days=1):
-        user.last_login = datetime.now(timezone.utc)
-        user.points += 100
-        print('Login time updated')
+    elif user.last_login is not None:
+        # print(user.last_login.date())
+        # print(datetime.now(timezone.utc).date())
+        if user.last_login.date() < datetime.now(timezone.utc).date():
+            user.last_login = datetime.now(timezone.utc).date()
+            user.points += 100
+            print('Login time updated')
     else:
         print('Login time not updated')
     db.commit()
