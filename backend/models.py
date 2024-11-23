@@ -58,11 +58,11 @@ class Payment(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     aspect = Column(String)
-    payment_amount = Column(Float)
     payment_method = Column(String)
-    payment_status = Column(String, default="Pending")
-    payment_date = Column(DateTime, default=func.now())
-    encrypted_payment_info = Column(String,unique=True)
+    payment_date = Column(DateTime)
+    payment_amount = Column(Float)
+    # payment_status = Column(String)
+    # encrypted_payment_info = Column(String,unique=True)
 
 
 class Itinerary_Record(Base):
@@ -72,8 +72,8 @@ class Itinerary_Record(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     trip_name = Column(String)
     trip_ai_record = Column(JSON)
-    total_budget = Column(Float)
-    estimated_cost = Column(Float)
+    # total_budget = Column(Float)
+    # estimated_cost = Column(Float)
 
   
 class CustomerPreference(Base):
