@@ -328,7 +328,7 @@ async def update_user(user_id: int, user_update: dict, db: db_dependency):
                 if not profile_image.startswith('data:image'):
                     raise HTTPException(status_code=400, detail="Invalid image format")
             user.profile_image = profile_image
-            
+        
         # Update other fields
         for key, value in user_update.items():
             if hasattr(user, key) and key != 'profile_image':
@@ -438,3 +438,16 @@ async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionReq
     db.commit()
     db.refresh(user)
 # @user_router.put("/user/{user_id}/subscription")
+
+@user_router.put("/user/purchase_offer/{user_id}")
+async def update_user_offers(user_id: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    user.number_of_offers -= 1
+    user.points += 250
+
+    db.commit()
+    db.refresh(user)
+    
+    return user

@@ -34,8 +34,8 @@ async def create_payment(payment: PaymentRequest, db: db_dependency):
             user_id=payment.user_id,
             aspect=payment.aspect,
             payment_method=payment.payment_method,
+            payment_date=datetime.now(timezone.utc),
             payment_amount=payment.payment_amount,
-            payment_date=datetime.now(timezone.utc)
         )
         db.add(payment_info)
         db.commit()

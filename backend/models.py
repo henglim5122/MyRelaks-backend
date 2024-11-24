@@ -56,7 +56,7 @@ class Payment(Base):
     __tablename__ = "payment_information"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
+    user_id = Column(Integer)
     aspect = Column(String)
     payment_method = Column(String)
     payment_date = Column(DateTime)
