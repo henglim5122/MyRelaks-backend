@@ -11,6 +11,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from datetime import date, timedelta, datetime, timezone
 import secrets
+from dateutil.relativedelta import relativedelta
+
 
 load_dotenv()
 
@@ -42,11 +44,19 @@ class UserBase(BaseModel):
     phone_number: Optional[str] = None
     city: Optional[str] = None
     country: Optional[str] = None
+    last_login: Optional[datetime] = None
+    is_email_verified: bool
+    updated_at: Optional[datetime] = None
+    password_reset_token: Optional[str] = None
+    password_reset_expires: Optional[datetime] = None
     subscription: Optional[bool] = False
     tier: Optional[str] = None
-    is_active: bool
-    is_email_verified: bool
-
+    subscription_time: Optional[datetime] = None
+    subscription_expire: Optional[datetime] = None
+    number_of_offers: Optional[int] = 0
+    discount: Optional[int] = 0
+    freemium_subscription_before: Optional[bool] = None
+    points: Optional[int] = 0
 
     class Config:
         orm_mode = True
@@ -81,6 +91,10 @@ class ResetPasswordRequest(BaseModel):
     token: str
     new_password: str
 
+class UpdateUserSubscriptionRequest(BaseModel):
+    tier: str
+    
+
 @auth_router.post("/register")
 async def register_user(db: db_dependency, user_request: UserRequest):
     
@@ -99,8 +113,6 @@ async def register_user(db: db_dependency, user_request: UserRequest):
             phone_number=user_request.phone_number,
             city=user_request.city,
             country=user_request.country,
-            subscription=False,
-            tier=False,
         )
         db.add(user)
         db.commit()
@@ -143,7 +155,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
     user = authenticate_user(form_data.username, form_data.password, db)
     if not user:
         raise HTTPException(status_code=401, detail="Could not validate user.")
-    token = create_access_token(user.username, user.id, timedelta(minutes=120))
+    token = create_access_token(user.username, user.id, timedelta(hours=6))
     return {"access_token": token, "token_type": "bearer"}
 
 @user_router.get("/user", response_model=UserBase)
@@ -157,6 +169,9 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
         user = db.query(Users).filter(Users.id == user_id).first()
+        
+        db.commit()
+        db.refresh(user)
         if user is None:
             raise HTTPException(status_code=401, detail="Could not validate user.")
         
@@ -165,7 +180,22 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)], db: db
         raise HTTPException(status_code=401, detail="Could not validate user.")
         
 
+@user_router.get("/user/{user_id}", response_model=UserBase)
+async def get_user(user_id: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
 
+@user_router.put("/user/{user_id}/{email}/add_points/")
+async def update_user_points(user_id: int, email: str, points: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    user.points += points
+    db.commit()
+    db.refresh(user)
+    return user
 
 
         
@@ -252,12 +282,31 @@ async def get_all_users(db: db_dependency):
     return users
 
     
-@user_router.get("/user/{user_id}", response_model=UserBase)
-async def get_user(user_id: int, db: db_dependency):
-    user = db.query(Users).filter(Users.id == user_id).first()
+
+
+@user_router.put("/user/{user_id}/{email}/login_time")
+async def update_user_login_time(user_id: int, email: str, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id, Users.email == email).first()
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
+    if user.last_login is None:
+        user.last_login = datetime.now(timezone.utc).date()
+        user.points = 100
+        print('Login time updated')
+    elif user.last_login is not None:
+        # print(user.last_login.date())
+        # print(datetime.now(timezone.utc).date())
+        if user.last_login.date() < datetime.now(timezone.utc).date():
+            user.last_login = datetime.now(timezone.utc).date()
+            user.points += 100
+            print('Login time updated')
+    else:
+        print('Login time not updated')
+    db.commit()
+    db.refresh(user)
     return user
+
+
 
 @user_router.put("/user/{user_id}", response_model=UserBase)
 async def update_user(user_id: int, user_update: dict, db: db_dependency):
@@ -279,7 +328,7 @@ async def update_user(user_id: int, user_update: dict, db: db_dependency):
                 if not profile_image.startswith('data:image'):
                     raise HTTPException(status_code=400, detail="Invalid image format")
             user.profile_image = profile_image
-            
+        
         # Update other fields
         for key, value in user_update.items():
             if hasattr(user, key) and key != 'profile_image':
@@ -305,4 +354,100 @@ async def delete_user(user_id: int, db: db_dependency):
     db.commit()
     return None
 
+@user_router.put("/user_subscription/{user_id}")
+async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionRequest, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    # if (user.subscription == False):
+    #     print(subscription.subscription)
+    #     user.subscription = True
+    #     user.tier = subscription.subscription
+    #     user.subscription_time = datetime.now(timezone.utc)
+    #     db.commit()
+    # else:
+    #     print("User already has a subscription")
+    tier = tier.tier
+    tiers = ["Freemium", "Starter", "Intermediate", "Pro"]
+   
+    if (user.tier is None):
+        user.tier = tier
+        user.subscription = True
+        user.subscription_time = datetime.now(timezone.utc).date()
+        if (tier == "Freemium"):
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=1)).date()
+            user.number_of_offers = 0
+            user.discount = 0
+            user.freemium_subscription_before = True
+            print("Freemium subscription")
+            db.commit()
+            db.refresh(user)
+        else:
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+            if (user.tier == "Starter"):
+                user.discount = 10
+                user.number_of_offers = 5
+                print("Starter subscription")
+            elif (user.tier == "Intermediate"):
+                user.discount = 10
+                user.number_of_offers = 10
+                print("Intermediate subscription")
+            elif (user.tier == "Pro"):
+                user.discount = 20
+                user.number_of_offers = 15
+                print("Pro subscription")
+        db.commit()
+        db.refresh(user)
+        return user
+    
+    elif (user.tier is not None and user.freemium_subscription_before == True):
+        if tier == "Freemium" and user.freemium_subscription_before:
+            print("Cannot subscribe to Freemium again")
+
+            raise HTTPException(status_code=400, detail="Cannot subscribe to Freemium again")
+        if tiers.index(tier) > tiers.index(user.tier):
+            print(tier)
+            print(user.tier)
+            print( tiers.index(tier))
+            print( tiers.index(user.tier))
+            user.tier = tier
+            print(user.tier)
+            user.subscription = True        
+            user.subscription_time = datetime.now(timezone.utc).date()
+            user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
+            if (tier == "Starter"):
+                user.discount = 10
+                user.number_of_offers = 5
+                print("Starter upgraded")
+                
+            elif (tier == "Intermediate"):
+                user.discount = 10
+                user.number_of_offers = 10
+                print("Intermediate upgraded")
+                
+            elif (tier == "Pro"):
+                user.discount = 20
+                user.number_of_offers = 15
+                print("Pro upgraded")
+            db.commit()
+            db.refresh(user)
+            return user
+        else:
+            print("Cant upgrade subscription")
+            raise HTTPException(status_code=400, detail="Cant downgrade subscription")
+    db.commit()
+    db.refresh(user)
 # @user_router.put("/user/{user_id}/subscription")
+
+@user_router.put("/user/purchase_offer/{user_id}")
+async def update_user_offers(user_id: int, db: db_dependency):
+    user = db.query(Users).filter(Users.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    user.number_of_offers -= 1
+    user.points += 250
+
+    db.commit()
+    db.refresh(user)
+    
+    return user

@@ -7,6 +7,7 @@ from routes import auth, itinerary, destination, payment
 origins = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://gaia-capstone05-prd.web.app"
 ]
 
 
@@ -23,3 +24,4 @@ app.add_middleware(
 app.include_router(auth.auth_router)
 app.include_router(auth.user_router)
 app.include_router(destination.router)
+app.include_router(payment.router)

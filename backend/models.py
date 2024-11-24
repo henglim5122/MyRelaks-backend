@@ -19,13 +19,19 @@ class Users(Base):
     phone_number = Column(String, nullable=True)
     city = Column(String, nullable=True)
     country = Column(String, nullable=True) 
-    is_active = Column(Boolean, default=True)
+    last_login = Column(DateTime(timezone=True), nullable=True)
     is_email_verified = Column(Boolean, default=False)
     updated_at = Column(DateTime, nullable=True)
     password_reset_token = Column(String(128), nullable=True, index=True)
     password_reset_expires = Column(DateTime(timezone=True), nullable=True)
     subscription = Column(Boolean, default=False)  
-    tier = Column(String, nullable=True,default=True) 
+    tier = Column(String, nullable=True,default=None) 
+    subscription_time = Column(DateTime, nullable=True)
+    subscription_expire = Column(DateTime, nullable=True)
+    number_of_offers = Column(Integer, nullable=True)
+    discount = Column(Integer, nullable=True,default=0)
+    freemium_subscription_before = Column(Boolean, default=False)
+    points = Column(Integer, nullable=True,default=None)
 
 
 class Destination(Base):
@@ -50,13 +56,13 @@ class Payment(Base):
     __tablename__ = "payment_information"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
+    user_id = Column(Integer)
     aspect = Column(String)
-    payment_amount = Column(Float)
     payment_method = Column(String)
-    payment_status = Column(String, default="Pending")
-    payment_date = Column(DateTime, default=func.now())
-    encrypted_payment_info = Column(String,unique=True)
+    payment_date = Column(DateTime)
+    payment_amount = Column(Float)
+    # payment_status = Column(String)
+    # encrypted_payment_info = Column(String,unique=True)
 
 
 class Itinerary_Record(Base):
@@ -65,9 +71,9 @@ class Itinerary_Record(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     trip_name = Column(String)
-    trip_dates = Column(Date)
-    total_budget = Column(Float)
-    estimated_cost = Column(Float)
+    trip_ai_record = Column(JSON)
+    # total_budget = Column(Float)
+    # estimated_cost = Column(Float)
 
   
 class CustomerPreference(Base):
