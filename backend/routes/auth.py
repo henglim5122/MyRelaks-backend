@@ -379,6 +379,7 @@ async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionReq
             user.number_of_offers = 0
             user.discount = 0
             user.freemium_subscription_before = True
+            user.points += 500
             print("Freemium subscription")
             db.commit()
             db.refresh(user)
@@ -387,47 +388,52 @@ async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionReq
             if (user.tier == "Starter"):
                 user.discount = 10
                 user.number_of_offers = 5
+                user.points += 1000
                 print("Starter subscription")
             elif (user.tier == "Intermediate"):
                 user.discount = 10
                 user.number_of_offers = 10
+                user.points += 1500
                 print("Intermediate subscription")
             elif (user.tier == "Pro"):
                 user.discount = 20
                 user.number_of_offers = 15
+                user.points += 2500
                 print("Pro subscription")
         db.commit()
         db.refresh(user)
         return user
     
-    elif (user.tier is not None and user.freemium_subscription_before == True):
-        if tier == "Freemium" and user.freemium_subscription_before:
+    elif (user.tier is not None):
+        if tier == "Freemium" and user.freemium_subscription_before == True:
             print("Cannot subscribe to Freemium again")
-
             raise HTTPException(status_code=400, detail="Cannot subscribe to Freemium again")
         if tiers.index(tier) > tiers.index(user.tier):
             print(tier)
-            print(user.tier)
             print( tiers.index(tier))
-            print( tiers.index(user.tier))
-            user.tier = tier
             print(user.tier)
+            print( tiers.index(user.tier))
+            
+            user.tier = tier
             user.subscription = True        
             user.subscription_time = datetime.now(timezone.utc).date()
             user.subscription_expire = (datetime.now(timezone.utc) + relativedelta(months=3)).date()
             if (tier == "Starter"):
                 user.discount = 10
                 user.number_of_offers = 5
+                user.points += 1000
                 print("Starter upgraded")
                 
             elif (tier == "Intermediate"):
                 user.discount = 10
                 user.number_of_offers = 10
+                user.points += 1500
                 print("Intermediate upgraded")
                 
             elif (tier == "Pro"):
                 user.discount = 20
                 user.number_of_offers = 15
+                user.points += 2500
                 print("Pro upgraded")
             db.commit()
             db.refresh(user)
@@ -442,11 +448,20 @@ async def update_user_subscription(user_id: int, tier: UpdateUserSubscriptionReq
 @user_router.put("/user/purchase_offer/{user_id}")
 async def update_user_offers(user_id: int, db: db_dependency):
     user = db.query(Users).filter(Users.id == user_id).first()
+    print(user)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
-    user.number_of_offers -= 1
-    user.points += 250
-
+    
+    if user.number_of_offers is None:
+        user.points += 250
+    elif user.number_of_offers > 0:  
+        user.number_of_offers -= 1
+        user.points += 250
+    elif user.number_of_offers == 0:
+        user.points += 250
+    else:
+        raise HTTPException(status_code=400, detail="No offers left")   
+    
     db.commit()
     db.refresh(user)
     
