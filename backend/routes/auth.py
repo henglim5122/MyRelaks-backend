@@ -298,7 +298,7 @@ async def update_user_login_time(user_id: int, email: str, db: db_dependency):
         # print(datetime.now(timezone.utc).date())
         if user.last_login.date() < datetime.now(timezone.utc).date():
             user.last_login = datetime.now(timezone.utc).date()
-            user.points += 100
+            user.points += 75
             print('Login time updated')
     else:
         print('Login time not updated')
