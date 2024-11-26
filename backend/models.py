@@ -59,6 +59,7 @@ class Payment(Base):
     user_id = Column(Integer)
     aspect = Column(String)
     payment_method = Column(String)
+    unique_id = Column(String, unique=True)
     payment_date = Column(DateTime)
     payment_amount = Column(Float)
     # payment_status = Column(String)

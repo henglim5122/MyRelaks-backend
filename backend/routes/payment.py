@@ -24,6 +24,7 @@ class PaymentRequest(BaseModel):
     user_id: int
     aspect: str
     payment_method: str
+    unique_id: str
     payment_amount: float
     payment_date: Optional[datetime] = None
 
@@ -34,9 +35,11 @@ async def create_payment(payment: PaymentRequest, db: db_dependency):
             user_id=payment.user_id,
             aspect=payment.aspect,
             payment_method=payment.payment_method,
+            unique_id=payment.unique_id,
             payment_date=datetime.now(timezone.utc),
             payment_amount=payment.payment_amount,
         )
+        print(payment_info)
         db.add(payment_info)
         db.commit()
         
