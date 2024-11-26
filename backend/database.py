@@ -1,9 +1,9 @@
 import os
-from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from google.cloud.sql.connector import Connector
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -27,12 +27,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-#Cloud SQL connection
-
-# DB_USER = os.getenv("DB_USER")
-# DB_PASSWORD = os.getenv("DB_PASSWORD")
-# DB_NAME = os.getenv("DB_NAME")
-# INSTANCE_CONNECTION_NAME = os.getenv("INSTANCE_CONNECTION_NAME")
+# Cloud SQL connection
+# DB_USER = os.environ.get("DB_USER", "postgres")
+# DB_PASS = os.environ.get("DB_PASS", "admin123")
+# DB_NAME = os.environ.get("DB_NAME", "myrelaks_db")
+# INSTANCE_CONNECTION_NAME = os.environ.get("INSTANCE_CONNECTION_NAME","gaia-capstone05-prd:us-central1:myrelaks-db2")
 
 # def getconn():
 #     connector = Connector()
@@ -40,12 +39,11 @@ Base = declarative_base()
 #         INSTANCE_CONNECTION_NAME,
 #         "pg8000",
 #         user=DB_USER,
-#         password=DB_PASSWORD,
+#         password=DB_PASS,
 #         db=DB_NAME
 #     )
 #     return conn
 
-# # Create the SQLAlchemy engine
 # engine = create_engine(
 #     "postgresql+pg8000://",
 #     creator=getconn,
